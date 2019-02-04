@@ -12,6 +12,7 @@ class FormMessage extends Component {
     }
 
     render() {
+        /*
         const messageStyle = {
             width: 340,
             backgroundColor: "lightblue",
@@ -19,12 +20,13 @@ class FormMessage extends Component {
             padding: 5
         };
         const BtnStyle = {width: 340};
+        */
 
         return (
-            <React.Fragment>
-                <p style={messageStyle}>Your proposal has been submitted.<br/>Approval pending.</p>
-                <button type="button" style={BtnStyle} onClick={this.createNewProposal}>Propose another waste item</button>
-            </React.Fragment>
+            <div >
+                <p className="alert alert-success">Your proposal has been submitted.<br/>Approval pending.</p>
+                <button type="button" className="btn btn-primary" onClick={this.createNewProposal}>Propose another waste item</button>
+            </div>
         )
     }
 }

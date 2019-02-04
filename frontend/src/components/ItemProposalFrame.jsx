@@ -31,10 +31,10 @@ class ItemProposalFrame extends Component {
 
     render() {
         return (
-            <React.Fragment>
+            <div className="container">
                 { this.state.showUserForm ? <UserForm formSubmitted={this.hideFormShowMessage} /> : null }
                 { this.state.showFormMessage ? <FormMessage newProposalWanted={this.hideMessageShowForm} /> : null }
-            </React.Fragment>
+            </div>
         )
     }
 }
