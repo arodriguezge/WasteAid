@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import UserForm from './UserForm';
 import FormMessage from './FormMessage';
 
-class ItemProposalFrame extends Component {
+class AddAnItem extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -39,4 +39,4 @@ class ItemProposalFrame extends Component {
     }
 }
 
-export default ItemProposalFrame;
+export default AddAnItem;

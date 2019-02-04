@@ -1,8 +1,9 @@
 import React from 'react';
+import ItemProposalFrame from "./AddAnItem"
 
 class App extends React.Component {
     constructor(props) {
-        super(props)
+        super(props);
         this.state = {
         }
     }
@@ -11,7 +12,7 @@ class App extends React.Component {
     render() {
         return (
             <React.Fragment>
-
+                <ItemProposalFrame />
             </React.Fragment>
         )
     }

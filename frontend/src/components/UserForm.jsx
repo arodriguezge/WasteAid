@@ -24,13 +24,11 @@ class UserForm extends Component {
         let itemNameProposal = this.state.itemName.trim();
         let itemDescrProposal = this.state.itemDescription.trim();
 
-        /*
-        this.setState({
-            itemName: '',
-            itemDescription: '',
-            binColor: "none"
-        });
-        */
+        // this.setState({
+        //     itemName: '',
+        //     itemDescription: '',
+        //     binColor: "none"
+        // });
 
         /*
         axios
@@ -57,7 +55,7 @@ class UserForm extends Component {
         console.log("item description:", itemDescrProposal);
         console.log("bin color:", this.state.binColor);
 
-// inverse data flow to parent component "ItemProposalFrame"
+    // inverse data flow to parent component "ItemProposalFrame"
         this.props.formSubmitted(event)
     }
 
