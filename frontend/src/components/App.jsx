@@ -1,18 +1,28 @@
 import React from 'react';
-import ItemProposalFrame from "./AddAnItem"
+
+import Footer from './Footer';
+import Header from './Header';
+import WelcomePage from './WelcomePage';
+
 
 class App extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-        }
-    }
+    // constructor(props) {
+    //     super(props)
+    //     this.state = {
+    //     }
+    // }
+
 
 
     render() {
         return (
             <React.Fragment>
-                <ItemProposalFrame />
+
+
+                <Header />
+                <WelcomePage />
+                <Footer />
+
             </React.Fragment>
         )
     }

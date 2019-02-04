@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "description": "",
+  "main": "index.js",
   "scripts": {
     "build-css": "node-sass-chokidar src/sass/ -o src/css/",
     "watch-css": "npm run build-css && node-sass-chokidar src/sass/ -o src/css/ --watch --recursive",
