@@ -11,7 +11,7 @@ class Header extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <header>
+                <nav>
 
                     <ul className="nav md-tabs bg-success text-white justify-content-end lighten-1 mx-0 mb-0 mt-1 pt-4 pb-2">
                         <li className="nav-item ">
@@ -30,7 +30,7 @@ class Header extends React.Component {
                             <a className="nav-link text-white" href="#!">About us</a>
                         </li>
                     </ul>
-                </header>
+                </nav>
             </React.Fragment>
         )
     }
