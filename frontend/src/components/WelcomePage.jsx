@@ -13,10 +13,10 @@ class WelcomePage extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <div className="bg-primary">
-                    <h1 className="display-1 text-center pt-4 mb-5 mt-4">Welcome to</h1>
+                <div className="">
+                    <h1 className="display-2 text-center pt-4 mb-5 mt-4">Welcome to</h1>
                     <img src={darkgrayBin} className="rounded mx-auto d-block" width="90" height="90" alt="darkgray bin" />
-                    <h1 className="display-1 text-center pt-4 mb-5 mt-4">Recycle Database</h1>
+                    <h1 className="display-3 text-center pt-4 mb-5 mt-4">Recycle Database</h1>
                     <p className="mb-5 bg-primary"></p>
                 </div>
             </React.Fragment>
