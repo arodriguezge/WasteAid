@@ -2,8 +2,9 @@ import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import App from './App';
-// import Form from './Form';
+// import AddAnItem from './AddAnItem';
 import AboutUs from './AboutUs';
+import SearchArea from './SearchArea';
 import RecommendedLinks from './RecommendedLinks';
 // import AdminFrame from './AdminFrame';
 // import NotFound from './NotFound';
@@ -15,10 +16,11 @@ class Router extends React.Component {
             <BrowserRouter>
                 <Switch>
                     <Route exact path="/" component={App} />
-                    {/* <Route path="/form" component={Form} /> */}
+                    {/* <Route path="/addAnItem" component={AddAnItem} /> */}
                     <Route path="/aboutUs" component={AboutUs} />
                     <Route path="/recommendedLinks" component={RecommendedLinks} />
                     {/* <Route path="/adminFrame" component={AdminFrame} /> */}
+                    <Route path="/searchArea" component={SearchArea} />
                     {/* <Route component={NotFound} /> */}
                 </Switch>
             </BrowserRouter>
