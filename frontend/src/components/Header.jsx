@@ -1,7 +1,7 @@
-import React from 'react';
-import component from '../images/Component.png';
-// import database from '../images/database.png';
-// import recycle from '../images/recycle.png';
+import React from 'react'
+import component from '../images/Component.png'
+import { NavLink } from 'react-router-dom'
+
 
 class Header extends React.Component {
     constructor(props) {
@@ -26,19 +26,21 @@ class Header extends React.Component {
                         </div>
 
                         <li className="nav-item ">
-                            <a className="nav-link text-white active" href="#!">Home</a>
+                            <NavLink to="/" className="nav-link text-white">Home</NavLink>
+
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link text-white" href="#!">Search Area</a>
+                            <NavLink to="/searchArea" className="nav-link text-white">Search Area</NavLink>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link text-white" href="#!">Add an Item</a>
+                            <NavLink to="/#" className="nav-link text-white">Add an Item</NavLink>
+
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link text-white" href="#!">Recommended Links</a>
+                            <NavLink to="/recommendedLinks" className="nav-link text-white">Recommended Links</NavLink>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link text-white" href="#!">About us</a>
+                            <NavLink to="/aboutUs" className="nav-link text-white">About us</NavLink>
                         </li>
                     </ul>
                 </nav>
@@ -47,5 +49,6 @@ class Header extends React.Component {
     }
 }
 
-export default Header;
+export default Header
+
 
