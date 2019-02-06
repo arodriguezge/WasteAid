@@ -1,31 +1,20 @@
-import React from 'react';
-
-import Footer from './Footer';
-import Header from './Header';
-import WelcomePage from './WelcomePage';
+import React from 'react'
+import Footer from './Footer'
+import Header from './Header'
+import WelcomePage from './WelcomePage'
 
 
 class App extends React.Component {
-    // constructor(props) {
-    //     super(props)
-    //     this.state = {
-    //     }
-    // }
-
-
-
     render() {
         return (
             <React.Fragment>
-
-
-                <Header />
-                <WelcomePage />
+                <Header/>
+                <WelcomePage/>
+                <button onClick={this.props.loadItems}>LOAD ITEMS</button>
                 <Footer />
-
             </React.Fragment>
         )
     }
 }
 
-export default App;
+export default App
