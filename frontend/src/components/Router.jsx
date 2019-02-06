@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react'
 
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
-import App from './App';
+import App from './App'
 // import AddAnItem from './AddAnItem';
-import AboutUs from './AboutUs';
-import SearchArea from './SearchArea';
-import RecommendedLinks from './RecommendedLinks';
+import AboutUs from './AboutUs'
+import SearchArea from './SearchArea'
+import RecommendedLinks from './RecommendedLinks'
 // import AdminFrame from './AdminFrame';
 // import NotFound from './NotFound';
 
@@ -32,4 +32,4 @@ class Router extends React.Component {
     }
 }
 
-export default Router;
+export default Router

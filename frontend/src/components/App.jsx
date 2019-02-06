@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Footer from './Footer';
-import Header from './Header';
-import WelcomePage from './WelcomePage';
+import Footer from './Footer'
+import Header from './Header'
+import WelcomePage from './WelcomePage'
 
 
 class App extends React.Component {
@@ -28,4 +28,4 @@ class App extends React.Component {
     }
 }
 
-export default App;
+export default App

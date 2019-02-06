@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
-import UserForm from './UserForm';
-import FormMessage from './FormMessage';
+import React, { Component } from 'react'
+import UserForm from './UserForm'
+import FormMessage from './FormMessage'
 
 class AddAnItem extends Component {
     constructor(props) {
@@ -32,11 +32,11 @@ class AddAnItem extends Component {
     render() {
         return (
             <div className="container">
-                { this.state.showUserForm ? <UserForm formSubmitted={this.hideFormShowMessage} /> : null }
-                { this.state.showFormMessage ? <FormMessage newProposalWanted={this.hideMessageShowForm} /> : null }
+                {this.state.showUserForm ? <UserForm formSubmitted={this.hideFormShowMessage} /> : null}
+                {this.state.showFormMessage ? <FormMessage newProposalWanted={this.hideMessageShowForm} /> : null}
             </div>
         )
     }
 }
 
-export default AddAnItem;
+export default AddAnItem

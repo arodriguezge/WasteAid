@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react'
 
 class FormMessage extends Component {
     constructor(props) {
@@ -24,11 +24,11 @@ class FormMessage extends Component {
 
         return (
             <div >
-                <p className="alert alert-success">Your proposal has been submitted.<br/>Approval pending.</p>
+                <p className="alert alert-success">Your proposal has been submitted.<br />Approval pending.</p>
                 <button type="button" className="btn btn-primary" onClick={this.createNewProposal}>Propose another waste item</button>
             </div>
         )
     }
 }
 
-export default FormMessage;
+export default FormMessage

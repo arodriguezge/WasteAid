@@ -1,5 +1,5 @@
-import React from 'react';
-import darkgrayBin from '../images/bin-darkgray-no-label.svg';
+import React from 'react'
+import darkgrayBin from '../images/bin-darkgray-no-label.svg'
 
 
 class WelcomePage extends React.Component {
@@ -24,4 +24,4 @@ class WelcomePage extends React.Component {
     }
 }
 
-export default WelcomePage;
+export default WelcomePage

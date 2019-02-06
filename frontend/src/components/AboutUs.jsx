@@ -1,6 +1,6 @@
-import React from 'react';
-import Footer from './Footer';
-import Header from './Header';
+import React from 'react'
+import Footer from './Footer'
+import Header from './Header'
 
 
 
@@ -27,4 +27,4 @@ class AboutUs extends React.Component {
     }
 }
 
-export default AboutUs;
+export default AboutUs
