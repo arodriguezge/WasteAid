@@ -13,17 +13,9 @@ const ItemSchema = new Schema({
         required: 'You must provide description of the item',
         trim: true
     },
-    recyclable: {
-        value: Boolean,
-        color_bin: {
-            blue: false,
-            green: false,
-            white: false,
-            yellow_orange: false,
-            brown: false,
-            grey_black: false
-        },
-        default: false
+    bin: {
+        type: String,
+        required: 'You must provide color of the bin'
     },
     approved: {
         type: Boolean,
