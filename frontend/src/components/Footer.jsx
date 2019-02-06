@@ -1,13 +1,6 @@
-import React from 'react';
+import React from 'react'
 
 class Footer extends React.Component {
-    // constructor(props) {
-    //     super(props)
-    //     this.state = {
-    //     }
-    // }
-
-
     render() {
         return (
             <React.Fragment>
@@ -22,4 +15,4 @@ class Footer extends React.Component {
     }
 }
 
-export default Footer;
+export default Footer
