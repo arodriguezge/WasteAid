@@ -12,7 +12,7 @@ class ItemDescription extends Component {
     }
 }
 
-class ItemCard extends Component {
+class Item extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -101,4 +101,4 @@ class ItemCard extends Component {
     }
 }
 
-export default ItemCard
+export default Item
