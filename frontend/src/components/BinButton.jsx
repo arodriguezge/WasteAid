@@ -1,6 +1,6 @@
 import React from 'react'
-import darkgrayBinLabelled from '../images/bin-darkgray-labelled.svg'
 import blueBinLabelled from '../images/bin-blue-labelled.svg'
+import darkgrayBinLabelled from '../images/bin-darkgray-labelled.svg'
 import brownGlassBinLabelled from '../images/bin-brown-glass-labelled.svg'
 import brownBinLabelled from '../images/bin-brown-labelled.svg'
 import greenBinLabelled from '../images/bin-green-labelled.svg'
@@ -8,7 +8,9 @@ import redBinLabelled from '../images/bin-red-labelled.svg'
 import whiteBinLabelled from '../images/bin-white-labelled.svg'
 import yellowBinLabelled from '../images/bin-yellow-dark-font.svg'
 
+//import + from '../images'
 
+// import {bin.name} from '{../images/:bin.name.svg}'
 
 class BinButton extends React.Component {
     // constructor(props) {
