@@ -1,3 +1,31 @@
+.item-card {
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  padding: 3px 5px 3px 10px;
+  background-color: #eee;
+  font-size: .9rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 5px; }
+
+.card-title {
+  font-weight: bold;
+  display: inline;
+  font-size: 1rem; }
+
+.desrc-toggle-switch {
+  font-weight: bold;
+  cursor: pointer;
+  display: inline;
+  color: #f88;
+  font-size: 1.3rem; }
+
+.wastebin-icon {
+  width: 30px;
+  height: 30px;
+  margin: 5px 5px 5px 10px; }
+
 .bg-success {
   background-color: #12A065 !important; }
 
