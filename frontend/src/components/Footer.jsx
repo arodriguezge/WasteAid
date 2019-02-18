@@ -13,7 +13,7 @@ class Footer extends React.Component {
             <React.Fragment>
                 <footer className="page-footer font-small bg-success pt-3 fixed-bottom">
                     <div className="footer-copyright text-center py-3 text-white">
-                        © 2019 Copyright: Recycle Database
+                        ©2019 Copyright: Recycle Database
                     </div>
                 </footer>
 
