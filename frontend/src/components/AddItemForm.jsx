@@ -2,18 +2,41 @@ import React, {Component} from 'react'
 import Header from './Header'
 import Footer from './Footer'
 
+class FormSubmitHint extends Component {
+    render() {
+        return (
+            <div className="form-submit-hint">
+                <p className="close-hint-char" onClick={this.props.hideHint} title="Close pop-up">&#10005;</p><br/>
+                Your proposal has been submitted.<br/>
+                Approval pending.
+            </div>
+        )
+    }
+}
+
 class AddItemForm extends Component {
+    state = {
+        isHidden: true
+    };
+
     name = React.createRef();
     description = React.createRef();
     bin = React.createRef();
 
+    toggleHidden = () => {
+        this.setState({
+            isHidden: !this.state.isHidden
+        })
+    };
+
     handleSubmit = event => {
         event.preventDefault();
-        const name = this.name.current.value
-        const description = this.description.current.value
-        const bin = this.bin.current.value
-        this.props.addItem(name, description, bin)
-        event.currentTarget.reset()
+        const name = this.name.current.value;
+        const description = this.description.current.value;
+        const bin = this.bin.current.value;
+        this.props.addItem(name, description, bin);
+        event.currentTarget.reset();
+        this.toggleHidden()
     };
 
     clearForm = () => {
@@ -51,6 +74,8 @@ class AddItemForm extends Component {
                         <button className="btn btn-secondary" type="submit">Add item</button>
                         <button className="btn btn-secondary" onClick={this.clearForm}>Reset form</button>
                     </form>
+
+                    {!this.state.isHidden && <FormSubmitHint hideHint={this.toggleHidden}/>}
                 </div>
                 <Footer/>
             </React.Fragment>
