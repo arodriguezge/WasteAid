@@ -1,4 +1,10 @@
 @import 'item';
+@import 'searchArea';
+@import 'addItemForm';
+
+body {
+  background-color: #eee;
+}
 
 .bg-success {
   background-color: #12A065 !important;

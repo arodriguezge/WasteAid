@@ -1,13 +1,13 @@
 .item-card {
   border: 1px solid lightgray;
-  border-radius: 4px;
-  padding: 3px 5px 3px 10px;
-  background-color: #eee;
+  border-radius: 5px;
+  padding: 2px 4px 2px 8px;
+  background-color: #fff;
   font-size: .9rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 5px; }
+  margin-bottom: 1px; }
 
 .card-title {
   font-weight: bold;
@@ -24,7 +24,58 @@
 .wastebin-icon {
   width: 30px;
   height: 30px;
-  margin: 5px 5px 5px 10px; }
+  margin: 3px 3px 3px 8px; }
+
+.wastebin-icon:hover {
+  cursor: default; }
+
+.bin-icon-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 9px; }
+
+img {
+  width: 75px;
+  height: 75px;
+  margin: 1px; }
+
+img:hover {
+  cursor: pointer; }
+
+.input-and-button {
+  display: flex;
+  justify-content: space-between; }
+
+.form-control {
+  width: 80%;
+  min-width: 200px; }
+
+p {
+  margin-top: 7px;
+  margin-bottom: 5px;
+  padding-left: 3px; }
+
+.no-results-hint {
+  border-radius: 5px;
+  background-color: #fcc;
+  padding: 7px 12px; }
+
+select {
+  width: 80%;
+  margin-bottom: 12px; }
+
+.heading {
+  margin-bottom: -20px;
+  margin-top: -20px; }
+
+button {
+  margin-right: 10px; }
+
+h4 {
+  margin-top: 10px; }
+
+body {
+  background-color: #eee; }
 
 .bg-success {
   background-color: #12A065 !important; }

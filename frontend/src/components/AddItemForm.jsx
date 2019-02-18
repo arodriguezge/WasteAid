@@ -1,9 +1,11 @@
 import React, {Component} from 'react'
+import Header from './Header'
+import Footer from './Footer'
 
 class AddItemForm extends Component {
-    name = React.createRef()
-    description = React.createRef()
-    bin = React.createRef()
+    name = React.createRef();
+    description = React.createRef();
+    bin = React.createRef();
 
     handleSubmit = event => {
         event.preventDefault();
@@ -12,45 +14,46 @@ class AddItemForm extends Component {
         const bin = this.bin.current.value
         this.props.addItem(name, description, bin)
         event.currentTarget.reset()
-    }
+    };
+
+    clearForm = () => {
+        document.getElementById("add-item-form").reset();
+    };
 
     render() {
         return (
-                <div className="container-small p-4 mt-5 text-dark rounded item-form">
-                    <h2 className="font-weight-bold text-center m-2 mb-5">Send us a new item</h2>
-                    <form onSubmit={this.handleSubmit}>
-                        <h5>Waste item name:</h5>
-                        <div className="form-group">
-                            <input type="text" className="form-control" placeholder="Type name of waste item here..." ref={this.name}/>
-                        </div>
-                        <br/>
-                        <div className="form-group">
-                            <label htmlFor="description">Description</label><br/>
-                            <textarea type="text" className="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="Type item description here..." ref={this.description}/><br/>
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="bin" className="my-1 mr-2">Bin</label><br/>
-                            <select className="custom-select my-1 mr-sm-2" ref={this.bin}>
-                                <option selected>Choose...</option>
-                                <option value="blue">blue bin (paper, cardboard)</option>
-                                <option value="green">green bin (colored glass)</option>
-                                <option value="white">white bin (white glass)</option>
-                                <option value="yellow">yellow/orange bin (plastic, metal, Green Dot)</option>
-                                <option value="brown">brown bin (biodegradable goods)</option>
-                                <option value="grey">grey/black bin (everything else)</option>
-                                <option value="none">none of the bins (other waste disposal)</option>
-                            </select>
-                        </div>
-                        <div className="input-group-append">
-                            <button className="btn btn-outline-dark m-1" type="submit" >
-                                <i className="fa fa-plus" aria-hidden="true" />&nbsp;Add item
-                            </button>
-                            <button className="btn btn-outline-dark m-1" onClick={this.props.toggleHidden} >
-                                <i className="fa fa-plus" aria-hidden="true" />&nbsp;Cancel
-                            </button>
-                        </div>
+            <React.Fragment>
+                <Header/>
+                <div className="container">
+                    <h4>Send us a new item</h4>
+
+                    <form onSubmit={this.handleSubmit} id="add-item-form">
+                        <p>Waste Item Name:</p>
+                        <input type="text" className="form-control" placeholder="Type name of waste item here..."
+                               ref={this.name}/><br/> {/* required={true} */}
+
+                        <p className="heading">Waste Item Description:</p><br/>
+                        <textarea type="text" className="form-control" id="exampleFormControlTextarea1" rows="5"
+                                  placeholder="Type item description here..." ref={this.description}/><br/>
+
+                        <p className="heading">Waste Bin:</p><br/>
+                        <select defaultValue="Choose..." ref={this.bin}>
+                            <option value="Choose...">Choose...</option>
+                            <option value="blue">blue bin (paper, cardboard)</option>
+                            <option value="green">green bin (colored glass)</option>
+                            <option value="white">white bin (white glass)</option>
+                            <option value="yellow">yellow/orange bin (plastic, metal, Green Dot)</option>
+                            <option value="brown">brown bin (biodegradable goods)</option>
+                            <option value="grey">grey/black bin (everything else)</option>
+                            <option value="none">none of the bins (other waste disposal)</option>
+                        </select><br/>
+
+                        <button className="btn btn-secondary" type="submit">Add item</button>
+                        <button className="btn btn-secondary" onClick={this.clearForm}>Reset form</button>
                     </form>
                 </div>
+                <Footer/>
+            </React.Fragment>
         )
     }
 }
