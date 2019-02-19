@@ -15,5 +15,4 @@ npm install
 
 nodemon index.js
 
-sudo service mongod start
 ```
