@@ -1,5 +1,4 @@
 # recycling-database-project
-===
 
 Run in the Frontend folder:
 ```
@@ -15,5 +14,4 @@ npm install
 
 nodemon index.js
 
-sudo service mongod start
 ```
