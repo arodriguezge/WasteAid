@@ -7,6 +7,7 @@ class FormSubmitHint extends Component {
         return (
             <div className="form-submit-hint">
                 <p className="close-hint-char" onClick={this.props.hideHint} title="Close pop-up">&#10005;</p><br/>
+                Thank you!<br/>
                 Your proposal has been submitted.<br/>
                 Approval pending.
             </div>
