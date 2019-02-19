@@ -10,7 +10,7 @@ class App extends React.Component {
             <React.Fragment>
                 <Header/>
                 <WelcomePage/>
-                <button onClick={this.props.loadItems}>LOAD ITEMS</button>
+                {/* <button onClick={this.props.loadItems}>LOAD ITEMS</button> */}
                 <Footer />
             </React.Fragment>
         )
