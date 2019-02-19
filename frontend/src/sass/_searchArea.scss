@@ -1,0 +1,36 @@
+.bin-icon-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 9px;
+}
+
+img {
+  width: 75px;
+  height: 75px;
+  margin: 1px;
+}
+img:hover {
+  cursor: pointer;
+}
+
+.input-and-button {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-control {
+  width: 80%;
+  min-width: 200px;
+}
+
+p {
+  margin-top: 7px;
+  margin-bottom: 5px;
+  padding-left: 3px;
+}
+
+.no-results-hint {
+  border-radius: 5px;
+  background-color: #fcc;
+  padding: 7px 12px;
+}

@@ -84,7 +84,7 @@ class Item extends Component {
 
     render() {
         return (
-            <div className="item-card">
+            <div className="item-card" id="search-result">
                 <div>
                     <div className="card-title">{this.props.item.name}</div>
                     <div className="desrc-toggle-switch" onClick={this.toggleItemDescr} title={this.state.toggleHint}>

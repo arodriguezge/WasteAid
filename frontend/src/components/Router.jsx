@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import App from './App'
 import AboutUs from './AboutUs'
 import RecommendedLinks from './RecommendedLinks'
+import SearchArea from './SearchArea'
 import AddItemForm from './AddItemForm'
 import ItemsList from './ItemsList'
 import TicketList from './TicketList'
@@ -79,7 +80,7 @@ class Router extends React.Component {
                     <Route exact path="/" component={ withProps(App, { items: this.state.items, loadItems: this.loadItems })}  />
                     <Route path="/aboutUs" component={AboutUs} />
                     <Route path="/recommendedLinks" component={RecommendedLinks} />
-                    <Route path="/recommendedLinks" component={RecommendedLinks} />
+                    <Route path="/searchArea" component={ withProps(SearchArea, { items: this.state.items })} />
                     <Route path="/add" component={ withProps(AddItemForm, { addItem: this.addItem })} />
                     <Route path="/items" component={ withProps(ItemsList, { items: this.state.items })} />
                     <Route path="/admin/tickets" component={ withProps(TicketList, { items: this.state.items, editItem: this.editItem, removeItem: this.removeItem, approveItem: this.approveItem })} />

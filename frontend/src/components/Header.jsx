@@ -25,7 +25,7 @@ class Header extends React.Component {
                                 <NavLink to="/searchArea" className="nav-link nav-text text-white">Search Area</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink to="/#" className="nav-link nav-text text-white">Add an Item</NavLink>
+                                <NavLink to="/add" className="nav-link nav-text text-white">Add an Item</NavLink>
 
                             </li>
                             <li className="nav-item">

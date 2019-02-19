@@ -1,0 +1,46 @@
+select {
+  width: 80%;
+  margin-bottom: 12px;
+}
+
+.heading {
+  margin-bottom: -20px;
+  margin-top: -20px;
+}
+
+button {
+  margin-right: 10px;
+}
+
+h4 {
+  margin-top: 10px;
+}
+
+.container {
+  position: relative;
+}
+
+.form-submit-hint {
+  border-radius: 5px;
+  background-color: #70e1e9;
+  padding: 10px 30px 20px 30px;
+  z-index: 1;
+
+  margin: 0;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.close-hint-char {
+  font-size: 1.5rem;
+  text-align: right;
+  margin: 0 0 -30px 0;
+  cursor: pointer;
+}
+
+

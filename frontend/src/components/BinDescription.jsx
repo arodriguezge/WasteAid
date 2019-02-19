@@ -24,6 +24,16 @@ class BinDescription extends Component {
         this.toggleBinDescr = this.toggleBinDescr.bind(this);
     }
 
+    // this is required in order to have the bin description always visible
+    // if clicking another bin icon, even if it has been hidden beforehand
+    componentWillReceiveProps() {
+        this.setState({
+            binDescrVisible: true,
+            toggleSwitchChar: String.fromCharCode(9650),
+            toggleHint: "hide bin description"
+        })
+    }
+
     toggleBinDescr() {
         if (this.state.binDescrVisible === true) {
             this.setState({
@@ -91,7 +101,7 @@ class BinDescription extends Component {
         }
 
         return (
-            <div className="item-card">
+            <div className="item-card" id="bin-description">
                 <div>
                     <div className="card-title">{binTitle}</div>
                     <div className="desrc-toggle-switch" onClick={this.toggleBinDescr} title={this.state.toggleHint}>
