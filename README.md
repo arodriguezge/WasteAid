@@ -1,5 +1,4 @@
 # recycling-database-project
-===
 
 Run in the Frontend folder:
 ```
