@@ -97,18 +97,28 @@ h4 {
   margin: 0 0 -30px 0;
   cursor: pointer; }
 
+.list-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly; }
+
+.list-box {
+  margin: auto; }
+
+h2 {
+  text-align: center; }
+
 body {
   background-color: #eee; }
+
+.nav-text {
+  font-size: 18px; }
 
 .bg-success {
   background-color: #12A065 !important; }
 
-.bg-primary {
-  background-color: #70E1E9 !important; }
-
 .display-4 {
   font-size: 42px;
-  color: black;
   font-weight: bold; }
 
 * {
@@ -122,6 +132,3 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); }
-
-.nav-text {
-  font-size: 18px; }
