@@ -97,6 +97,17 @@ h4 {
   margin: 0 0 -30px 0;
   cursor: pointer; }
 
+.list-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly; }
+
+.list-box {
+  margin: auto; }
+
+h2 {
+  text-align: center; }
+
 body {
   background-color: #eee; }
 
