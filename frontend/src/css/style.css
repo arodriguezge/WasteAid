@@ -133,16 +133,19 @@ select:hover {
   margin: 0 0 -30px 0;
   cursor: pointer; }
 
-.list-container {
+.list-container-0 {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-evenly; }
 
-.list-box {
+.list-box-0 {
   margin: auto; }
 
-h2 {
-  text-align: center; }
+.h2-0 {
+  text-align: center;
+  margin-top: 5%;
+  margin-bottom: 5%; }
 
 .item-card5 {
   border: 1px solid lightgray;
