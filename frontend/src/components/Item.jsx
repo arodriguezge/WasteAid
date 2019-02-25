@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 
-// corresponding style file: _itemCard.scss
+// corresponding style file: _item.scss
 
 class ItemDescription extends Component {
     render() {
@@ -84,17 +84,17 @@ class Item extends Component {
 
     render() {
         return (
-            <div className="item-card" id="search-result">
+            <div className="item-card1" id="search-result">
                 <div>
-                    <div className="card-title">{this.props.item.name}</div>
-                    <div className="desrc-toggle-switch" onClick={this.toggleItemDescr} title={this.state.toggleHint}>
+                    <div className="desrc-toggle-switch1" onClick={this.toggleItemDescr} title={this.state.toggleHint}>
                         &nbsp;{this.state.toggleSwitchChar}
                     </div>
+                    <div className="card-title1">{this.props.item.name}</div>
                     { this.state.itemDescrVisible ? <ItemDescription descr={this.props.item.description}/> : null }
 
                 </div>
                 <div>
-                    <img className="wastebin-icon" src={this.binIconPath()} alt="wastebin icon" title={this.binIconTitle()}/>
+                    <img className="wastebin-icon1" src={this.binIconPath()} alt="wastebin icon" title={this.binIconTitle()}/>
                 </div>
             </div>
         )
