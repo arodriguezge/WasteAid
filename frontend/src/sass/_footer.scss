@@ -1,17 +1,8 @@
-footer {
-    min-height: 70px;
-}
 
 // wrapper with a calculation to prevent the page content to overlap with footer. Calculation based on the footer height
 .footer-fix {
-    min-height: calc(90vh - 90px);
-    //margin-top: 0 !important;
-}
-// footer-fix
-
-// adding this to remove bootstrap standard code that adds margin
-// .container {
-//     margin-top: 0 !important;
-// //     border: 1px transparent #d1d1d1;
-    
-// }
+    min-height: calc(84vh - 70px);
+  }
+  .footer {
+    min-height: 50px;
+  }

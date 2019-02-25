@@ -108,11 +108,11 @@ h4 {
 h2 {
   text-align: center; }
 
-footer {
-  min-height: 70px; }
-
 .footer-fix {
-  min-height: calc(90vh - 90px); }
+  min-height: calc(84vh - 70px); }
+
+.footer {
+  min-height: 50px; }
 
 .nav-text {
   font-size: 18px; }
