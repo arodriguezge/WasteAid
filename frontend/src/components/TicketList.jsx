@@ -3,6 +3,8 @@ import Ticket from './Ticket'
 import Footer from './Footer'
 import Header from './Header'
 
+// corresponding style file: _ticketList.scss
+
 class TicketList extends Component {
 
     render() {

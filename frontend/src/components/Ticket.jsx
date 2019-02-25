@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import EditTicket from './EditTicket'
 
-// corresponding style file: _itemCard.scss
+// corresponding style file: _ticket.scss
 
 class ItemDescription extends Component {
     render() {
