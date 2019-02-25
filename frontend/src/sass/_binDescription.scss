@@ -1,7 +1,7 @@
-.item-card1 {
+.bin-descr-card2 {
   border: 1px solid lightgray;
   border-radius: 5px;
-  padding: 2px 4px 2px 6px;
+  padding: 1px 3px 2px 6px;
   background-color: #fff;
   font-size: .9rem;
   display: flex;
@@ -10,26 +10,26 @@
   margin-bottom: 1px;
 }
 
-.card-title1 {
+.card-title2 {
   font-weight: bold;
   display: inline;
   font-size: 1rem;
+  margin-left: 6px;
 }
 
-.desrc-toggle-switch1 {
+.desrc-toggle-switch2 {
   font-weight: bold;
   cursor: pointer;
   display: inline;
   color: #f88;
   font-size: 1.3rem;
-  margin-right: 6px;
 }
 
-.wastebin-icon1 {
+.wastebin-icon2 {
   width: 30px;
   height: 30px;
-  margin: 3px 3px 3px 8px;
+  margin: 5px 3px 3px 8px;
 }
-.wastebin-icon1:hover {
+.wastebin-icon2:hover {
   cursor: default;
 }

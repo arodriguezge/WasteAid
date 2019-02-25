@@ -1,0 +1,55 @@
+.popup-container4 {
+  position:fixed;
+  padding:0;
+  margin:0;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  background:rgba(255,255,255,0.5);
+}
+
+.form-box4 {
+  width: 50%;
+  text-align: left;
+
+  border-radius: 5px;
+  background-color: #70e1e9;
+  padding: 8px 20px 15px 20px;
+  z-index: 1;
+  margin: auto;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  -ms-transform: translate(-50%);
+  transform: translate(-50%);
+}
+
+.heading4-1 {
+  margin-top: 0;
+  margin-bottom: 3px;
+  margin-left: 2px;
+}
+
+.heading4-2 {
+  margin-top: -16px;
+  margin-bottom: -18px;
+  margin-left: 2px;
+}
+
+.form-control {
+  width: 100%;
+  margin-top: 0;
+}
+
+.button4 {
+  margin-top: 12px;
+  margin-right: 12px;
+}
+
+.select4 {
+  width: 100%;
+}
+.select4:hover {
+  cursor: pointer;
+}

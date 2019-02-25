@@ -1,5 +1,5 @@
 .item-card1 {
-  border: 1px solid lightgrey;
+  border: 1px solid lightgray;
   border-radius: 5px;
   padding: 2px 4px 2px 6px;
   background-color: #fff;
@@ -56,7 +56,7 @@
   min-width: 200px;
   width: 80%;
   border-radius: 5px;
-  border: 1px solid lightgrey;
+  border: 1px solid lightgray;
   padding-left: 10px;
   height: 38px;
   margin-bottom: -20px;
@@ -145,7 +145,7 @@ h2 {
   text-align: center; }
 
 .item-card5 {
-  border: 1px solid lightgrey;
+  border: 1px solid lightgray;
   border-radius: 5px;
   padding: 3px 8px 0 7px;
   background-color: #fff;
@@ -234,7 +234,7 @@ h2 {
   cursor: pointer; }
 
 .bin-descr-card2 {
-  border: 1px solid lightgrey;
+  border: 1px solid lightgray;
   border-radius: 5px;
   padding: 1px 3px 2px 6px;
   background-color: #fff;
@@ -271,9 +271,6 @@ h2 {
 .nav-text {
   font-size: 18px; }
 
-.nav-text {
-  font-size: 18px; }
-
 .bg-success {
   background-color: #12A065 !important; }
 
@@ -289,3 +286,5 @@ body {
 
 .btn-secondary {
   background-color: #8b8b8b; }
+
+/*# sourceMappingURL=style.css.map */
