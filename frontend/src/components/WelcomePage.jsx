@@ -5,13 +5,11 @@ class WelcomePage extends React.Component {
         return (
             <React.Fragment>
                 <div className="container">
-                    <br/><br/><br/>
-                    <h2>Welcome to Recycle Database</h2>
-                    <br/><br/>
+                    <h2 className="h2-0">Welcome to Recycle Database</h2>
 
-                    <div className="list-container">
+                    <div className="list-container-0">
 
-                        <div className="list-box">
+                        <div className="list-box-0">
                             <h4>Contribute to a better future</h4>
                             <ul>
                                 <li>Support recycling of your waste</li>
@@ -21,7 +19,7 @@ class WelcomePage extends React.Component {
                             </ul>
                         </div>
 
-                        <div className="list-box">
+                        <div className="list-box-0">
                             <h4>This little app can help you</h4>
                             <ul>
                                 <li>separate your rubbish properly</li>
@@ -30,6 +28,25 @@ class WelcomePage extends React.Component {
                                 <li>find disposal sites for special refuse</li>
                             </ul>
                         </div>
+
+                        {/* <div className="list-box-0">
+                            <h4>Features</h4>
+                            <ul>
+                                <li>General info on disposal of domestic<br/>refuse and benefits of recycling</li>
+                                <li>Growing database describing various<br/>waste items and how to get rid of them</li>
+                                <li>Users can propose waste items</li>
+                            </ul>
+                        </div>
+
+                        <div className="list-box-0">
+                            <h4>Limitations</h4>
+                            <ul>
+                                <li>This app adresses private consumers and<br/>is related to domestic waste exclusively</li>
+                                <li>This app is not an advisor for disposal<br/>of commercial waste</li>
+                                <li>bla bla</li>
+                            </ul>
+                        </div> */}
+
                     </div>
 
                 </div>

@@ -1,36 +1,59 @@
-.bin-icon-container {
+.bin-icon-container2 {
   display: flex;
   justify-content: space-between;
   margin-bottom: 9px;
 }
 
-img {
+.h4-2 {
+  margin-top: 10px;
+}
+
+.img2 {
   width: 75px;
   height: 75px;
   margin: 1px;
 }
-img:hover {
+.img2:hover {
   cursor: pointer;
 }
 
-.input-and-button {
+.input-and-button2 {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin-top: -8px;
 }
 
-.form-control {
-  width: 80%;
+.form-control2 {
   min-width: 200px;
+  width: 80%;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+  padding-left: 10px;
+  height: 38px;
+  margin-bottom: -20px;
+  margin-top: -18px;
 }
 
-p {
+.p2 {
   margin-top: 7px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   padding-left: 3px;
 }
 
-.no-results-hint {
+.p2-1 {
+  margin-top: 15px;
+  margin-bottom: 8px;
+  padding-left: 3px;
+}
+
+.no-results-hint2 {
   border-radius: 5px;
   background-color: #fcc;
   padding: 7px 12px;
+}
+
+.button2 {
+  margin-top: 3px;
+  margin-right: 2px;
 }
