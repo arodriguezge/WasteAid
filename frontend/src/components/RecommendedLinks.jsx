@@ -34,7 +34,6 @@ class RecommendedLinks extends React.Component {
                             </ul>
                         </p>
 
-
                         <h4 className="display-5 ml-5 pt-4 mb-5 mt-4">Learn more</h4>
                         <p className="para">
                             <a href="https://allaboutberlin.com/guides/sorting-trash-in-germany"

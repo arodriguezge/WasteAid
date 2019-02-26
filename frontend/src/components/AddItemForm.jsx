@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import Header from './Header'
 import Footer from './Footer'
 
@@ -7,13 +7,15 @@ import Footer from './Footer'
 class FormSubmitHint extends Component {
     render() {
         return (
+
             <div className="popup-container3">
                 <div className="form-submit-hint3">
-                    <p className="close-hint-char3" onClick={this.props.hideHint} title="Close pop-up">&#10005;</p><br/>
-                    Thank you!<br/>
-                    Your proposal has been submitted.<br/>
+                    <p className="close-hint-char3" onClick={this.props.hideHint} title="Close pop-up">&#10005;</p><br />
+                    Thank you!<br />
+                    Your proposal has been submitted.<br />
                     Approval pending.
                 </div>
+
             </div>
         )
     }
@@ -52,8 +54,10 @@ class AddItemForm extends Component {
         return (
             <React.Fragment>
                 <Header/>
+
                 <div className="footer-fix">
                     <div className="container">
+                      
                         <h4 className="h4-3">Send us a new item</h4>
 
                         <form onSubmit={this.handleSubmit} id="add-item-form">
@@ -66,6 +70,7 @@ class AddItemForm extends Component {
                                       placeholder="Type item description here..." ref={this.description}/><br/>
 
                             <p className="heading3">Waste Bin:</p><br/>
+
                             <select className="form-control" defaultValue="Choose..." ref={this.bin}>
                                 <option value="Choose...">Choose...</option>
                                 <option value="blue">blue bin (paper, cardboard)</option>
@@ -82,10 +87,12 @@ class AddItemForm extends Component {
                         </form>
 
                         {!this.state.isHidden && <FormSubmitHint hideHint={this.toggleHidden}/>}
+
                     </div>
                 </div>
-                <Footer/>
-            </React.Fragment>
+
+                <Footer />
+            </React.Fragment >
         )
     }
 }

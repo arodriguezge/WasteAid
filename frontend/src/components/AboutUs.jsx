@@ -7,8 +7,10 @@ class AboutUs extends React.Component {
         return (
             <React.Fragment>
                 <Header/>
+        
                 <div className="footer-fix">
                     <div className="container">
+                      
                         <h1 className="display-5 ml-5 pt-4 mb-5 mt-4">Who we are</h1>
                         <div className="container">
                             <p>We care about managing your waste and how you are managing your waste, the easy
@@ -24,8 +26,10 @@ class AboutUs extends React.Component {
                                 <br/>
                             </p>
                         </div>
+                      
                     </div>
                 </div>
+        
                 <Footer/>
             </React.Fragment>
         )

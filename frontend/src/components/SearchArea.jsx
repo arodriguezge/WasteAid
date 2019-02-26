@@ -1,7 +1,5 @@
 import React from 'react';
 import Header from './Header';
-// import SearchBar from './SearchBar';
-// import BinArea from './BinArea';
 import Footer from './Footer';
 import Item from './Item';
 import BinDescription from './BinDescription';
@@ -11,9 +9,11 @@ import BinDescription from './BinDescription';
 class NoSearchResultsHint extends React.Component {
     render() {
         return (
+
             <div className="no-results-hint2">
                 <b>No results found.</b><br/>
                 You can propose the search item as a database entry.<br/>
+
                 If so, please go to "Add an Item".
             </div>
         )
@@ -99,6 +99,7 @@ class SearchArea extends React.Component {
                 <Header/>
                 <div className="footer-fix">
                     <div className="container">
+                      
                         <h4 className="h4-2">Search Area</h4>
 
                         <form onSubmit={this.handleSubmit}>
@@ -112,6 +113,7 @@ class SearchArea extends React.Component {
                                 </button>
                             </div>
                         </form>
+                    
                         <div>
                             <p className="p2-1">... or click a waste bin icon for a description.</p>
                             <div className="bin-icon-container2">
@@ -138,6 +140,7 @@ class SearchArea extends React.Component {
                                      onClick={() => this.binIconClick("none")}/>
                             </div>
                         </div>
+                    
                         <div>
                             {/* search for item name */}
                             {Object.keys(this.props.items).map((index) => {
@@ -163,9 +166,10 @@ class SearchArea extends React.Component {
                                 return ""
                             })}
                         </div>
+                    
                     </div>
                 </div>
-                <Footer/>
+                <Footer />
             </React.Fragment>
         )
     }
