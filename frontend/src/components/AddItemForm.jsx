@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import Header from './Header'
 import Footer from './Footer'
 
@@ -7,6 +7,7 @@ import Footer from './Footer'
 class FormSubmitHint extends Component {
     render() {
         return (
+
             <div className="popup-container3">
                 <div className="form-submit-hint3">
                     <p className="close-hint-char3" onClick={this.props.hideHint} title="Close pop-up">&#10005;</p><br/>
@@ -14,6 +15,7 @@ class FormSubmitHint extends Component {
                     Your proposal has been submitted.<br/>
                     Approval pending.
                 </div>
+
             </div>
         )
     }
@@ -51,7 +53,9 @@ class AddItemForm extends Component {
     render() {
         return (
             <React.Fragment>
+
                 <Header/>
+                      <div className="footer-fix">
                 <div className="container">
                     <h4 className="h4-3">Send us a new item</h4>
 
@@ -80,9 +84,12 @@ class AddItemForm extends Component {
                         <button className="btn btn-secondary button3" onClick={this.clearForm}>Reset form</button>
                     </form>
 
-                    {!this.state.isHidden && <FormSubmitHint hideHint={this.toggleHidden}/>}
+
+                        {!this.state.isHidden && <FormSubmitHint hideHint={this.toggleHidden} />}
+                    </div>
                 </div>
-                <Footer/>
+                       </div>
+                <Footer />
             </React.Fragment>
         )
     }

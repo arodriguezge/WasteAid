@@ -147,6 +147,13 @@ select:hover {
   margin-top: 5%;
   margin-bottom: 5%; }
 
+
+.footer-fix {
+  min-height: calc(84vh - 70px); }
+
+.footer {
+  min-height: 50px; }
+
 .item-card5 {
   border: 1px solid lightgray;
   border-radius: 5px;
@@ -270,6 +277,7 @@ select:hover {
 
 .h4-5 {
   margin-top: 10px; }
+
 
 .nav-text {
   font-size: 18px; }

@@ -11,9 +11,11 @@ import BinDescription from './BinDescription';
 class NoSearchResultsHint extends React.Component {
     render() {
         return (
+
             <div className="no-results-hint2">
                 <b>No results found.</b><br/>
                 You can propose the search item as a database entry.<br/>
+
                 If so, please go to "Add an Item".
             </div>
         )
@@ -97,6 +99,7 @@ class SearchArea extends React.Component {
         return (
             <React.Fragment>
                 <Header/>
+                <div className="footer-fix">
                 <div className="container">
                     <h4 className="h4-2">Search Area</h4>
 
@@ -125,35 +128,12 @@ class SearchArea extends React.Component {
                                  onClick={() => this.binIconClick("grey")}/>
                             <img className="img2" src="../images/bin-red-labelled.svg" alt="wastebin icon" title="none of the bins, separate disposal"
                                  onClick={() => this.binIconClick("none")}/>
+
                         </div>
                     </div>
-                    <div>
-                        {/* search for item name */}
-                        {Object.keys(this.props.items).map((index) => {
-                            if (this.props.items[index].approved === true &&
-                                this.props.items[index].name === this.state.itemName) {
-                                return <Item item={this.props.items[index]} key={`item ${index}`}/>
-                            }
-                            //console.log(this.name);
-                            return ""
-                        })}
-
-                        {/* this.checkResults() */}
-                        { this.state.noResultsHintVisible ? <NoSearchResultsHint/> : null }
-
-                        {/* search specific waste bin */}
-                        {this.state.wasteBinColor ? <BinDescription binColor={this.state.wasteBinColor}/> : null}
-
-                        {Object.keys(this.props.items).map((index) => {
-                            if (this.props.items[index].approved === true &&
-                                this.props.items[index].bin === this.state.wasteBinColor) {
-                                return <Item item={this.props.items[index]} key={`item ${index}`}/>
-                            }
-                            return ""
-                        })}
-                    </div>
+                   </div>
                 </div>
-                <Footer/>
+                <Footer />
             </React.Fragment>
         )
     }

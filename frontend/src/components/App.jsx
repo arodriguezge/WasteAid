@@ -8,9 +8,11 @@ class App extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <Header/>
-                <WelcomePage/>
-                {/* <button onClick={this.props.loadItems}>LOAD ITEMS</button> */}
+                <Header />
+                <div className="footer-fix">
+                    <WelcomePage />
+                    {/* <button onClick={this.props.loadItems}>LOAD ITEMS</button> */}
+                </div>
                 <Footer />
             </React.Fragment>
         )
