@@ -287,6 +287,15 @@ select:hover {
   font-size: 42px;
   font-weight: bold; }
 
+.footer-fix {
+  min-height: calc(84vh - 70px); }
+
+.footer {
+  min-height: 50px; }
+
+.para {
+  margin-left: 35px; }
+
 body {
   background-color: #eee; }
 
