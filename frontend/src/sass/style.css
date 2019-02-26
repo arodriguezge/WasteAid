@@ -133,26 +133,16 @@ select:hover {
   margin: 0 0 -30px 0;
   cursor: pointer; }
 
-.list-container-0 {
+.list-container {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-evenly; }
 
-.list-box-0 {
+.list-box {
   margin: auto; }
 
-.h2-0 {
-  text-align: center;
-  margin-top: 5%;
-  margin-bottom: 5%; }
-
-
-.footer-fix {
-  min-height: calc(84vh - 70px); }
-
-.footer {
-  min-height: 50px; }
+h2 {
+  text-align: center; }
 
 .item-card5 {
   border: 1px solid lightgray;
@@ -278,7 +268,6 @@ select:hover {
 .h4-5 {
   margin-top: 10px; }
 
-
 .nav-text {
   font-size: 18px; }
 
@@ -297,3 +286,5 @@ body {
 
 .btn-secondary {
   background-color: #8b8b8b; }
+
+/*# sourceMappingURL=style.css.map */

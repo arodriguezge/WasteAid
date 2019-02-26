@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import { binDescriptions } from '../binDescriptions'
 
-// corresponding style file: _itemCard.scss
+// corresponding style file: _binDescription.scss
 
 class BinDescrText extends Component {
     render() {
@@ -101,17 +101,17 @@ class BinDescription extends Component {
         }
 
         return (
-            <div className="item-card" id="bin-description">
+            <div className="bin-descr-card2" id="bin-description">
                 <div>
-                    <div className="card-title">{binTitle}</div>
-                    <div className="desrc-toggle-switch" onClick={this.toggleBinDescr} title={this.state.toggleHint}>
+                    <div className="desrc-toggle-switch2" onClick={this.toggleBinDescr} title={this.state.toggleHint}>
                         &nbsp;{this.state.toggleSwitchChar}
                     </div>
+                    <div className="card-title2">{binTitle}</div>
                     { this.state.binDescrVisible ? <BinDescrText descrTxt={binDescriptions[this.props.binColor]}/> : null }
 
                 </div>
                 <div>
-                    <img className="wastebin-icon" src={this.binIconPath()} alt="wastebin icon" title={this.binIconTitle()}/>
+                    <img className="wastebin-icon2" src={this.binIconPath()} alt="wastebin icon" title={this.binIconTitle()}/>
                 </div>
             </div>
         )

@@ -1,13 +1,16 @@
-.list-container {
+.list-container-0 {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-evenly;
 }
 
-.list-box {
+.list-box-0 {
   margin: auto;
 }
 
-h2 {
+.h2-0 {
   text-align: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
