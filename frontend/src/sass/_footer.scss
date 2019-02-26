@@ -1,0 +1,8 @@
+
+// wrapper with a calculation to prevent the page content to overlap with footer. Calculation based on the footer height
+.footer-fix {
+  min-height: calc(84vh - 70px);
+}
+.footer {
+  min-height: 50px;
+}
