@@ -1,5 +1,5 @@
 import React from 'react'
-import component from '../images/Component.png'
+import component from '../images/bin-red-no-label-no-lines.svg'
 import { NavLink } from 'react-router-dom'
 
 
@@ -12,7 +12,7 @@ class Header extends React.Component {
                     <div className="container-fluid md-tabs ">
                         <div className="d-flex img-fluid justify-content-start align-items-center">
                             <span className="display-4 text-dark">RECYCLE </span> &nbsp;
-                            <img src={component} className=" mx-auto " width="50" height="50" alt="" />
+                            <img src={component} className=" mx-auto " width="50" height="50" alt="waste bin icon" />
                             &nbsp;
                             <span className="display-4 text-dark"> DATABASE</span>
                         </div>
