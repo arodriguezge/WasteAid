@@ -6,8 +6,17 @@ import { NavLink } from 'react-router-dom'
 
 
 class Header extends React.Component {
+    state = {
+        navCollapsed: true
+    }
+
+    _onToggleNav = () => {
+        this.setState({ navCollapsed: !this.state.navCollapsed })
+    }
 
     render() {
+        const { navCollapsed } = this.state
+
         return (
             <React.Fragment>
                 <nav className="navbar navbar-expand-md bg-success">
@@ -17,13 +26,14 @@ class Header extends React.Component {
                         <img src={component} className=" mx-auto " width="30" height="30" alt="something" />
                     </span>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarLinks" aria-controls="navbarLinks"
-                        aria-expanded="false" aria-label="Toggle navigation">
+                        aria-expanded="false" aria-label="Toggle navigation" onClick={this._onToggleNav}>
                         <img src={menuButton} className="mx-auto" width="30" height="30" alt="something" />
                         {/* <span className="navbar-toggler-icon"></span> */}
                     </button>
-                    <div className="collapse navbar-collapse justify-content-end" id="navbarLinks">
+                    <div id="navbarLinks" className={(navCollapsed ? 'collapse justify-content-end' : '') + ' navbar-collapse '}
+                    >
 
-                        <ul className="navbar-nav  ">
+                        <ul className="navbar-nav">
                             <li className="nav-item">
                                 <NavLink to="/" className="nav-link nav-text text-white active">Home</NavLink>
                             </li>
