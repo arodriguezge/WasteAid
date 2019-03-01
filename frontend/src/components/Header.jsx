@@ -1,6 +1,7 @@
 import React from 'react'
 import component from '../images/bin-red-no-label-no-lines.svg'
 import component2 from '../images/bin-yellow-no-label.svg'
+import menuButton from '../images/menu-button.svg'
 import { NavLink } from 'react-router-dom'
 
 
@@ -17,7 +18,7 @@ class Header extends React.Component {
                     </span>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarLinks" aria-controls="navbarLinks"
                         aria-expanded="false" aria-label="Toggle navigation">
-                        <img src={component} className="mx-auto" width="30" height="30" alt="something" />
+                        <img src={menuButton} className="mx-auto" width="30" height="30" alt="something" />
                         {/* <span className="navbar-toggler-icon"></span> */}
                     </button>
                     <div className="collapse navbar-collapse justify-content-end" id="navbarLinks">
