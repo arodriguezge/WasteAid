@@ -10,7 +10,7 @@ class Header extends React.Component {
         navCollapsed: true
     }
 
-    _onToggleNav = () => {
+    onToggleNav = () => {
         this.setState({ navCollapsed: !this.state.navCollapsed })
     }
 
@@ -26,7 +26,7 @@ class Header extends React.Component {
                         <img src={component} className=" mx-auto " width="30" height="30" alt="something" />
                     </span>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarLinks" aria-controls="navbarLinks"
-                        aria-expanded="false" aria-label="Toggle navigation" onClick={this._onToggleNav}>
+                        aria-expanded="false" aria-label="Toggle navigation" onClick={this.onToggleNav}>
                         <img src={menuButton} className="mx-auto" width="30" height="30" alt="something" />
                         {/* <span className="navbar-toggler-icon"></span> */}
                     </button>
