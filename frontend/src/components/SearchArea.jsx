@@ -97,7 +97,6 @@ class SearchArea extends React.Component {
         return (
             <React.Fragment>
                 <Header/>
-                <div className="footer-fix">
                     <div className="container">
                       
                         <h4 className="h4-2">Search Area</h4>
@@ -168,7 +167,6 @@ class SearchArea extends React.Component {
                         </div>
                     
                     </div>
-                </div>
                 <Footer />
             </React.Fragment>
         )
