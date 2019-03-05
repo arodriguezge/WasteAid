@@ -3,14 +3,8 @@ import EditTicket from './EditTicket'
 
 // corresponding style file: _ticket.scss
 
-class ItemDescription extends Component {
-    render() {
-        return (
-            <div>
-                {this.props.descr}
-            </div>
-        )
-    }
+function ItemDescription (props) {
+        return <div>{props.descr}</div>
 }
 
 class Ticket extends Component {
@@ -112,7 +106,7 @@ class Ticket extends Component {
                     </tr>
                     <tr>
                         <td colSpan="2">
-                            {this.state.itemDescrVisible ? <ItemDescription descr={this.props.item.description}/> : null}
+                            {this.state.itemDescrVisible ? <ItemDescription descr={this.props.item.description} /> : null}
                         </td>
                     </tr>
                     </tbody>
