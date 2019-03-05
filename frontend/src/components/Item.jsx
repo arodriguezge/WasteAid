@@ -2,14 +2,8 @@ import React, {Component} from 'react'
 
 // corresponding style file: _item.scss
 
-class ItemDescription extends Component {
-    render() {
-        return (
-            <div>
-                {this.props.descr}
-            </div>
-        )
-    }
+function ItemDescription(props) {
+        return <div>{props.descr}</div>
 }
 
 class Item extends Component {
@@ -90,7 +84,7 @@ class Item extends Component {
                         &nbsp;{this.state.toggleSwitchChar}
                     </div>
                     <div className="card-title1">{this.props.item.name}</div>
-                    { this.state.itemDescrVisible ? <ItemDescription descr={this.props.item.description}/> : null }
+                    {this.state.itemDescrVisible ? <ItemDescription descr={this.props.item.description}/> : null}
 
                 </div>
                 <div>

@@ -3,14 +3,8 @@ import { binDescriptions } from '../binDescriptions'
 
 // corresponding style file: _binDescription.scss
 
-class BinDescrText extends Component {
-    render() {
-        return (
-            <div>
-                {this.props.descrTxt}
-            </div>
-        )
-    }
+function BinDescrText(props) {
+        return <div>{props.descrTxt}</div>
 }
 
 class BinDescription extends Component {
@@ -107,7 +101,7 @@ class BinDescription extends Component {
                         &nbsp;{this.state.toggleSwitchChar}
                     </div>
                     <div className="card-title2">{binTitle}</div>
-                    { this.state.binDescrVisible ? <BinDescrText descrTxt={binDescriptions[this.props.binColor]}/> : null }
+                    {this.state.binDescrVisible ? <BinDescrText descrTxt={binDescriptions[this.props.binColor]}/> : null}
 
                 </div>
                 <div>
