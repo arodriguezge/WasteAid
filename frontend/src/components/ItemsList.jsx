@@ -11,7 +11,6 @@ class ItemList extends Component {
         return (
             <React.Fragment>
                 <Header/>
-                <div className="footer-fix">
                     <div className="container">
                         <h4 className="h4-5">Approved Items</h4>
                         {Object.keys(this.props.items).map((index) => {
@@ -21,7 +20,6 @@ class ItemList extends Component {
                             return ''
                         })}
                     </div>
-                </div>
                 <Footer/>
             </React.Fragment>
         )

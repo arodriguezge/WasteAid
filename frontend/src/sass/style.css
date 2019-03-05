@@ -32,6 +32,7 @@
 
 .bin-icon-container2 {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 9px; }
 
@@ -118,7 +119,7 @@ select:hover {
 .form-submit-hint3 {
   border-radius: 5px;
   background-color: #70e1e9;
-  padding: 8px 20px 15px 20px;
+  padding: 8px 18px 15px 18px;
   z-index: 1;
   margin: auto;
   position: absolute;
@@ -131,18 +132,32 @@ select:hover {
   font-size: 1.5rem;
   text-align: right;
   margin: 0 0 -30px 0;
-  cursor: pointer; }
+  cursor: pointer;
+  font-weight: bold; }
 
-.list-container {
+.list-container-0 {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-evenly; }
 
-.list-box {
+.list-box-0 {
   margin: auto; }
 
-h2 {
-  text-align: center; }
+.h2-0 {
+  text-align: center;
+  margin-top: 5%;
+  margin-bottom: 5%; }
+
+footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  /* background-color: #efefef; */
+  /* text-align: center; */
+  z-index: -1; }
 
 .item-card5 {
   border: 1px solid lightgray;
@@ -278,11 +293,36 @@ h2 {
   font-size: 42px;
   font-weight: bold; }
 
-body {
-  background-color: #eee; }
+footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  /* background-color: #efefef; */
+  /* text-align: center; */
+  z-index: -1; }
 
-* {
+.para {
+  margin-left: 35px; }
+
+html {
+  height: 100%;
+  box-sizing: border-box; }
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  box-sizing: border-box !important;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; }
+
+body {
+  position: relative;
+  margin: 0;
+  padding-bottom: 6rem;
+  min-height: 100%;
+  background-color: #eee; }
 
 .btn-secondary {
   background-color: #8b8b8b; }
