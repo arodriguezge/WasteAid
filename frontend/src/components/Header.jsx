@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '..images/wDA-Logo-grey-orange-green-blue.svg'
+import logo from '..images/WDA-Logo-grey-orange-green-blue.svg'
 import component from '../images/bin-red-no-label-no-lines.svg'
 import component2 from '../images/bin-yellow-no-label.svg'
 import menuButton from '../images/menu-button.svg'
