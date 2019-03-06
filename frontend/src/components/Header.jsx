@@ -1,4 +1,5 @@
 import React from 'react'
+import logo from '..images/wDA-Logo-grey-orange-green-blue.svg'
 import component from '../images/bin-red-no-label-no-lines.svg'
 import component2 from '../images/bin-yellow-no-label.svg'
 import menuButton from '../images/menu-button.svg'
@@ -21,6 +22,7 @@ class Header extends React.Component {
             <React.Fragment>
                 <nav className="navbar navbar-expand-md bg-success">
                     <span className="navbar-brand">
+                        <img src={logo} className="mx-auto" width="30" height="30" alt="logo" />
                         <img src={component} className="mx-auto" width="30" height="30" alt="something" />
                         <img src={component2} className="mx-auto" width="40" height="30" alt="something" />
                         <img src={component} className=" mx-auto " width="30" height="30" alt="something" />
