@@ -293,6 +293,15 @@ footer {
   font-size: 42px;
   font-weight: bold; }
 
+.label-0 {
+  width: 35%;
+  height: 35%; }
+
+.label-1 {
+  font-size: 1.55rem;
+  font-weight: bold;
+  color: #888888; }
+
 footer {
   position: absolute;
   right: 0;

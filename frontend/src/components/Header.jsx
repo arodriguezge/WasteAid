@@ -1,6 +1,6 @@
 import React from 'react'
-import component from '../images/bin-red-no-label-no-lines.svg'
-import component2 from '../images/bin-yellow-no-label.svg'
+import logoText from '../images/WDA-Label-153-153-153.svg'
+import logo from '../images/WDA-Logo-grey-orange-green-blue.svg'
 import menuButton from '../images/menu-button.svg'
 import { NavLink } from 'react-router-dom'
 
@@ -19,11 +19,10 @@ class Header extends React.Component {
 
         return (
             <React.Fragment>
-                <nav className="navbar navbar-expand-md bg-success">
-                    <span className="navbar-brand">
-                        <img src={component} className="mx-auto" width="30" height="30" alt="something" />
-                        <img src={component2} className="mx-auto" width="40" height="30" alt="something" />
-                        <img src={component} className=" mx-auto " width="30" height="30" alt="something" />
+                <nav className="navbar navbar-expand-lg bg-success">
+                    <span className="navbar-brand pb-0 pt-0">
+                        <img src={logo} className="mx-auto " width="50" height="50" alt="logo" />&nbsp; &nbsp;
+                        <img src={logoText} className="mx-auto" width="250" height="50" alt="logo" />
                     </span>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarLinks" aria-controls="navbarLinks"
 
