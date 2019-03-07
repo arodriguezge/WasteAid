@@ -28,7 +28,7 @@ const RecommendedLinks = props => {
                             </li>
                         <li><b>Recycling</b> of litter is the most sustainable and environment-friendly way of
                                 treating rubbish and should be preferred.<br /> This requires the consumers'
-                        support as they need to sort their refuse and dispose of it separately.
+            support as they need to sort their refuse and dispose of it separately.
                             </li>
                     </ul>
                 </div>
@@ -43,7 +43,7 @@ const RecommendedLinks = props => {
                         target="_blank"
                         rel="noopener noreferrer">https://www.aliadventures.com/2013/02/how-to-throw-out-your-garbage-in-germany/</a>
                     <br />
-                    <a href="https://www.infomigrants.net/en/post/5817/step-by-step-how-to-recycle-in-germany" target="_blank" rel="noopener noreferrer">http://google.com</a>
+                    <a href="https://www.infomigrants.net/en/post/5817/step-by-step-how-to-recycle-in-germany" target="_blank" rel="noopener noreferrer">https://www.infomigrants.net/en/post/5817/step-by-step-how-to-recycle-in-germany</a>
                 </div>
 
             </div>
