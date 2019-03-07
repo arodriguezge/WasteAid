@@ -116,25 +116,25 @@ class SearchArea extends React.Component {
                         <div>
                             <p className="p2-1">... or click a waste bin icon for a description.</p>
                             <div className="bin-icon-container2">
-                                <img className="img2" src="../images/bin-blue-labelled.svg" alt="wastebin icon"
+                                <img className="img2" src="../images/bin2-blue-labelled.svg" alt="wastebin icon"
                                      title="bin for paper and cardboard"
                                      onClick={() => this.binIconClick("blue")}/>
-                                <img className="img2" src="../images/bin-green-labelled.svg" alt="wastebin icon"
+                                <img className="img2" src="../images/bin2-green-labelled.svg" alt="wastebin icon"
                                      title="bin for green glass"
                                      onClick={() => this.binIconClick("green")}/>
-                                <img className="img2" src="../images/bin-white-labelled.svg" alt="wastebin icon"
+                                <img className="img2" src="../images/bin2-white1-labelled.svg" alt="wastebin icon"
                                      title="bin for white glass"
                                      onClick={() => this.binIconClick("white")}/>
-                                <img className="img2" src="../images/bin-yellow-dark-font.svg" alt="wastebin icon"
+                                <img className="img2" src="../images/bin2-yellow-labelled.svg" alt="wastebin icon"
                                      title="bin for plastic, metal, Green Dot"
                                      onClick={() => this.binIconClick("yellow")}/>
-                                <img className="img2" src="../images/bin-brown-labelled.svg" alt="wastebin icon"
+                                <img className="img2" src="../images/bin2-brown1-labelled.svg" alt="wastebin icon"
                                      title="bin for bio waste"
                                      onClick={() => this.binIconClick("brown")}/>
-                                <img className="img2" src="../images/bin-darkgray-labelled.svg" alt="wastebin icon"
+                                <img className="img2" src="../images/bin2-grey-labelled.svg" alt="wastebin icon"
                                      title="bin for residual waste"
                                      onClick={() => this.binIconClick("grey")}/>
-                                <img className="img2" src="../images/bin-red-labelled.svg" alt="wastebin icon"
+                                <img className="img2" src="../images/bin2-white2-labelled.svg" alt="wastebin icon"
                                      title="none of the bins, separate disposal"
                                      onClick={() => this.binIconClick("none")}/>
                             </div>

@@ -51,19 +51,19 @@ class Ticket extends Component {
         //console.log(this.props.item.description);
         switch (this.props.item.bin) {
             case 'blue':
-                return "../images/bin-blue-no-label.svg";
+                return "../images/bin2-blue-no-label.svg";
             case 'green':
-                return "../images/bin-green-no-label.svg";
+                return "../images/bin2-green-no-label.svg";
             case 'white':
-                return "../images/bin-white-no-label.svg";
+                return "../images/bin2-white-no-label.svg";
             case 'yellow':
-                return "../images/bin-yellow-no-label.svg";
+                return "../images/bin2-yellow-no-label.svg";
             case 'brown':
-                return "../images/bin-brown-no-label.svg";
+                return "../images/bin2-brown-no-label.svg";
             case 'grey':
-                return "../images/bin-darkgray-no-label.svg";
+                return "../images/bin2-grey-no-label.svg";
             case 'none':
-                return "../images/bin-red-no-label-no-hole.svg";
+                return "../images/bin2-white-traffic-sign.svg";
             default:
                 return null;
         }
