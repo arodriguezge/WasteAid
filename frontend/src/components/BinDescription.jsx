@@ -86,6 +86,27 @@ class BinDescription extends Component {
         }
     };
 
+    binSecondClassName() {
+        switch(this.props.binColor) {
+            case 'blue':
+                return "blueBackground";
+            case 'green':
+                return "greenBackground";
+            case 'white':
+                return "whiteBackground";
+            case 'yellow':
+                return "yellowBackground";
+            case 'brown':
+                return "brownBackground";
+            case 'grey':
+                return "greyBackground";
+            case 'none':
+                return "noneBackground";
+            default:
+                return null;
+        }
+    }
+
     render() {
         let binTitle;
         if (this.props.binColor === "none") {
@@ -95,7 +116,7 @@ class BinDescription extends Component {
         }
 
         return (
-            <div className="bin-descr-card2" id="bin-description">
+            <div className={`bin-descr-card2 ${this.binSecondClassName()}`} id="bin-description">
                 <div>
                     <div className="desrc-toggle-switch2" onClick={this.toggleBinDescr} title={this.state.toggleHint}>
                         &nbsp;{this.state.toggleSwitchChar}
