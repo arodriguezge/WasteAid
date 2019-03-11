@@ -2,8 +2,17 @@ const Item = require('../models/Item')
 
 module.exports = {
     index: async (req, res, next) => {
-        const items = await Item.find({})
-        res.status(200).json(items)
+        try {
+            if (req.query.q) {
+                const items = await Item.find({$text: {$search: req.query.q}})
+                res.status(200).json(items)
+            } else {
+                const items = await Item.find({})
+                res.status(200).json(items)
+            }
+        } catch(e) {
+            console.log(e)
+        }
     },
     newItem: async (req, res, next) => {
         const newItem = new Item(req.body)
