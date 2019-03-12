@@ -1,6 +1,5 @@
 import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
-//import App from './App'
 import WelcomePage from './WelcomePage'
 import AboutUs from './AboutUs'
 import RecommendedLinks from './RecommendedLinks'
@@ -86,9 +85,6 @@ class Router extends React.Component {
                     <Route path="/items" component={withProps(ItemsList, { items: this.state.items })} />
                     <Route path="/admin/tickets" component={withProps(TicketList, { items: this.state.items, editItem: this.editItem, removeItem: this.removeItem, approveItem: this.approveItem })} />
                     <Route path="/searchArea" component={withProps(SearchArea, { items: this.state.items })} />
-                    <Route path="/add" component={withProps(AddItemForm, { addItem: this.addItem })} />
-                    <Route path="/items" component={withProps(ItemsList, { items: this.state.items })} />
-                    <Route path="/admin/tickets" component={withProps(TicketList, { items: this.state.items, editItem: this.editItem, removeItem: this.removeItem, approveItem: this.approveItem })} />
 
                     {/* <Route path="/adminFrame" component={AdminFrame} /> */}
                     {/* <Route component={NotFound} /> */}
