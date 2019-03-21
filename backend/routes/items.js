@@ -9,15 +9,16 @@ const {
     removeItem
 } = require('../controllers/itemsController')  
 
-// GET all items
+
+// GET items - by querying
 router.get('/', index)
 // POST create item create
-router.post('/create', newItem)
+router.post('/', newItem)
 // GET specific item
 router.get('/:id', getItem)
 // PATCH edit item
-router.patch('/edit/:id', editItem)
+router.patch('/:id', editItem)
 // DELETE item
-router.delete('/remove/:id', removeItem)
+router.delete('/:id', removeItem)
 
 module.exports = router
