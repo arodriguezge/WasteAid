@@ -15,7 +15,7 @@ const ItemSchema = new Schema({
     },
     bin: {
         type: String,
-        required: 'You must provide color of the bin'
+        required: 'You must provide color of the bin',
     },
     approved: {
         type: Boolean,
@@ -26,5 +26,7 @@ const ItemSchema = new Schema({
         default: Date.now
     }
 })
+
+ItemSchema.index({ name: 'text', description: 'text' })
 
 module.exports = mongoose.model('Item', ItemSchema)
