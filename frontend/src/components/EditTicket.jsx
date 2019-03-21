@@ -1,4 +1,6 @@
 import React, {Component} from 'react'
+import { connect } from 'react-redux'
+import { editItem } from '../actions/index'
 
 // corresponding style file: _editTicketForm.scss
 
@@ -9,11 +11,12 @@ class EditTicket extends Component {
 
     handleSubmit = event => {
         event.preventDefault();
-        const name = this.name.current.value
-        const description = this.description.current.value
-        const bin = this.bin.current.value
-        const id = this.props.item._id
-        this.props.editItem(id, name, description, bin)
+        this.props.editItem(
+            this.props.item._id,
+            this.name.current.value,
+            this.description.current.value,
+            this.bin.current.value
+        )
         event.currentTarget.reset()
         this.props.toggleHidden()
     }
@@ -58,4 +61,10 @@ class EditTicket extends Component {
     }
 }
 
-export default EditTicket
+const mapStateToProps = ({ items }) => {
+    return { items }
+}
+
+export default connect(mapStateToProps, {
+    editItem: editItem,
+})(EditTicket)

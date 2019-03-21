@@ -1,20 +1,22 @@
 import React from 'react'
-import Header from './Header'
-import Footer from './Footer'
-import Item from './Item'
-import BinDescription from './BinDescription'
-import axios from 'axios'
+import { connect } from 'react-redux'
+import Item from '../components/Item'
+import Footer from '../components/Footer'
+import Header from '../components/Header'
+import { fetchQuery } from '../actions/index'
+import { fetchBin } from '../actions/index'
 
-const BACKEND_URI = `http://localhost:5000`
+import BinDescription from '../components/BinDescription'
+
+
+//CHECK THIS ONE
 
 class NoSearchResultsHint extends React.Component {
     render() {
         return (
-
             <div className="no-results-hint2">
                 <b>No results found.</b><br/>
                 You can propose the search item as a database entry.<br/>
-
                 If so, please go to "Add an Item".
             </div>
         )
@@ -22,61 +24,43 @@ class NoSearchResultsHint extends React.Component {
 }
 
 class SearchArea extends React.Component {
-        state = {
-            wasteBinColor: "",
-            itemName: "",
-            noResultsHintVisible: false,
-            items: []
-        }
-
+    state = {
+        wasteBinColor: "",
+        noResultsHintVisible: false
+    }
+    
     query = React.createRef()
 
     handleSubmit = event => {
         event.preventDefault()
-        const query = this.query.current.value
-        axios.get(`${BACKEND_URI}/api/items/`, {params: {
-            q: query
-        }})
-          .then((res) => {
-              if(res.status === 200) {
-                if (res.data.length === 0) {
-                    this.setState({
-                        noResultsHintVisible: true,
-                        items: []
-                    })
-                } else {
-                    const items = res.data
-                    this.setState({
-                        noResultsHintVisible: false,
-                        items: items,
-                        wasteBinColor: ''
-                    })
-                }
-              } else {
-                console.log('ups something went wrong')
-              }
-          })
-          event.currentTarget.reset()
+        this.props.fetchQuery(this.query.current.value)
+        if (this.props.items.data.length === 0) {
+            this.setState({
+                wasteBinColor: '',
+                noResultsHintVisible: true
+            })
+
+            //SEE THIS!!!
+            setTimeout(() => {
+                this.setState({
+                    noResultsHintVisible: false
+                })
+            }, 5000)
+        } else {
+            this.setState({
+                wasteBinColor: '',
+                noResultsHintVisible: false
+            })
+        }
+        event.currentTarget.reset()
     }
 
     binIconClick = binColor => {
-        axios.get(`${BACKEND_URI}/api/items/`)
-          .then((res) => {
-                if (res.status === 200) {
-                    let items = []
-                    for (let i in res.data) {
-                        if (res.data[i].bin === binColor)
-                        items.push(res.data[i])
-                    }
-                    this.setState({
-                        wasteBinColor: binColor,
-                        noResultsHintVisible: false,
-                        items: items
-                    })
-                } else {
-                    console.log('ups something went wrong')  
-                }
-            })
+        this.props.fetchBin(binColor)
+        this.setState({
+            wasteBinColor: binColor,
+            noResultsHintVisible: false
+        })
     }
 
     render() {
@@ -131,15 +115,12 @@ class SearchArea extends React.Component {
                             {this.state.wasteBinColor ? <BinDescription binColor={this.state.wasteBinColor}/> : null}
 
                             {/* search for item query */}
-                            {Object.keys(this.state.items).map((item, index) => {
-                                if (this.state.items[item].approved) {
-                                    return <Item item={this.state.items[item]} key={`item ${index}`}/>
-                                }
-                                return ""
+                            {this.props.items.data.map(item => {
+                                    return <Item item={item} key={`item ${item._id}`}/>
                             })}
 
-                            {/* this.checkResults() */}
-                            { this.state.noResultsHintVisible ? <NoSearchResultsHint/> : null }
+                            {/* non result found */}
+                            {this.state.noResultsHintVisible ? <NoSearchResultsHint/> : null}
                             
                         </div>
                     
@@ -150,4 +131,11 @@ class SearchArea extends React.Component {
     }
 }
 
-export default SearchArea
+const mapStateToProps = ({ items }) => {
+    return { items }
+}
+
+export default connect(mapStateToProps, {
+    fetchQuery: fetchQuery,
+    fetchBin: fetchBin 
+})(SearchArea)
