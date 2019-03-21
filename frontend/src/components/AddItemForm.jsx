@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import Header from './Header'
 import Footer from './Footer'
+import { connect } from 'react-redux'
+import { addItem } from '../actions'
 
 // corresponding style file: _addItemForm.scss
 
@@ -36,10 +38,7 @@ class AddItemForm extends Component {
 
     handleSubmit = event => {
         event.preventDefault();
-        const name = this.name.current.value;
-        const description = this.description.current.value;
-        const bin = this.bin.current.value;
-        this.props.addItem(name, description, bin);
+        this.props.addItem(this.name.current.value, this.description.current.value, this.bin.current.value)
         event.currentTarget.reset();
         this.toggleHidden()
     };
@@ -91,4 +90,5 @@ class AddItemForm extends Component {
     }
 }
 
-export default AddItemForm
+export default connect(null, {addItem: addItem})(AddItemForm)
+

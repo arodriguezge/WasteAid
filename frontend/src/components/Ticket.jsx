@@ -1,5 +1,7 @@
 import React, {Component} from 'react'
+import { connect } from 'react-redux'
 import EditTicket from './EditTicket'
+import { removeItem, approveTicket } from '../actions/index'
 
 // corresponding style file: _ticket.scss
 
@@ -97,7 +99,7 @@ class Ticket extends Component {
                             <div className="card-title5">{this.props.item.name}</div>
                         </td>
                         <td className="buttons-and-icon5">
-                            <button className="button5" onClick={() => {this.props.approveItem(this.props.item._id)}}>approve</button>
+                            <button className="button5" onClick={() => {this.props.approveTicket(this.props.item._id)}}>approve</button>
                             <button className="button5" onClick={this.toggleHidden.bind(this)}>edit</button>
                             {!this.state.isHidden && <EditTicket item={this.props.item} editItem={this.props.editItem} toggleHidden={this.toggleHidden}/>}
                             <button className="button5" onClick={() => {this.props.removeItem(this.props.item._id)}}>remove</button>
@@ -116,4 +118,7 @@ class Ticket extends Component {
     }
 }
 
-export default Ticket
+export default connect(null, { 
+    removeItem: removeItem,
+    approveTicket: approveTicket
+})(Ticket)

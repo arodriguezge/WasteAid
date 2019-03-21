@@ -2,7 +2,7 @@ import React from 'react';
 import Footer from './Footer'
 import Header from './Header'
 
-const WelcomePage = props => {
+const WelcomePage = () => {
 
     return (
         <React.Fragment>
