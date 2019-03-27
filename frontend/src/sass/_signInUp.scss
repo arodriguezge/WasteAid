@@ -1,0 +1,30 @@
+.form-box {
+    width: 45%;
+    text-align: left;
+  
+    border-radius: 5px;
+    background-color: white;
+    padding: 8px 20px 15px 20px;
+    z-index: 1;
+    margin: auto;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    -ms-transform: translate(-50%);
+    transform: translate(-50%);
+  }
+  
+  .popup-container {
+    position:fixed;
+    padding:0;
+    margin:0;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background:rgba(7, 7, 7, 0.8);
+  }
+  
+  .btn-success {
+    background-color: #12A065 !important;
+  }
