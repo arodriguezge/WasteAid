@@ -1,6 +1,6 @@
 import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
-import App from './App'
+import WelcomePage from './WelcomePage'
 import AboutUs from './AboutUs'
 import RecommendedLinks from './RecommendedLinks'
 import AddItemForm from './AddItemForm'
@@ -16,7 +16,7 @@ class Router extends React.Component {
         return (
             <BrowserRouter>
                 <Switch>
-                    <Route exact path="/" component={App} />
+                    <Route exact path="/" component={WelcomePage} />
                     <Route path="/aboutUs" component={AboutUs} />
                     <Route path="/recommendedLinks" component={RecommendedLinks} />
 
