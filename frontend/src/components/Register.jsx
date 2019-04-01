@@ -1,12 +1,14 @@
 import React, { Component } from 'react'
 import closeButton from '../images/close-button.svg'
 
+// corresponding style file: _registerLogIn.scss
+
 class Register extends Component {
 
     handleSubmit = event => {
         event.preventDefault();
-        this.props.addAdmin(this.name.current.value, this.emailAddress.current.value, this.password.current.value, this.passwordConfirm.current.value)
-
+        // function  addAdmin needs to be created, then add next line:
+        // this.props.addAdmin(this.name.current.value, this.emailAddress.current.value, this.password.current.value, this.passwordConfirm.current.value)
     }
 
     name = React.createRef();
@@ -24,13 +26,11 @@ class Register extends Component {
                     </div>
                     <br />
 
-
                     <form onSubmit={this.handleSubmit}>
                         <div>
                             <input type="text" className="form-control" placeholder="Name" required={true} ref={this.name} />
                         </div>
                         <br />
-
                         <div>
                             <input type="email" className="form-control" placeholder="Email address" required={true} ref={this.emailAddress} />
                         </div>
@@ -46,7 +46,6 @@ class Register extends Component {
                         <br />
                         <div>
                             <button className="btn btn-success btn-block p-2" type="submit"><b>Register</b></button>
-
                         </div>
                     </form>
                     <br />
