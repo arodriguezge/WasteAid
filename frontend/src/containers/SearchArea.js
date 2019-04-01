@@ -1,69 +1,56 @@
 import React from 'react'
 import { connect } from 'react-redux'
+
 import Item from '../components/Item'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
-import { fetchQuery } from '../actions/index'
-import { fetchBin } from '../actions/index'
-
+import Loading from '../components/Loading'
+import NoSearchResultsHint from '../components/NoSearchResultsHint'
 import BinDescription from '../components/BinDescription'
 
+import {
+    fetchQuery,
+    fetchBin,
+    resetItemsState
+} from '../actions/index'
 
-//CHECK THIS ONE
-
-class NoSearchResultsHint extends React.Component {
-    render() {
-        return (
-            <div className="no-results-hint2">
-                <b>No results found.</b><br/>
-                You can propose the search item as a database entry.<br/>
-                If so, please go to "Add an Item".
-            </div>
-        )
-    }
-}
 
 class SearchArea extends React.Component {
     state = {
-        wasteBinColor: "",
-        noResultsHintVisible: false
+        wasteBinColor: ""
     }
-    
+
     query = React.createRef()
 
     handleSubmit = event => {
         event.preventDefault()
         this.props.fetchQuery(this.query.current.value)
-        if (this.props.items.data.length === 0) {
-            this.setState({
-                wasteBinColor: '',
-                noResultsHintVisible: true
-            })
-
-            //SEE THIS!!!
-            setTimeout(() => {
-                this.setState({
-                    noResultsHintVisible: false
-                })
-            }, 5000)
-        } else {
-            this.setState({
-                wasteBinColor: '',
-                noResultsHintVisible: false
-            })
-        }
-        event.currentTarget.reset()
     }
 
     binIconClick = binColor => {
         this.props.fetchBin(binColor)
         this.setState({
             wasteBinColor: binColor,
-            noResultsHintVisible: false
         })
     }
 
+    componentDidMount = () => {
+        this.props.resetItemsState()
+    }
+
     render() {
+        let searchResult
+        if(this.props.items.loading) {
+            searchResult = <Loading />
+        } else {
+            if (this.props.items.data.length === 0 && this.props.items.success) {
+                searchResult = <NoSearchResultsHint />
+            } else {
+                searchResult = this.props.items.data.map(item => {
+                    return <Item item={item} key={`item ${item._id}`}/>
+                })
+            }
+        }
         return (
             <React.Fragment>
                 <Header/>
@@ -111,16 +98,12 @@ class SearchArea extends React.Component {
                         </div>
                     
                         <div>
-                            {/* search specific waste bin */}
+                            
+                            {/* specific bin clicked */}
                             {this.state.wasteBinColor ? <BinDescription binColor={this.state.wasteBinColor}/> : null}
 
-                            {/* search for item query */}
-                            {this.props.items.data.map(item => {
-                                    return <Item item={item} key={`item ${item._id}`}/>
-                            })}
-
-                            {/* non result found */}
-                            {this.state.noResultsHintVisible ? <NoSearchResultsHint/> : null}
+                            {/* result of search by item - query - bin color */}
+                            {searchResult}
                             
                         </div>
                     
@@ -137,5 +120,6 @@ const mapStateToProps = ({ items }) => {
 
 export default connect(mapStateToProps, {
     fetchQuery: fetchQuery,
-    fetchBin: fetchBin 
+    fetchBin: fetchBin,
+    resetItemsState: resetItemsState
 })(SearchArea)

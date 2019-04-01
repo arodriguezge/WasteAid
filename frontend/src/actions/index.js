@@ -1,37 +1,7 @@
 import axios from 'axios'
+import * as types from './actionTypes'
 
 const BACKEND_URI = `http://localhost:5000/api/items/`
-
-export const QUERY_LOADING = 'QUERY_LOADING'
-export const FETCH_QUERY_SUCCESS = 'FETCH_QUERY_SUCCESS'
-export const FETCH_QUERY_FAILURE = 'FETCH_QUERY_FAILURE'
-
-export const BIN_LOADING = 'BIN_LOADING'
-export const FETCH_BIN_SUCCESS = 'FETCH_BIN_SUCCESS'
-export const FETCH_BIN_FAILURE = 'FETCH_BIN_FAILURE'
-
-export const APPROVED_ITEMS_LOADING = 'APPROVED_ITEMS_LOADING'
-export const FETCH_APPROVED_ITEMS_SUCCESS = 'FETCH_APPROVED_ITEMS_SUCCESS'
-export const FETCH_APPROVED_ITEMS_FAILURE = 'FETCH_APPROVED_ITEMS_FAILURE'
-
-export const TICKETS_LOADING = 'TICKETS_LOADING'
-export const FETCH_TICKETS_SUCCESS = 'FETCH_TICKETS_SUCCESS'
-export const FETCH_TICKETS_FAILURE = 'FETCH_TICKETS_FAILURE'
-
-export const ADD_ITEM_STARTED = 'ADD_ITEM_STARTED'
-export const ADD_ITEM_SUCCESS = 'ADD_ITEM_SUCCESS'
-export const ADD_ITEM_FAILURE = 'ADD_ITEM_FAILURE'
-
-export const REMOVE_ITEM_SUCCESS = 'REMOVE_ITEM_SUCCESS'
-export const REMOVE_ITEM_FAILURE = 'REMOVE_ITEM_SUCCESS'
-
-export const EDIT_ITEM_STARTED = 'EDIT_ITEM_STARTED'
-export const EDIT_ITEM_SUCCESS = 'EDIT_ITEM_SUCCESS'
-export const EDIT_ITEM_FAILURE = 'EDIT_ITEM_FAILURE'
-
-export const APPROVE_TICKET_STARTED = 'APPROVE_TICKET_STARTED'
-export const APPROVE_TICKET_SUCCESS = 'APPROVE_TICKET_SUCCESS'
-export const APPROVE_TICKET_FAILURE = 'APPROVE_TICKET_FAILURE'
 
 
 export const fetchQuery = (query) => {
@@ -50,19 +20,19 @@ export const fetchQuery = (query) => {
 }
 
 export const queryLoading = () => ({
-    type: QUERY_LOADING,
+    type: types.QUERY_LOADING,
     loading: true
 })
 
 export const fetchQuerySuccess = items => ({
-    type: FETCH_QUERY_SUCCESS,
+    type: types.FETCH_QUERY_SUCCESS,
     payload: [
         ...items
     ]
 })
 
 export const fetchQueryFailure = error => ({
-    type: FETCH_QUERY_FAILURE,
+    type: types.FETCH_QUERY_FAILURE,
     payload: [
         error
     ]
@@ -84,19 +54,19 @@ export const fetchBin = (colorBin) => {
 }
 
 export const binLoading = () => ({
-    type: BIN_LOADING,
+    type: types.BIN_LOADING,
     loading: true
 })
 
 export const fetchBinSuccess = items => ({
-    type: FETCH_QUERY_SUCCESS,
+    type: types.FETCH_QUERY_SUCCESS,
     payload: [
         ...items
     ]
 })
 
 export const fetchBinFailure = error => ({
-    type: FETCH_QUERY_FAILURE,
+    type: types.FETCH_QUERY_FAILURE,
     payload: [
         error
     ]
@@ -119,19 +89,19 @@ export const fetchApprovedItems = () => {
 }
 
 export const ApprovedItemsLoading = () => ({
-    type: APPROVED_ITEMS_LOADING,
+    type: types.APPROVED_ITEMS_LOADING,
     loading: true
 })
 
 export const fetchApprovedSuccess = items => ({
-    type: FETCH_APPROVED_ITEMS_SUCCESS,
+    type: types.FETCH_APPROVED_ITEMS_SUCCESS,
     payload: [
         ...items
     ]
 })
 
 export const fetchApprovedFailure = error => ({
-    type: FETCH_APPROVED_ITEMS_FAILURE,
+    type: types.FETCH_APPROVED_ITEMS_FAILURE,
     payload: [
         error
     ]
@@ -153,19 +123,19 @@ export const fetchTickets = () => {
 }
 
 export const ticketsLoading = () => ({
-    type: TICKETS_LOADING,
+    type: types.TICKETS_LOADING,
     loading: true
 })
 
 export const fetchTicketsSuccess = items => ({
-    type: FETCH_TICKETS_SUCCESS,
+    type: types.FETCH_TICKETS_SUCCESS,
     payload: [
         ...items
     ]
 })
 
 export const fetchTicketsFailure = error => ({
-    type: FETCH_TICKETS_FAILURE,
+    type: types.FETCH_TICKETS_FAILURE,
     payload: [
         error
     ]
@@ -184,23 +154,20 @@ export const addItem = ( name, description, bin ) => {
     }
 }
 
-
-//CREATE LOADING WHILE FETCHING DATA
-
 export const addItemStarted = () => ({
-    type: TICKETS_LOADING,
+    type: types.TICKETS_LOADING,
     loading: true
 })
 
 export const addItemSuccess = item => ({
-    type: ADD_ITEM_SUCCESS,
+    type: types.ADD_ITEM_SUCCESS,
     payload: {
         ...item
     }
 })
 
 export const addItemFailure = error => ({
-    type: FETCH_TICKETS_FAILURE,
+    type: types.FETCH_TICKETS_FAILURE,
     payload: [
         error
     ]
@@ -219,14 +186,14 @@ export const removeItem = (id) => {
 }
 
 export const removeItemSuccess = item => ({
-    type: REMOVE_ITEM_SUCCESS,
+    type: types.REMOVE_ITEM_SUCCESS,
     payload: {
         ...item
     }
 })
 
 export const removeItemFailure = error => ({
-    type: ADD_ITEM_FAILURE,
+    type: types.ADD_ITEM_FAILURE,
     payload: {
         error
     }
@@ -246,19 +213,19 @@ export const editItem = (id, name, description, bin) => {
 }
 
 export const editItemStarted = () => ({
-    type: EDIT_ITEM_STARTED,
+    type: types.EDIT_ITEM_STARTED,
     loading: true
 })
 
 export const editItemSuccess = item => ({
-    type: EDIT_ITEM_SUCCESS,
+    type: types.EDIT_ITEM_SUCCESS,
     payload: {
         ...item
     }
 })
 
 export const editItemFailure = error => ({
-    type: EDIT_ITEM_FAILURE,
+    type: types.EDIT_ITEM_FAILURE,
     payload: {
         error
     }
@@ -278,20 +245,25 @@ export const approveTicket = (id) => {
 }
 
 export const approveTicketStarted = () => ({
-    type: APPROVE_TICKET_STARTED,
+    type: types.APPROVE_TICKET_STARTED,
     loading: true
 })
 
 export const approveTicketSuccess = item => ({
-    type: APPROVE_TICKET_SUCCESS,
+    type: types.APPROVE_TICKET_SUCCESS,
     payload: {
         ...item
     }
 })
 
 export const approveTicketFailure = error => ({
-    type: APPROVE_TICKET_FAILURE,
+    type: types.APPROVE_TICKET_FAILURE,
     payload: {
         error
     }
+})
+
+export const resetItemsState = () => ({
+    type: types.RESET_ITEMS,
+    loading: false
 })
