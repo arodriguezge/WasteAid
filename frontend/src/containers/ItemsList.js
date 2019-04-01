@@ -3,14 +3,20 @@ import { connect } from 'react-redux'
 import Item from '../components/Item'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
+import Loading from '../components/Loading'
 import { fetchApprovedItems } from '../actions/index'
+
 
 class ItemsList extends Component {
     componentDidMount = () => {
         this.props.fetchApprovedItems()
     }
-
+    
     render() {
+        let itemsResult
+        if(this.props.items.loading) {
+            itemsResult = <Loading />
+        } 
         return (
             <React.Fragment>
                 <Header/>
@@ -21,8 +27,8 @@ class ItemsList extends Component {
                         })}
                     </div>
 
-                    {/* show loading */}
-                    {/* {!this.props.items.loading && <div>LOADING...</div>} */}
+                    {/* shows loading */}
+                    {itemsResult}
                 <Footer/>
             </React.Fragment>
         )
