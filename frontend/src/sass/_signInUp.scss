@@ -1,3 +1,15 @@
+.popup-container {
+  position:fixed;
+  padding:0;
+  margin:0;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  background:rgba(7, 7, 7, 0.8);
+  
+}
+
 .form-box {
     width: 45%;
     text-align: left;
@@ -13,18 +25,11 @@
     -ms-transform: translate(-50%);
     transform: translate(-50%);
   }
-  
-  .popup-container {
-    position:fixed;
-    padding:0;
-    margin:0;
-    top:0;
-    left:0;
-    width: 100%;
-    height: 100%;
-    background:rgba(7, 7, 7, 0.8);
-  }
-  
+
   .btn-success {
     background-color: #12A065 !important;
+  }
+  .close-btn:hover,
+        .close:focus {
+            cursor: pointer;            
   }

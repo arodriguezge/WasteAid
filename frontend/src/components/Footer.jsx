@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import SignUp from './SignUp';
-import SignIn from './SignIn';
+import Register from './Register';
+import LogIn from './LogIn';
 
 class Footer extends Component {
     state = {
@@ -28,10 +28,10 @@ class Footer extends Component {
 
     render() {
         if (this.state.buttonClicked === 'signup') {
-            return (<SignUp onReset={this.resetButtonClicked} />);
+            return (<Register onReset={this.resetButtonClicked} />);
         }
         if (this.state.buttonClicked === 'signin') {
-            return (<SignIn onReset={this.resetButtonClicked} />);
+            return (<LogIn onReset={this.resetButtonClicked} />);
         }
         return (
             <React.Fragment>
@@ -41,8 +41,8 @@ class Footer extends Component {
                 <br />
 
                 <div className="btn-group-sm" role="group" aria-label="Sign in and Sign up">
-                    <button type="button" className="btn btn-primary" onClick={() => { this.setState({ buttonClicked: 'signup' }) }}>Sign up</button>
-                    <button type="button" className="btn btn-primary" onClick={() => { this.setState({ buttonClicked: 'signin' }) }}>Sign in</button>
+                    <button type="button" className="btn btn-primary" onClick={() => { this.setState({ buttonClicked: 'signup' }) }}>Register</button>
+                    <button type="button" className="btn btn-primary" onClick={() => { this.setState({ buttonClicked: 'signin' }) }}>Log in</button>
 
                 </div>
                 <footer className="page-footer font-small bg-success p-0 ">
