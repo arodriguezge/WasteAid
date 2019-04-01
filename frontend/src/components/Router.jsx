@@ -9,6 +9,8 @@ import TicketList from '../containers/TicketList'
 import ItemsList from '../containers/ItemsList'
 import SearchArea from '../containers/SearchArea'
 
+import MapSearch from './MapSearch'
+
 
 class Router extends React.Component {
 
@@ -24,6 +26,7 @@ class Router extends React.Component {
                     <Route path="/items" component={ItemsList} />
                     <Route path="/admin/tickets" component={TicketList} />
                     <Route path="/searchArea" component={SearchArea} />
+                    <Route path="/mapSearch" component={MapSearch} />
                     
                     {/* <Route path="/adminFrame" component={AdminFrame} /> */}
                     {/* <Route component={NotFound} /> */}

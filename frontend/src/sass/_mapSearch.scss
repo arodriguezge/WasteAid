@@ -1,0 +1,30 @@
+.category-button {
+  margin: 2px;
+  height: 28px;
+  padding-top: 3px;
+}
+
+.h4-map-search {
+  margin-top: 10px;
+  margin-left: 4px;
+}
+
+.p-map-search {
+  margin-left: 4px;
+  margin-bottom: 5px;
+}
+
+/* map properties */
+.leaflet-container {
+  /* height: calc(70vh - 120px); */
+  height: calc(80vh - 155px);
+  /* height: 330px; */
+  width: 100%;
+  margin-top: 12px;
+}
+
+hr {
+  margin-top: 4px;
+  margin-bottom: 4px;
+  background-color: #ececec;
+}
