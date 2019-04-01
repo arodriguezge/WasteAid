@@ -9,6 +9,7 @@ const itemsRouter = require('./routes/items')
 
 const DB_URI = `mongodb://localhost:27017/recycling_db`
 const FRONTEND_URI = `http://localhost:3000`
+const port = process.env.PORT || 5000
 
 const app = express()
 
@@ -51,7 +52,5 @@ mongoose
 // routes
 app.use('/', indexRouter)
 app.use('/api/items', itemsRouter)
-
-const port = process.env.PORT || 5000
 
 app.listen(port, () => console.log(`Server started on port ${port}`))
