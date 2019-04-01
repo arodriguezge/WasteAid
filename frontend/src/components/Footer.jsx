@@ -10,21 +10,6 @@ class Footer extends Component {
         this.setState({ buttonClicked: null });
     }
 
-    // state = {
-    //     isHidden: true
-    // };
-
-    // toggleHidden = () => {
-    //     this.setState({
-    //         isHidden: !this.state.isHidden
-    //     })
-    // };
-
-    // handleSubmit = event => {
-    //     event.preventDefault();
-    //     event.currentTarget.reset();
-    //     this.toggleHidden()
-    // };
 
     render() {
         if (this.state.buttonClicked === 'signup') {
@@ -35,10 +20,7 @@ class Footer extends Component {
         }
         return (
             <React.Fragment>
-                <br />
-                <br />
-                <br />
-                <br />
+                <div className="m-3"></div>
 
                 <div className="btn-group-sm" role="group" aria-label="Sign in and Sign up">
                     <button type="button" className="btn btn-primary" onClick={() => { this.setState({ buttonClicked: 'signup' }) }}>Register</button>
