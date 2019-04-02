@@ -35,8 +35,9 @@ class Header extends React.Component {
                     >
 
                         <ul className="navbar-nav">
-                            <li className="nav-item">
-                                <NavLink to="/" className="nav-link nav-text text-white active">Home</NavLink>
+                            <li className="nav-item active">
+                                <NavLink to="/" className="nav-link nav-text text-white">Home
+                                </NavLink>
                             </li>
                             <li className="nav-item">
                                 <NavLink to="/searchArea" className="nav-link nav-text text-white">Search Area</NavLink>
