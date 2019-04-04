@@ -10,4 +10,7 @@
     font-weight: 500;    
 }
 
-li a:hover:not(.active) {background-color: rgb(0, 168, 98);}
+li a:hover:not(.active) {
+    background-color: white; 
+    color: #12A065 !important;
+}
