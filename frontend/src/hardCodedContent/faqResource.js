@@ -89,4 +89,20 @@ export const faq = [
         ],
         links: []
     },
+    {
+        question: "Is recycling suited for mitigating climate change?",
+        answers: [
+            "Most probably, yes. Garbage that can't be recycled will be incinerated or buried, both of which release greenhouse gases.",
+            "Unavoidably, carbon dioxide is being emitted through recycling too, but not as much as through waste incineration."
+        ],
+        links: []
+    },
+    {
+        question: "Where can I leave metals like copper, brass or bronze?",
+        answers: [
+            "Small amounts of non-ferrous metal can be delivered to the BSR Recycling Centers (BSR Recyclinghöfe).",
+            "Big amounts will be accepted by scrap yards. Possibly, you can get some money for it."
+        ],
+        links: []
+    }
 ];
