@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import Footer from './Footer'
 import Header from './Header'
-import {faq} from '../faqResource'
+import {faq} from '../hardCodedContent/faqResource'
 
 // corresponding style file: _learnMore.scss
 
@@ -91,9 +91,6 @@ class FrequentlyAskedQuestions extends Component {
             <React.Fragment>
                 <Header/>
                 <div className="container">
-                    {/* <a href="https://allaboutberlin.com/guides/sorting-trash-in-germany" target="_blank"
-                        rel="noopener noreferrer"> https://allaboutberlin.com/guides/sorting-trash-in-germany</a> */}
-
                     <h4 className="h4-faq">Frequently Asked Questions</h4>
 
                     <div className="">
