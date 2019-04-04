@@ -49,7 +49,7 @@ class Header extends React.Component {
 
                             </li>
                             <li className="nav-item">
-                                <NavLink to="/recommendedLinks" className="nav-link nav-text text-white">Learn More</NavLink>
+                                <NavLink to="/learnMore" className="nav-link nav-text text-white">Learn More</NavLink>
                             </li>
                             <li className="nav-item">
                                 <NavLink to="/aboutUs" className="nav-link nav-text text-white">About us</NavLink>
