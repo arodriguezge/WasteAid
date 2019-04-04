@@ -81,4 +81,28 @@ export const faq = [
         ],
         links: []
     },
+    {
+        question: "What kind of bag can I use for collecting and disposing of kitchen refuse?",
+        answers: [
+            "Neither plastic bags nor bags made of bioplastics may be thrown into the biowaste container. A small bucket or a piece of newspaper is better suited.",
+            "The plastic bags would return as microplastics in your food. Decomposition of bags made of bioplastics is too slow in composting plants."
+        ],
+        links: []
+    },
+    {
+        question: "Is recycling suited for mitigating climate change?",
+        answers: [
+            "Most probably, yes. Garbage that can't be recycled will be incinerated or buried, both of which release greenhouse gases.",
+            "Unavoidably, carbon dioxide is being emitted through recycling too, but not as much as through waste incineration."
+        ],
+        links: []
+    },
+    {
+        question: "Where can I leave metals like copper, brass or bronze?",
+        answers: [
+            "Small amounts of non-ferrous metal can be delivered to the BSR Recycling Centers (BSR Recyclinghöfe).",
+            "Big amounts will be accepted by scrap yards. Possibly, you can get some money for it."
+        ],
+        links: []
+    }
 ];
