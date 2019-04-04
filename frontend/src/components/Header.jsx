@@ -10,25 +10,30 @@ class Header extends React.Component {
         navCollapsed: true
     }
 
+
     onToggleNav = () => {
         this.setState({ navCollapsed: !this.state.navCollapsed })
     }
 
+
     render() {
+
         const { navCollapsed } = this.state
 
         return (
+
             <React.Fragment>
-                <nav className="navbar navbar-expand-lg bg-success">
+                <nav className="navbar navbar-expand-lg bg-success" id="topheader">
                     <span className="navbar-brand pb-0 pt-0">
                         <img src={logo} className="mx-auto" width="50" height="50" alt="logo" />&nbsp; &nbsp;
-                        <img src={logoText} className="mx-auto d-sm-inline d-none" width="250" height="50" alt="logo" />
+                        <span className="text-white font-weight-bold d-sm-inline d-none">Waste Disposal Advisor</span>
+                        {/* <img src={logoText} className="mx-auto d-sm-inline d-none" width="250" height="50" alt="logo" /> */}
                     </span>
-                    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarLinks" aria-controls="navbarLinks"
+                    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarLinks" aria-controls="navbarLinks" aria-expanded="false"
+                        aria-label="Toggle navigation"
+                        onClick={this.onToggleNav}>
 
-                        aria-expanded="false" aria-label="Toggle navigation" onClick={this.onToggleNav}>
-
-                        <img src={menuButton} className="mx-auto" width="30" height="30" alt="something" />
+                        <img src={menuButton} className="mx-auto" width="30" height="30" alt="menu" />
                         {/* <span className="navbar-toggler-icon"></span> */}
                     </button>
                     <div id="navbarLinks" className={(navCollapsed ? 'collapse justify-content-end' : '') + ' navbar-collapse '}
@@ -36,23 +41,23 @@ class Header extends React.Component {
 
                         <ul className="navbar-nav">
                             <li className="nav-item">
-                                <NavLink to="/" className="nav-link nav-text text-white">Home</NavLink>
+                                <NavLink to="/" className="nav-link nav-text text-grey" exact activeClassName="active"><span className="pb-1">Home</span></NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink to="/searchArea" className="nav-link nav-text text-white">Search Area</NavLink>
+                                <NavLink to="/searchArea" className="nav-link nav-text text-grey" activeClassName="active"><span className="pb-1">Search Area</span></NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink to="/mapSearch" className="nav-link nav-text text-white">Map Search</NavLink>
+                                <NavLink to="/mapSearch" className="nav-link nav-text text-grey" activeClassName="active"><span className="pb-1">Map Search</span></NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink to="/add" className="nav-link nav-text text-white">Add an Item</NavLink>
+                                <NavLink to="/add" className="nav-link nav-text text-grey" activeClassName="active"><span className="pb-1">Add an Item</span></NavLink>
 
                             </li>
                             <li className="nav-item">
-                                <NavLink to="/recommendedLinks" className="nav-link nav-text text-white">Learn More</NavLink>
+                                <NavLink to="/recommendedLinks" className="nav-link nav-text text-grey" activeClassName="active"><span className="pb-1">Learn More</span></NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink to="/aboutUs" className="nav-link nav-text text-white">About us</NavLink>
+                                <NavLink to="/aboutUs" className="nav-link nav-text text-grey" activeClassName="active"><span className="pb-1">About us</span></NavLink>
                             </li>
                         </ul>
 

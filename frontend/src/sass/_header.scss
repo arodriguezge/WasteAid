@@ -6,11 +6,24 @@
     background-color: #12A065 !important;
 }
 
-.ativado {
-    font-weight: 500;    
+.active span {
+    color: rgba(255, 255, 255, 1) !important;    
+    // font-weight: bold;
+    
 }
 
-li a:hover:not(.active) {
-    background-color: white; 
-    color: #12A065 !important;
+li a:hover:not(.active) span {
+    // background-color: white; 
+    color: rgba(255, 255, 255, 0.90) !important;
+    border-bottom: 2px solid  rgba(255, 255, 255, 0.9);
+    
+}
+
+.navbar .navbar-collapse .nav-item {
+    text-align: center !important;
+}
+
+.text-grey {
+    color: rgba(255, 255, 255, 0.75) !important;
+    
 }
