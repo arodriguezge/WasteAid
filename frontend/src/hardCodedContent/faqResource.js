@@ -81,4 +81,12 @@ export const faq = [
         ],
         links: []
     },
+    {
+        question: "What kind of bag can I use for collecting and disposing of kitchen refuse?",
+        answers: [
+            "Neither plastic bags nor bags made of bioplastics may be thrown into the biowaste container. A small bucket or a piece of newspaper is better suited.",
+            "The plastic bags would return as microplastics in your food. Decomposition of bags made of bioplastics is too slow in composting plants."
+        ],
+        links: []
+    },
 ];
