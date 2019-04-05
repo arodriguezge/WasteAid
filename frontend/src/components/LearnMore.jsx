@@ -6,7 +6,7 @@ import {faq} from '../hardCodedContent/faqResource'
 // corresponding style file: _learnMore.scss
 
 
-// answer in item card
+// answer in item card (grand child component)
 function AnswerText(props) {
     let answersAndLinks = props.answers.concat(props.links);
 
@@ -25,14 +25,15 @@ function AnswerText(props) {
 }
 
 
-// item card
+// item card (child component)
 class QuestionAndAnswer extends Component {
     constructor(props) {
         super(props);
         this.state = {
             answerVisible: false,
             toggleSwitchChar: String.fromCharCode(9660),
-            toggleHint: "show answer"
+            toggleHint: "show answer",
+            questionStyle: "question-faq-0"
         };
         this.toggleAnswer = this.toggleAnswer.bind(this);
     }
@@ -43,13 +44,15 @@ class QuestionAndAnswer extends Component {
             this.setState({
                 answerVisible: false,
                 toggleSwitchChar: String.fromCharCode(9660),
-                toggleHint: "show answer"
+                toggleHint: "show answer",
+                questionStyle: "question-faq-0"
             })
         } else {
             this.setState({
                 answerVisible: true,
                 toggleSwitchChar: String.fromCharCode(9650),
-                toggleHint: "hide answer"
+                toggleHint: "hide answer",
+                questionStyle: "question-faq"
             })
         }
     }
@@ -68,12 +71,14 @@ class QuestionAndAnswer extends Component {
                             </div>
                         </td>
                         <td className="question">
-                            <div className="question-faq">{this.props.question}</div>
+                            <div className={this.state.questionStyle}>{this.props.question}</div>
                         </td>
                     </tr>
                     <tr>
                         <td colSpan="2">
-                            {this.state.answerVisible ? <AnswerText answers={this.props.answers} links={this.props.links} /> : null}
+                            {this.state.answerVisible ?
+                                <AnswerText answers={this.props.answers} links={this.props.links}/> :
+                                null}
                         </td>
                     </tr>
                     </tbody>
@@ -84,7 +89,7 @@ class QuestionAndAnswer extends Component {
 }
 
 
-// this page
+// this page (parent component)
 class FrequentlyAskedQuestions extends Component {
     render() {
         return (
