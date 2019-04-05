@@ -23,11 +23,10 @@ class Header extends React.Component {
         return (
 
             <React.Fragment>
-                <nav className="navbar navbar-expand-lg bg-success" id="topheader">
+                <nav className="navbar navbar-expand-lg bg-success">
                     <span className="navbar-brand pb-0 pt-0">
                         <img src={logo} className="mx-auto" width="50" height="50" alt="logo" />&nbsp; &nbsp;
                         <span className="text-white font-weight-bold d-sm-inline d-none">Waste Disposal Advisor</span>
-                        {/* <img src={logoText} className="mx-auto d-sm-inline d-none" width="250" height="50" alt="logo" /> */}
                     </span>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarLinks" aria-controls="navbarLinks" aria-expanded="false"
                         aria-label="Toggle navigation"
