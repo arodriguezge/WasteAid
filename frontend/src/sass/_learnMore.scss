@@ -1,0 +1,45 @@
+.h4-faq {
+  margin-top: 10px;
+  margin-left: 4px;
+}
+
+.item-card-faq {
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  padding: 3px 4px 0 3px;
+  background-color: #fff;
+  font-size: .9rem;
+  margin-bottom: 1px;
+}
+
+.question-faq {
+  font-weight: bold;
+  display: inline;
+  font-size: 1rem;
+  line-height: 110%;
+}
+
+.answer-toggle-switch-faq {
+  font-weight: bold;
+  cursor: pointer;
+  display: inline;
+  color: #f88;
+  font-size: 1.3rem;
+  margin-right: 6px;
+  margin-left: 0;
+  line-height: 110%;
+}
+
+.table-faq {
+  width: 100%;
+}
+td.triangle {
+  width: 10px;
+}
+td.question {
+  padding-top: 4px;
+}
+
+.answer-div {
+  margin: 0 7px 0 7px;
+}

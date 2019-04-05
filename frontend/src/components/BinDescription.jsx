@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import { binDescriptions } from '../binDescriptions'
+import { binDescriptions } from '../hardCodedContent/binDescriptions'
 
 // corresponding style file: _binDescription.scss
 

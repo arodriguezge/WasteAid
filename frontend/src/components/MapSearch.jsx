@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {disposalSites} from '../disposalSites'
+import {disposalSites} from '../hardCodedContent/disposalSites'
 import Footer from './Footer'
 import Header from './Header'
 import {Map, Marker, Popup, TileLayer} from 'react-leaflet'
@@ -28,8 +28,7 @@ class MapSearch extends Component {
         });
 
         let allCategoriesWithDoubles = allCategoryArrays.flat();
-        let allCategories = [...new Set(allCategoriesWithDoubles)].sort();
-        return allCategories
+        return [...new Set(allCategoriesWithDoubles)].sort()
     }
 
 

@@ -2,7 +2,7 @@ import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import WelcomePage from './WelcomePage'
 import AboutUs from './AboutUs'
-import RecommendedLinks from './RecommendedLinks'
+import LearnMore from './LearnMore'
 import AddItemForm from './AddItemForm'
 import TicketList from '../containers/TicketList'
 
@@ -22,9 +22,9 @@ class Router extends React.Component {
                     <Route path="/searchArea" component={SearchArea} />
                     <Route path="/mapSearch" component={MapSearch} />
                     <Route path="/add" component={AddItemForm} />
-                    <Route path="/recommendedLinks" component={RecommendedLinks} />
+                    <Route path="/learnMore" component={LearnMore} />
                     <Route path="/aboutUs" component={AboutUs} />
-
+                    
                     <Route path="/items" component={ItemsList} />
                     <Route path="/admin/tickets" component={TicketList} />
 

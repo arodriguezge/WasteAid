@@ -1,4 +1,4 @@
-# recycling-database-project
+# Waste-Disposal-Advisor-project
 
 Run in the Frontend folder:
 ```
