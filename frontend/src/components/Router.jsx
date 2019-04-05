@@ -19,15 +19,15 @@ class Router extends React.Component {
             <BrowserRouter>
                 <Switch>
                     <Route exact path="/" component={WelcomePage} />
-                    <Route path="/aboutUs" component={AboutUs} />
-                    <Route path="/learnMore" component={LearnMore} />
-
-                    <Route path="/add" component={AddItemForm} />
-                    <Route path="/items" component={ItemsList} />
-                    <Route path="/admin/tickets" component={TicketList} />
                     <Route path="/searchArea" component={SearchArea} />
                     <Route path="/mapSearch" component={MapSearch} />
+                    <Route path="/add" component={AddItemForm} />
+                    <Route path="/learnMore" component={LearnMore} />
+                    <Route path="/aboutUs" component={AboutUs} />
                     
+                    <Route path="/items" component={ItemsList} />
+                    <Route path="/admin/tickets" component={TicketList} />
+
                     {/* <Route path="/adminFrame" component={AdminFrame} /> */}
                     {/* <Route component={NotFound} /> */}
                 </Switch>
