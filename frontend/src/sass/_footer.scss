@@ -6,5 +6,16 @@ footer {
   padding: 1rem;
   /* background-color: #efefef; */
   /* text-align: center; */
-  z-index: -1;
+  // z-index: -10;
+}
+
+.pointer a:hover {
+  cursor: pointer;
+}
+
+.pointer a {
+  position: relative;
+  
+  z-index: 5;
+  
 }
