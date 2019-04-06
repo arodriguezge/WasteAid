@@ -52,7 +52,9 @@ class MapSearch extends Component {
                 <div className="container map-container">
 
                     <h4 className="h4-map-search">Waste Category Search</h4>
-                    <p className="p-map-search">Click a category to see the disposal sites!</p>
+                    <p className="p-map-search">
+                        Find disposal sites for big garbage amounts and special waste.
+                    </p>
 
                     <div className="kategory-search-buttons">
                         {this.getAllWasteCategories().map((item, index) => {
