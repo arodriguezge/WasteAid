@@ -156,8 +156,14 @@ footer {
   left: 0;
   padding: 1rem;
   /* background-color: #efefef; */
-  /* text-align: center; */
-  z-index: -1; }
+  /* text-align: center; */ }
+
+.pointer a:hover {
+  cursor: pointer; }
+
+.pointer a {
+  position: relative;
+  z-index: 5; }
 
 .item-card5 {
   border: 1px solid lightgray;
@@ -332,8 +338,14 @@ footer {
   left: 0;
   padding: 1rem;
   /* background-color: #efefef; */
-  /* text-align: center; */
-  z-index: -1; }
+  /* text-align: center; */ }
+
+.pointer a:hover {
+  cursor: pointer; }
+
+.pointer a {
+  position: relative;
+  z-index: 5; }
 
 .para {
   margin-left: 35px; }

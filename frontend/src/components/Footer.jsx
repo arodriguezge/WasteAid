@@ -12,26 +12,26 @@ class Footer extends Component {
 
 
     render() {
-        if (this.state.buttonClicked === 'signup') {
+        if (this.state.buttonClicked === 'register') {
             return (<Register onReset={this.resetButtonClicked} />);
         }
-        if (this.state.buttonClicked === 'signin') {
+        if (this.state.buttonClicked === 'logIn') {
             return (<LogIn onReset={this.resetButtonClicked} />);
         }
         return (
             <React.Fragment>
                 <div className="m-3"></div>
 
-                <div className="btn-group-sm" role="group" aria-label="Sign in and Sign up">
-                    <button type="button" className="btn btn-primary" onClick={() => { this.setState({ buttonClicked: 'signup' }) }}>Register</button>
-                    <button type="button" className="btn btn-primary" onClick={() => { this.setState({ buttonClicked: 'signin' }) }}>Log in</button>
-
-                </div>
-                <footer className="page-footer font-small bg-success p-0 ">
-                    <div className="footer-copyright text-center py-3 text-white">
-                        © 2019 Copyright: Waste Disposal Advisor
-
+                <footer className="page-footer bg-success p-0 ">
+                    <div className="footer-copyright text-center py-3 text-grey">
+                        © 2019 Copyright: Waste Disposal Advisor <span className="m-1"></span>
+                        <span className="pointer" role="" aria-label="">
+                            <small>[<a className="" onClick={() => { this.setState({ buttonClicked: 'register' }) }}> Register </a>|
+                                    <a className="" onClick={() => { this.setState({ buttonClicked: 'logIn' }) }}> Log in </a>
+                                ]</small>
+                        </span>
                     </div>
+
                 </footer>
 
             </React.Fragment>
