@@ -62,6 +62,9 @@ class MapSearch extends Component {
                             )
                         })}
                     </div>
+                    <div className="map-search-hint">
+                        Disposal locations accepting waste category <b>{this.state.wasteCategory}</b>:
+                    </div>
 
                     <Map
                         center={this.state.position}
