@@ -425,12 +425,15 @@ footer {
   height: calc(80vh - 155px);
   /* height: 330px; */
   width: 100%;
-  margin-top: 12px; }
+  margin-top: 9px; }
 
 hr {
   margin-top: 4px;
   margin-bottom: 4px;
   background-color: #ececec; }
+
+.map-search-hint {
+  padding-top: 5px; }
 
 .h4-faq {
   margin-top: 10px;
