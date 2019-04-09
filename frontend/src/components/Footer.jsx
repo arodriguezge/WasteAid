@@ -20,12 +20,12 @@ class Footer extends Component {
         }
         return (
             <React.Fragment>
-                <div className="m-3"></div>
+
 
                 <footer className="page-footer bg-success p-0 ">
                     <div className="footer-copyright text-center py-3 text-grey">
                         © 2019 Copyright: Waste Disposal Advisor <span className="m-1"></span>
-                        <span className="pointer" role="" aria-label="">
+                        <span className="pointer">
                             <small>[<a className="" onClick={() => { this.setState({ buttonClicked: 'register' }) }}> Register </a>|
                                     <a className="" onClick={() => { this.setState({ buttonClicked: 'logIn' }) }}> Log in </a>
                                 ]</small>
