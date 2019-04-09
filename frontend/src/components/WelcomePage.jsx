@@ -1,12 +1,12 @@
 import React from 'react';
 import Footer from './Footer'
-import Header from './Header'
+import Header2 from './Header2'
 
 const WelcomePage = () => {
 
     return (
         <React.Fragment>
-            <Header />
+            <Header2 />
             <div className="container">
                 <h2 className="h2-0">Welcome to Waste Disposal Advisor</h2>
 
