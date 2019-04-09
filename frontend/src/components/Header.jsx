@@ -1,5 +1,4 @@
 import React from 'react'
-import logoText from '../images/WDA-Label-153-153-153.svg'
 import logo from '../images/WDA-Logo-grey-orange-green-blue.svg'
 import menuButton from '../images/menu-button.svg'
 import { NavLink } from 'react-router-dom'
