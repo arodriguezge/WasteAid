@@ -25,6 +25,18 @@
     transform: translate(-50%);
   }
 
+  @media only screen and (max-width: 700px) {
+    .form-box {
+      width: 65%;
+    }
+  }
+
+  @media only screen and (max-width: 400px) {
+    .form-box {
+      width: 80%;
+    }
+  }
+
   .btn-success {
     background-color: #12A065 !important;
   }
