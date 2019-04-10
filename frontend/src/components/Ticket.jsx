@@ -1,12 +1,42 @@
 import React, {Component} from 'react'
 import { connect } from 'react-redux'
 import EditTicket from './EditTicket'
-import { removeItem, approveTicket } from '../actions/index'
+import {disposalSites} from '../hardCodedContent/disposalSites'
+// import { removeItem, approveTicket } from '../actions/index'
 
-// corresponding style file: _ticket.scss
+import { removeItem, approveTicket, editItem } from '../actions/index'
 
-function ItemDescription (props) {
+
+// corresponding style files: _ticket.scss and _addItemForm.scss
+
+function ItemDescription(props) {
         return <div>{props.descr}</div>
+}
+
+// function CategoryHint() {
+//     return (
+//             <div className="popup-container3">
+//                 <div className="form-submit-hint3">
+//
+//                 </div>
+//                 <p>
+//                     Please set a CATEGORY <br/>before editing or approving!
+//                 </p>
+//             </div>
+//         )
+// }
+
+class CategoryHint extends Component {
+    render() {
+        return (
+            <div className="popup-container-ticket">
+                <div className="category-hint">
+                    <p className="close-hint-char-ticket" onClick={this.props.hideHint} title="Close pop-up">&#10005;</p>
+                    Please set a CATEGORY<br/>before editing or approving!
+                </div>
+            </div>
+        )
+    }
 }
 
 class Ticket extends Component {
@@ -16,10 +46,62 @@ class Ticket extends Component {
             itemDescrVisible: false,
             toggleSwitchChar: String.fromCharCode(9660),
             toggleHint: "show item description",
-            isHidden: true
+            isHidden: true,
+            categoryHintHidden: true
         };
         this.toggleItemDescr = this.toggleItemDescr.bind(this);
+
+        this.handleChange = this.handleChange.bind(this);
+        this.category = React.createRef()
     }
+
+
+    getAllWasteCategories() {
+        let allCategoryArrays = [];
+
+        disposalSites.forEach(function (arrayItem) {
+            allCategoryArrays.push(arrayItem.categories);
+        });
+
+        let allCategoriesWithDoubles = allCategoryArrays.flat();
+        return [...new Set(allCategoriesWithDoubles)].sort()
+    }
+
+    handleChange() {
+        this.props.editItem(
+            this.props.item._id,
+            this.props.item.name,
+            this.props.item.description,
+            this.props.item.bin,
+            this.category.current.value
+        );
+        console.log(this.category.current.value)
+    }
+
+    // allows item approvement only if category is given
+    confirmTicket() {
+        if (this.props.item.category) {
+            this.props.approveTicket(this.props.item._id)
+        } else {
+            this.setState({categoryHintHidden: false})
+        }
+    }
+
+    // allows item editing only if category is given
+    editTicket() {
+        if (this.props.item.category) {
+            this.toggleHidden()
+        } else {
+            this.setState({categoryHintHidden: false})
+        }
+    }
+
+    toggleCategoryHint = () => {
+        this.setState({
+            categoryHintHidden: !this.state.categoryHintHidden
+        })
+    }
+
 
     toggleHidden = () => {
         this.setState({
@@ -44,7 +126,6 @@ class Ticket extends Component {
     }
 
     binIconPath() {
-        //console.log(this.props.item.description);
         switch (this.props.item.bin) {
             case 'blue':
                 return "../images/bin2-blue-no-label.svg";
@@ -98,12 +179,22 @@ class Ticket extends Component {
                             </div>
                             <div className="card-title5">{this.props.item.name}</div>
                         </td>
-                        <td className="buttons-and-icon5">
-                            <button className="button5" onClick={() => {this.props.approveTicket(this.props.item._id)}}>approve</button>
-                            <button className="button5" onClick={this.toggleHidden.bind(this)}>edit</button>
-                            {!this.state.isHidden && <EditTicket item={this.props.item} editItem={this.props.editItem} toggleHidden={this.toggleHidden}/>}
-                            <button className="button5" onClick={() => {this.props.removeItem(this.props.item._id)}}>remove</button>
-                            <img className="wastebin-icon5" src={this.binIconPath()} alt="wastebin icon" title={this.binIconTitle()}/>
+                        <td>
+                            <div className="button-container-5">
+                                <select className="form-control select-ticket" defaultValue={this.props.item.category} onChange={this.handleChange} ref={this.category}>
+                                    <option value="">Select a category</option>
+                                    {this.getAllWasteCategories().map((item, index) => {
+                                        return <option value={item} key={index}>{item}</option>
+                                    })}
+                                </select>
+
+                                {!this.state.categoryHintHidden && <CategoryHint hideHint={this.toggleCategoryHint}/>}
+                                <button className="button5" onClick={() => {this.confirmTicket()}}>approve</button>
+                                <button className="button5" onClick={() => {this.editTicket()}}>edit</button>
+                                {!this.state.isHidden && <EditTicket item={this.props.item} editItem={this.props.editItem} toggleHidden={this.toggleHidden}/>}
+                                <button className="button5" onClick={() => {this.props.removeItem(this.props.item._id)}}>remove</button>
+                                <img className="wastebin-icon5" src={this.binIconPath()} alt="wastebin icon" title={this.binIconTitle()}/>
+                            </div>
                         </td>
                     </tr>
                     <tr>
@@ -118,7 +209,18 @@ class Ticket extends Component {
     }
 }
 
-export default connect(null, { 
+// export default connect(null, {
+//     removeItem: removeItem,
+//     approveTicket: approveTicket
+// })(Ticket)
+
+
+const mapStateToProps = ({ items }) => {
+    return { items }
+}
+
+export default connect(mapStateToProps, {
     removeItem: removeItem,
-    approveTicket: approveTicket
+    approveTicket: approveTicket,
+    editItem: editItem
 })(Ticket)

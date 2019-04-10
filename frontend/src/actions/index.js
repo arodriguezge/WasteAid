@@ -199,10 +199,10 @@ export const removeItemFailure = error => ({
     }
 })
 
-export const editItem = (id, name, description, bin) => {
+export const editItem = (id, name, description, bin, category) => {                 // added category
     return dispatch => {
         dispatch(editItemStarted())
-        axios.patch(`${BACKEND_URI}${id}`, { name, description, bin })
+        axios.patch(`${BACKEND_URI}${id}`, { name, description, bin, category })    // added category
             .then(res => {
                 dispatch(editItemSuccess(res.data))
             })
