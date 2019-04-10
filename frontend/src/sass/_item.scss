@@ -16,7 +16,11 @@
   font-size: 1rem;
 }
 
-.desrc-toggle-switch1 {
+.table1 {
+  width: 100%;
+}
+
+.desrc-toggle-switch-1 {
   font-weight: bold;
   cursor: pointer;
   display: inline;
@@ -33,3 +37,21 @@
 .wastebin-icon1:hover {
   cursor: default;
 }
+
+.button-container-1 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.map-search-link {
+  color: black;
+  text-decoration: none;
+}
+.map-search-link:hover {
+  color: black;
+  text-decoration: none;
+}
+

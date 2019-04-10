@@ -17,6 +17,10 @@ const ItemSchema = new Schema({
         type: String,
         required: 'You must provide color of the bin',
     },
+    category: {
+        type: String,
+        default: null
+    },
     approved: {
         type: Boolean,
         default: false

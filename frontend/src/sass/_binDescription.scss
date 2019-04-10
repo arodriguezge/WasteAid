@@ -1,7 +1,7 @@
-.bin-descr-card2 {
+.bin-descr-card-2 {
   border: 1px solid lightgray;
   border-radius: 5px;
-  padding: 1px 3px 2px 6px;
+  padding: 2px 4px 2px 6px;
   background-color: #fff;
   font-size: .9rem;
   display: flex;
@@ -14,7 +14,10 @@
   font-weight: bold;
   display: inline;
   font-size: 1rem;
-  margin-left: 6px;
+}
+
+.table2 {
+  width: 100%;
 }
 
 .desrc-toggle-switch2 {
@@ -23,15 +26,24 @@
   display: inline;
   color: #f88;
   font-size: 1.3rem;
+  margin-right: 6px;
 }
 
 .wastebin-icon2 {
   width: 35px;
   height: 35px;
-  margin: 5px 3px 3px 8px;
+  margin: 3px 9px 3px 8px;
 }
 .wastebin-icon2:hover {
   cursor: default;
+}
+
+.button-container-2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .blueBackground {
