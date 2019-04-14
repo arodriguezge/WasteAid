@@ -36,6 +36,10 @@ class SearchArea extends React.Component {
 
     componentDidMount = () => {
         this.props.resetItemsState()
+
+        if (this.props.match.params.searchString && this.props.match.params.searchString !== "default") {
+            this.props.fetchQuery(this.props.match.params.searchString)
+        }
     }
 
     render() {
@@ -101,6 +105,10 @@ class SearchArea extends React.Component {
                             
                             {/* specific bin clicked */}
                             {this.state.wasteBinColor ? <BinDescription binColor={this.state.wasteBinColor}/> : null}
+
+                            <div className="search-area-map-hint">
+                                For big garbage amounts or special waste: Click on Map Search in results.
+                            </div>
 
                             {/* result of search by item - query - bin color */}
                             {searchResult}

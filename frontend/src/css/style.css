@@ -100,6 +100,9 @@
   margin-top: 3px;
   margin-right: 2px; }
 
+.search-area-map-hint {
+  padding: 10px 0 5px 0; }
+
 .heading3 {
   margin-bottom: -20px;
   margin-top: -20px; }
@@ -167,6 +170,68 @@ select:hover {
   text-align: center;
   margin-top: 5%;
   margin-bottom: 5%; }
+
+.form-box-welcome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 30px; }
+
+.form-welcome {
+  width: 48%; }
+
+.input-and-button-welcome {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -8px; }
+
+.form-control-welcome {
+  min-width: 180px;
+  width: 84%;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+  padding-left: 10px;
+  height: 38px;
+  margin-bottom: -20px;
+  margin-top: -18px; }
+
+.p2-welcome {
+  margin-top: 7px;
+  margin-bottom: 10px;
+  padding-left: 3px; }
+
+.popup-container-welcome {
+  position: fixed;
+  padding: 0;
+  margin: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  z-index: 1; }
+
+.search-item-hint-welcome {
+  border-radius: 5px;
+  background-color: #70e1e9;
+  padding: 8px 18px 15px 18px;
+  z-index: 2;
+  margin: auto;
+  position: absolute;
+  top: 33%;
+  left: 50%;
+  -ms-transform: translate(-50%);
+  transform: translate(-50%);
+  text-align: left; }
+
+.close-hint-char-welcome {
+  font-size: 1.5rem;
+  text-align: right;
+  margin: 0 0 -5px 0;
+  cursor: pointer;
+  font-weight: bold; }
 
 footer {
   position: absolute;
