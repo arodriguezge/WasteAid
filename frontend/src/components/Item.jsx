@@ -93,7 +93,7 @@ class Item extends Component {
                         <td>
                             <div className="button-container-1">
                                 <button className="button5" title="show disposal sites in map">
-                                    <NavLink to={`/mapSearch/${this.props.item.category}`} className=" map-search-link" activeClassName="active">
+                                    <NavLink to={`/mapSearch/${this.props.item.category}`} className="map-search-link" activeClassName="active">
                                         <span>Map Search</span>
                                     </NavLink>
                                 </button>

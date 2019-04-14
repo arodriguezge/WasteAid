@@ -19,7 +19,7 @@ class Router extends React.Component {
             <BrowserRouter>
                 <Switch>
                     <Route exact path="/" component={WelcomePage} />
-                    <Route path="/searchArea" component={SearchArea} />
+                    <Route path="/searchArea/:searchString" component={SearchArea} />
                     <Route path="/mapSearch/:rubbishCategory" component={MapSearch} />
 
                     <Route path="/add" component={AddItemForm} />

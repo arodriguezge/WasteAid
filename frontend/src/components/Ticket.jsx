@@ -13,19 +13,6 @@ function ItemDescription(props) {
         return <div>{props.descr}</div>
 }
 
-// function CategoryHint() {
-//     return (
-//             <div className="popup-container3">
-//                 <div className="form-submit-hint3">
-//
-//                 </div>
-//                 <p>
-//                     Please set a CATEGORY <br/>before editing or approving!
-//                 </p>
-//             </div>
-//         )
-// }
-
 class CategoryHint extends Component {
     render() {
         return (
