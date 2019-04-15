@@ -321,7 +321,7 @@ footer {
 .active span {
   color: white !important; }
 
-li a:hover:not(.active) span {
+a:hover:not(.active) span {
   color: rgba(255, 255, 255, 0.9) !important;
   border-bottom: 2px solid rgba(255, 255, 255, 0.9); }
 
