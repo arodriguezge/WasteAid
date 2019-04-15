@@ -20,6 +20,15 @@ class MapSearch extends Component {
     }
 
 
+    componentDidMount () {
+        if (this.props.match.params.rubbishCategory && this.props.match.params.rubbishCategory !== "default") {
+            this.setState({wasteCategory: this.props.match.params.rubbishCategory})
+        } else {
+            this.setState({wasteCategory: ""})
+        }
+    }
+
+
     getAllWasteCategories() {
         let allCategoryArrays = [];
 
