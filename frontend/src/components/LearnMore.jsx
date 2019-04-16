@@ -1,7 +1,7 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import Footer from './Footer'
 import Header from './Header'
-import {faq} from '../hardCodedContent/faqResource'
+import { faq } from '../hardCodedContent/faqResource'
 
 // corresponding style file: _learnMore.scss
 
@@ -11,17 +11,17 @@ function AnswerText(props) {
     let answersAndLinks = props.answers.concat(props.links);
 
     return (
-            answersAndLinks.map((item, index) => {
-                if (item.search("http") > -1) {
-                    return (
-                        <div className="answer-div" key={index}>
-                            <a href={item} target="_blank" rel="noopener noreferrer">{item}</a>
-                        </div>
-                    )
-                }
-                return <div className="answer-div" key={index}>{item}</div>
-            })
-        )
+        answersAndLinks.map((item, index) => {
+            if (item.search("http") > -1) {
+                return (
+                    <div className="answer-div" key={index}>
+                        <a href={item} target="_blank" rel="noopener noreferrer">{item}</a>
+                    </div>
+                )
+            }
+            return <div className="answer-div" key={index}>{item}</div>
+        })
+    )
 }
 
 
@@ -63,24 +63,24 @@ class QuestionAndAnswer extends Component {
             <div className="item-card-faq">
                 <table className="table-faq">
                     <tbody>
-                    <tr>
-                        <td className="triangle">
-                            <div className="answer-toggle-switch-faq" onClick={this.toggleAnswer}
-                                 title={this.state.toggleHint}>
-                                &nbsp;{this.state.toggleSwitchChar}
-                            </div>
-                        </td>
-                        <td className="question">
-                            <div className={this.state.questionStyle}>{this.props.question}</div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colSpan="2">
-                            {this.state.answerVisible ?
-                                <AnswerText answers={this.props.answers} links={this.props.links}/> :
-                                null}
-                        </td>
-                    </tr>
+                        <tr>
+                            <td className="triangle">
+                                <div className="answer-toggle-switch-faq" onClick={this.toggleAnswer}
+                                    title={this.state.toggleHint}>
+                                    &nbsp;{this.state.toggleSwitchChar}
+                                </div>
+                            </td>
+                            <td className="question">
+                                <div className={this.state.questionStyle}>{this.props.question}</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colSpan="2">
+                                {this.state.answerVisible ?
+                                    <AnswerText answers={this.props.answers} links={this.props.links} /> :
+                                    null}
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
@@ -94,21 +94,21 @@ class FrequentlyAskedQuestions extends Component {
     render() {
         return (
             <React.Fragment>
-                <Header/>
+                <Header />
                 <div className="container">
-                    <h4 className="h4-faq">Frequently Asked Questions</h4>
+                    <h4 className="pt-4 h4-faq">Frequently Asked Questions</h4>
 
                     <div className="">
                         {faq.map((item, index) => {
                             return (
                                 <QuestionAndAnswer question={item.question} answers={item.answers} links={item.links}
-                                                   key={index}/>
+                                    key={index} />
                             )
                         })}
                     </div>
 
                 </div>
-                <Footer/>
+                <Footer />
             </React.Fragment>
         )
     }

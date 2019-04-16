@@ -12,6 +12,11 @@
     
 }
 
+.specialFont {
+    font-family: 'Leckerli One', cursive;
+    font-size: 40px;
+}
+
 a:hover:not(.active) span {
     // background-color: white; 
     color: rgba(255, 255, 255, 0.90) !important;
