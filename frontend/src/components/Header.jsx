@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../images/WDA-Logo-grey-orange-green-blue.svg'
+// import logo from '../images/WDA-Logo-grey-orange-green-blue.svg'
 import { Navbar, NavDropdown, Nav } from 'react-bootstrap'
 
 class Header extends React.Component {
@@ -11,8 +11,8 @@ class Header extends React.Component {
                 <Navbar bg="success" expand="lg">
 
                     <Navbar.Brand className="pb-0 pt-0">
-                        <img src={logo} className="mx-auto" width="50" height="50" alt="logo" />&nbsp; &nbsp;
-                        <span className="text-white font-weight-bold d-sm-inline d-none">Waste Disposal Advisor</span>
+                        {/* <img src={logo} className="mx-auto" width="50" height="50" alt="logo" />&nbsp; &nbsp; */}
+                        <span className="text-white  d-sm-inline pl-2 specialFont ">Wasteaid</span>
 
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />

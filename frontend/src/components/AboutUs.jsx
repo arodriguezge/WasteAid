@@ -13,7 +13,7 @@ const AboutUs = props => {
                 <div className="container">
                     <div>We care about managing your waste and how you are managing your waste, the easy
                                 way. <br />
-                        Getting rid of your old wallpaper? Look up where it goes. Our app “Waste Disposal Advisor” <br />
+                        Getting rid of your old wallpaper? Look up where it goes. Our app “Wasteaid” <br />
                         comes in handy for just that.
                                 <br /><br />
                         Technologies we used, got to work with, and learned about with in the process:

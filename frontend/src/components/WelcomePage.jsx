@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import Footer from './Footer'
 import Header from './Header'
 import { withRouter } from 'react-router-dom'
@@ -10,7 +10,7 @@ class SearchItemHint extends Component {
             <div className="popup-container-welcome">
                 <div className="search-item-hint-welcome">
                     <p className="close-hint-char-welcome" onClick={this.props.hideHint} title="Close pop-up">&#10005;</p>
-                    Please enter search item<br/>before starting the search!
+                    Please enter search item<br />before starting the search!
                 </div>
             </div>
         )
@@ -32,7 +32,7 @@ class WelcomePage extends Component {
 
 
     handleChange = event => {
-        this.setState({soughtItem: event.target.value})
+        this.setState({ soughtItem: event.target.value })
     };
 
 
@@ -53,7 +53,7 @@ class WelcomePage extends Component {
                     if (this.state.soughtItem !== "default") {
                         history.push(`/searchArea/${this.state.soughtItem}`)
                     } else {
-                        this.setState({searchItemHintHidden: false})
+                        this.setState({ searchItemHintHidden: false })
                     }
                 }}
             >
@@ -64,9 +64,9 @@ class WelcomePage extends Component {
 
         return (
             <React.Fragment>
-                <Header/>
+                <Header />
                 <div className="container">
-                    <h2 className="h2-0">Welcome to Waste Disposal Advisor</h2>
+                    <h1 className="h2-0 font-weight-bold">Welcome to Wasteaid</h1>
 
                     <div className="list-container-0">
 
@@ -116,19 +116,19 @@ class WelcomePage extends Component {
                             <p className="p2-welcome">Which waste bin is best for my trash?</p>
                             <div className="input-and-button-welcome">
                                 <input type="text" className="form-control-welcome"
-                                       placeholder="Type name of waste item here..."
-                                       required={true} ref={this.input}
-                                       onChange={this.handleChange}
+                                    placeholder="Type name of waste item here..."
+                                    required={true} ref={this.input}
+                                    onChange={this.handleChange}
                                 />
-                                <Button/>
+                                <Button />
                             </div>
                         </form>
                     </div>
 
-                    {!this.state.searchItemHintHidden && <SearchItemHint hideHint={this.toggleSearchItemHint}/>}
+                    {!this.state.searchItemHintHidden && <SearchItemHint hideHint={this.toggleSearchItemHint} />}
 
                 </div>
-                <Footer/>
+                <Footer />
             </React.Fragment>
         )
     }
