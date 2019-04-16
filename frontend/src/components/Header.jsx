@@ -1,5 +1,6 @@
 import React from 'react'
 // import logo from '../images/WDA-Logo-grey-orange-green-blue.svg'
+import pin from '../images/pin.svg'
 import { Navbar, NavDropdown, Nav } from 'react-bootstrap'
 
 class Header extends React.Component {
@@ -20,8 +21,8 @@ class Header extends React.Component {
 
                         <Nav className="">
                             <Nav.Link className="nav-text text-grey" href="/" exact="true" activeclassname="active"><span className="pb-1 hover">Home</span></Nav.Link>
-                            <Nav.Link className="nav-text text-grey" href="/searchArea/default" activeclassname="active"><span className="pb-1 hover">Search Area</span></Nav.Link>
-                            <Nav.Link className="nav-text text-grey" href="/mapSearch/default" activeclassname="active"><span className="pb-1 hover">Map Search</span></Nav.Link>
+                            <Nav.Link className="nav-text text-grey" href="/searchArea/default" activeclassname="active"><span className="pb-1 hover">Search</span></Nav.Link>
+                            <Nav.Link className="nav-text text-grey" href="/mapSearch/default" activeclassname="active"><span className="pb-1 hover"><img src={pin} className="mx-auto" width="25" height="25" alt="logo" /> Map</span></Nav.Link>
                             <Nav.Link className="nav-text text-grey" href="/add" activeclassname="active"><span className="pb-1 hover">Add an Item</span></Nav.Link>
                             <NavDropdown alignRight title="Learn More" className="nav-text text-grey" id="basic-nav-dropdown">
                                 <NavDropdown.Item href="/learnMore">FAQ</NavDropdown.Item>
