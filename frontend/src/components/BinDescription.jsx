@@ -1,10 +1,17 @@
 import React, {Component} from 'react'
-import { binDescriptions } from '../hardCodedContent/binDescriptions'
+import {binDescriptions} from '../hardCodedContent/binDescriptions'
 
 // corresponding style file: _binDescription.scss
 
 function BinDescrText(props) {
-        return <div>{props.descrTxt}</div>
+    return (
+        <div>
+            <b>German name:</b> {props.descrTxt.germanName}<br/>
+            <b>Allowed:</b> {props.descrTxt.allowed}<br/>
+            <b>Not allowed:</b> {props.descrTxt.forbidden}<br/>
+            <b>Hints:</b> {props.descrTxt.hints}
+        </div>
+    )
 }
 
 class BinDescription extends Component {
@@ -37,7 +44,7 @@ class BinDescription extends Component {
             })
         } else {
             this.setState({
-               binDescrVisible: true,
+                binDescrVisible: true,
                 toggleSwitchChar: String.fromCharCode(9650),
                 toggleHint: "hide bin description"
             })
@@ -45,7 +52,7 @@ class BinDescription extends Component {
     }
 
     binIconPath() {
-        switch(this.props.binColor) {
+        switch (this.props.binColor) {
             case 'blue':
                 return "../images/bin2-blue-no-label.svg";
             case 'green':
@@ -66,7 +73,7 @@ class BinDescription extends Component {
     };
 
     binIconTitle() {
-        switch(this.props.binColor) {
+        switch (this.props.binColor) {
             case 'blue':
                 return "bin for paper and cardboard";
             case 'green':
@@ -87,7 +94,7 @@ class BinDescription extends Component {
     };
 
     binSecondClassName() {
-        switch(this.props.binColor) {
+        switch (this.props.binColor) {
             case 'blue':
                 return "blueBackground";
             case 'green':
@@ -116,18 +123,32 @@ class BinDescription extends Component {
         }
 
         return (
-            <div className={`bin-descr-card2 ${this.binSecondClassName()}`} id="bin-description">
-                <div>
-                    <div className="desrc-toggle-switch2" onClick={this.toggleBinDescr} title={this.state.toggleHint}>
-                        &nbsp;{this.state.toggleSwitchChar}
-                    </div>
-                    <div className="card-title2">{binTitle}</div>
-                    {this.state.binDescrVisible ? <BinDescrText descrTxt={binDescriptions[this.props.binColor]}/> : null}
-
-                </div>
-                <div>
-                    <img className="wastebin-icon2" src={this.binIconPath()} alt="wastebin icon" title={this.binIconTitle()}/>
-                </div>
+            <div className={`bin-descr-card-2 ${this.binSecondClassName()}`} id="bin-description">
+                <table className="table2">
+                    <tbody>
+                    <tr>
+                        <td>
+                            <div className="desrc-toggle-switch2" onClick={this.toggleBinDescr}
+                                 title={this.state.toggleHint}>
+                                &nbsp;{this.state.toggleSwitchChar}
+                            </div>
+                            <div className="card-title2">{binTitle}</div>
+                        </td>
+                        <td>
+                            <div className="button-container-2">
+                                <img className="wastebin-icon2" src={this.binIconPath()} alt="wastebin icon"
+                                     title={this.binIconTitle()}/>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colSpan="2">
+                            {this.state.binDescrVisible ?
+                                <BinDescrText descrTxt={binDescriptions[this.props.binColor]}/> : null}
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
             </div>
         )
     }

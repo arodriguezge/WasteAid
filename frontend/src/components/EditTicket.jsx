@@ -15,7 +15,8 @@ class EditTicket extends Component {
             this.props.item._id,
             this.name.current.value,
             this.description.current.value,
-            this.bin.current.value
+            this.bin.current.value,
+            this.props.item.category    // added category
         )
         event.currentTarget.reset()
         this.props.toggleHidden()
@@ -34,7 +35,7 @@ class EditTicket extends Component {
                             <br/>
                             <div>
                                 <p className="heading4-2">Description:</p><br/>
-                                <textarea type="text" className="form-control" id="exampleFormControlTextarea1"
+                                <textarea className="form-control" id="exampleFormControlTextarea1"
                                           defaultValue={this.props.item.description} rows="5"
                                           placeholder="Type item description here..." ref={this.description}/><br/>
                             </div>
