@@ -10,6 +10,7 @@ import ItemsList from '../containers/ItemsList'
 import SearchArea from '../containers/SearchArea'
 
 import MapSearch from './MapSearch'
+import AdminLogin from './AdminLogin';
 
 
 class Router extends React.Component {
@@ -25,9 +26,10 @@ class Router extends React.Component {
                     <Route path="/add" component={AddItemForm} />
                     <Route path="/learnMore" component={LearnMore} />
                     <Route path="/aboutUs" component={AboutUs} />
-                    
+
                     <Route path="/items" component={ItemsList} />
                     <Route path="/admin/tickets" component={TicketList} />
+                    <Route path="/admin/login" component={AdminLogin} />
 
                     {/* <Route path="/adminFrame" component={AdminFrame} /> */}
                     {/* <Route component={NotFound} /> */}
