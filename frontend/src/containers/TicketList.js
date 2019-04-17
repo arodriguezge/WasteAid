@@ -1,7 +1,7 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import Ticket from '../components/Ticket'
 import Footer from '../components/Footer'
-import Header from '../components/Header'
+import HeaderAdmin from '../components/HeaderAdmin'
 import { connect } from 'react-redux'
 import { fetchTickets } from '../actions/index'
 
@@ -15,14 +15,14 @@ class TicketList extends Component {
     render() {
         return (
             <React.Fragment>
-                <Header/>
-                    <div className="container">
-                        <h4 className="h4-5">Items to be approved</h4>
-                        {this.props.items.data.map(item => {
-                                return <Ticket item={item} key={`item ${item._id}`}/>
-                        })}
-                    </div>
-                <Footer/>
+                <HeaderAdmin />
+                <div className="container">
+                    <h4 className="h4-5">Items to be approved</h4>
+                    {this.props.items.data.map(item => {
+                        return <Ticket item={item} key={`item ${item._id}`} />
+                    })}
+                </div>
+                <Footer />
             </React.Fragment>
         )
     }

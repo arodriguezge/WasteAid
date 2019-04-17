@@ -1,8 +1,8 @@
-import React, {Component} from 'react'
-import {disposalSites} from '../hardCodedContent/disposalSites'
+import React, { Component } from 'react'
+import { disposalSites } from '../hardCodedContent/disposalSites'
 import Footer from './Footer'
 import Header from './Header'
-import {Map, Marker, Popup, TileLayer} from 'react-leaflet'
+import { Map, Marker, Popup, TileLayer } from 'react-leaflet'
 
 // corresponding style files: _mapSearch.scss and a link in index.html
 
@@ -20,11 +20,11 @@ class MapSearch extends Component {
     }
 
 
-    componentDidMount () {
+    componentDidMount() {
         if (this.props.match.params.rubbishCategory && this.props.match.params.rubbishCategory !== "default") {
-            this.setState({wasteCategory: this.props.match.params.rubbishCategory})
+            this.setState({ wasteCategory: this.props.match.params.rubbishCategory })
         } else {
-            this.setState({wasteCategory: ""})
+            this.setState({ wasteCategory: "" })
         }
     }
 
@@ -49,7 +49,7 @@ class MapSearch extends Component {
 
 
     setWasteCategory(category) {
-        this.setState({wasteCategory: category});
+        this.setState({ wasteCategory: category });
         this.recenterResizeMap();
     }
 
@@ -57,10 +57,10 @@ class MapSearch extends Component {
     render() {
         return (
             <React.Fragment>
-                <Header ref={this.headerRef}/>
+                <Header ref={this.headerRef} />
                 <div className="container map-container">
 
-                    <h4 className="h4-map-search">Waste Category Search</h4>
+                    <h4 className="pt-4 h4-map-search">Waste Category Search</h4>
                     <p className="p-map-search">
                         Find disposal sites for big garbage amounts and special waste.
                     </p>
@@ -69,7 +69,7 @@ class MapSearch extends Component {
                         {this.getAllWasteCategories().map((item, index) => {
                             return (
                                 <button className="btn btn-secondary btn-sm category-button" key={index}
-                                        onClick={() => this.setWasteCategory(item)}>{item}</button>
+                                    onClick={() => this.setWasteCategory(item)}>{item}</button>
                             )
                         })}
                     </div>
@@ -92,21 +92,21 @@ class MapSearch extends Component {
                                 if (item.categories.indexOf(this.state.wasteCategory) > -1) {
                                     return (
                                         <Marker position={[item.coordinates.latitude, item.coordinates.longitude]}
-                                                key={index}>
+                                            key={index}>
                                             <Popup>
-                                                <b>{item.name}</b><br/>
-                                                {item.address}<br/>
-                                                <hr/>
-                                                <b>Opening hours</b><br/>
-                                                Monday: {item.openingHours.monday}<br/>
-                                                Tuesday: {item.openingHours.tuesday}<br/>
-                                                Wednesday: {item.openingHours.wednesday}<br/>
-                                                Thursday: {item.openingHours.thursday}<br/>
-                                                Friday: {item.openingHours.friday}<br/>
-                                                Saturday: {item.openingHours.saturday}<br/>
-                                                Sunday: {item.openingHours.sunday}<br/>
-                                                <hr/>
-                                                Phone: {item.contact.phone}<br/>
+                                                <b>{item.name}</b><br />
+                                                {item.address}<br />
+                                                <hr />
+                                                <b>Opening hours</b><br />
+                                                Monday: {item.openingHours.monday}<br />
+                                                Tuesday: {item.openingHours.tuesday}<br />
+                                                Wednesday: {item.openingHours.wednesday}<br />
+                                                Thursday: {item.openingHours.thursday}<br />
+                                                Friday: {item.openingHours.friday}<br />
+                                                Saturday: {item.openingHours.saturday}<br />
+                                                Sunday: {item.openingHours.sunday}<br />
+                                                <hr />
+                                                Phone: {item.contact.phone}<br />
                                                 Email: {item.contact.email}
                                             </Popup>
                                         </Marker>
@@ -118,7 +118,7 @@ class MapSearch extends Component {
                     </Map>
 
                 </div>
-                <Footer/>
+                <Footer />
             </React.Fragment>
         )
     }
