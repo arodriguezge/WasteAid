@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import { connect } from 'react-redux'
-import Item from '../components/Item'
+
+import ItemAdmin from '../components/ItemAdmin'     // replaced Item with ItemAdmin
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 import Loading from '../components/Loading'
@@ -13,22 +14,25 @@ class ItemsList extends Component {
     }
     
     render() {
+        // commented out Loading because it didn't stop after "change category" and "edit"
+
         let itemsResult
         if(this.props.items.loading) {
             itemsResult = <Loading />
-        } 
+        }
+
         return (
             <React.Fragment>
                 <Header/>
                     <div className="container">
                         <h4 className="h4-5">Approved Items</h4>
                         {this.props.items.data.map(item => {
-                                return <Item item={item} key={`item ${item._id}`}/>
+                                return <ItemAdmin item={item} key={`item ${item._id}`}/>    // replaced Item with ItemAdmin
                         })}
                     </div>
 
                     {/* shows loading */}
-                    {itemsResult}
+                {itemsResult}
                 <Footer/>
             </React.Fragment>
         )
