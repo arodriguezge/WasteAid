@@ -12,7 +12,7 @@ Run in the Backend folder:
 ```
 npm install
 
-nodemon index.js
+npm run dev
 
 ```
 After installing MongoDB in your machine, you will need to run once:
