@@ -11,6 +11,7 @@ import SearchArea from '../containers/SearchArea'
 
 import MapSearch from './MapSearch'
 import AdminLogin from './AdminLogin';
+import AdminFrame from './AdminFrame';
 
 
 class Router extends React.Component {
@@ -31,7 +32,7 @@ class Router extends React.Component {
                     <Route path="/admin/tickets" component={TicketList} />
                     <Route path="/admin/login" component={AdminLogin} />
 
-                    {/* <Route path="/adminFrame" component={AdminFrame} /> */}
+                    <Route path="/admin/frame" component={AdminFrame} />
                     {/* <Route component={NotFound} /> */}
                 </Switch>
             </BrowserRouter>
