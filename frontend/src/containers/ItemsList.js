@@ -21,7 +21,7 @@ class ItemsList extends Component {
 
         return (
             <React.Fragment>
-                <Header/>
+                <HeaderAdmin/>
                     {/* shows loading */}
                     {loading}
                     <div className="container">
