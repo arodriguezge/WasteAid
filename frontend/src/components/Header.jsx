@@ -1,5 +1,5 @@
 import React from 'react'
-// import logo from '../images/WDA-Logo-grey-orange-green-blue.svg'
+import logo from '../images/logonextry.svg'
 import pin from '../images/pin.svg'
 import { Navbar, NavDropdown, Nav } from 'react-bootstrap'
 
@@ -9,11 +9,11 @@ class Header extends React.Component {
         return (
 
             <React.Fragment>
-                <Navbar bg="success" expand="md">
+                <Navbar bg="success" expand="lg">
 
                     <Navbar.Brand className="pb-0 pt-0">
-                        {/* <img src={logo} className="mx-auto" width="50" height="50" alt="logo" />&nbsp; &nbsp; */}
-                        <span className="text-white pl-2 specialFont">Wasteaid</span>
+                        <img src={logo} className="d-inline-block align-top m-1" width="50" height="50" alt="logo" /> &nbsp;
+                        <span className="d-sm-inline d-none text-white pl-1 specialFont">Wasteaid</span>
 
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
