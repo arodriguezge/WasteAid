@@ -7,6 +7,7 @@ const bodyParser = require('body-parser')
 
 const indexRouter = require('./routes/index')
 const itemsRouter = require('./routes/items')
+const usersRouter = require('./routes/users')
 
 const DB_URI = process.env.MONGO_LOCAL_CONN_URL
 
@@ -48,6 +49,7 @@ mongoose
 // routes
 app.use('/', indexRouter)
 app.use('/api/items', itemsRouter)
+app.use('/api/users', usersRouter)
 
 
 app.listen(`${stage.port}`, () => {
