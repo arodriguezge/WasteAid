@@ -128,8 +128,7 @@ export default (state = initialState, action) => {
             return Object.assign({}, state, {
                 data: updatedData,
                 success: true,
-
-                loading: false      // without this Loading (Spinner) doesn't stop
+                loading: false      // stop Loading (Spinner)
             })
         case types.EDIT_ITEM_FAILURE:
             return {

@@ -16,14 +16,16 @@ class ItemsList extends Component {
     render() {
         // commented out Loading because it didn't stop after "change category" and "edit"
 
-        let itemsResult
+        let loading
         if(this.props.items.loading) {
-            itemsResult = <Loading />
+            loading = <Loading />
         }
 
         return (
             <React.Fragment>
                 <Header/>
+                    {/* shows loading */}
+                    {loading}
                     <div className="container">
                         <h4 className="h4-5">Approved Items</h4>
                         {this.props.items.data.map(item => {
@@ -31,8 +33,7 @@ class ItemsList extends Component {
                         })}
                     </div>
 
-                    {/* shows loading */}
-                {itemsResult}
+
                 <Footer/>
             </React.Fragment>
         )

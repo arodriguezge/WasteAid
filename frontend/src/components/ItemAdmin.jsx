@@ -2,7 +2,6 @@ import React, {Component} from 'react'
 import { connect } from 'react-redux'
 import EditTicket from './EditTicket'
 import {disposalSites} from '../hardCodedContent/disposalSites'
-// import { removeItem, approveTicket, editItem } from '../actions/index'
 import { removeItem, editItem } from '../actions/index'
 
 
@@ -60,17 +59,7 @@ class Ticket extends Component {
             this.props.item.bin,
             this.category.current.value
         );
-        console.log(this.category.current.value)
     }
-
-    // allows item approvement only if category is given
-    // confirmTicket() {
-    //     if (this.props.item.category) {
-    //         this.props.approveTicket(this.props.item._id)
-    //     } else {
-    //         this.setState({categoryHintHidden: false})
-    //     }
-    // }
 
     // allows item editing only if category is given
     editTicket() {
@@ -196,6 +185,5 @@ class Ticket extends Component {
 
 export default connect(null, {
     removeItem: removeItem,
-    editItem: editItem,
-    // approveTicket: approveTicket
+    editItem: editItem
 })(Ticket)
