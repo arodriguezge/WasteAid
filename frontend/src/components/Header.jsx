@@ -9,11 +9,11 @@ class Header extends React.Component {
         return (
 
             <React.Fragment>
-                <Navbar bg="success" expand="lg">
+                <Navbar bg="success" expand="md">
 
                     <Navbar.Brand className="pb-0 pt-0">
                         {/* <img src={logo} className="mx-auto" width="50" height="50" alt="logo" />&nbsp; &nbsp; */}
-                        <span className="text-white  d-sm-inline pl-2 specialFont ">Wasteaid</span>
+                        <span className="text-white pl-2 specialFont">Wasteaid</span>
 
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />

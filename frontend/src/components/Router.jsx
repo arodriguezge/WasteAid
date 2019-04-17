@@ -11,6 +11,10 @@ import SearchArea from '../containers/SearchArea'
 
 import MapSearch from './MapSearch'
 import AdminLogin from './AdminLogin';
+import AdminFrame from './AdminFrame';
+
+import NotFound from './NotFound';
+
 
 
 class Router extends React.Component {
@@ -27,12 +31,14 @@ class Router extends React.Component {
                     <Route path="/learnMore" component={LearnMore} />
                     <Route path="/aboutUs" component={AboutUs} />
 
-                    <Route path="/items" component={ItemsList} />
-                    <Route path="/admin/tickets" component={TicketList} />
                     <Route path="/admin/login" component={AdminLogin} />
 
-                    {/* <Route path="/adminFrame" component={AdminFrame} /> */}
-                    {/* <Route component={NotFound} /> */}
+                    <Route path="/admin/frame" component={AdminFrame} />
+                    {/* those two now have special header: HeaderAdmin */}
+                    <Route path="/items" component={ItemsList} />
+                    <Route path="/admin/tickets" component={TicketList} />
+
+                    <Route component={NotFound} />
                 </Switch>
             </BrowserRouter>
         )
