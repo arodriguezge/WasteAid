@@ -48,9 +48,12 @@
   /*background-color: #dfdfff;*/
   color: black;
   font-size: 0.9rem;
-  width: 180px !important;
-  height: 28px;
+  min-width: 160px !important;
+  max-width: 200px;
+
+  height: 28px !important;
   padding-top: 3px;
+  padding-left: 3px;
   border: 1px solid #aaa;
   border-radius: 2px !important;
 }
