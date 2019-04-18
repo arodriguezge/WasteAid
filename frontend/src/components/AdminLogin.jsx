@@ -1,12 +1,27 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+
 import Footer from './Footer'
 import Header from './Header'
+
+import {
+    login
+} from '../actions/userActions'
 
 // corresponding style file: _registerLogin.scss
 
 class AdminLogin extends Component {
+    username = React.createRef()
+    password = React.createRef()
+
     handleSubmit = event => {
         event.preventDefault();
+        this.props.login(
+            this.username.current.value,
+            this.password.current.value,
+            this.props.history
+        )
+        // event.currentTarget.reset()
     }
     render() {
 
@@ -21,11 +36,11 @@ class AdminLogin extends Component {
                         <div className="col-md-6 col-11 pt-4 m-auto">
 
                             <div className="form-group">
-                                <input type="email" className="form-control" placeholder="Email address" ref={this.name} />
+                                <input type="text" className="form-control" placeholder="Username" ref={this.username} />
                             </div>
                             <br />
                             <div className="form-group">
-                                <input type="password" className="form-control" placeholder="Password" ref={this.name} />
+                                <input type="password" className="form-control" placeholder="Password" ref={this.password} />
                             </div>
                             <br />
                             <div>
@@ -43,6 +58,13 @@ class AdminLogin extends Component {
     }
 }
 
-export default AdminLogin;
 
+const mapStateToProps = ({ users }) => {
+    return { users }
+}
+
+
+export default connect(mapStateToProps, {
+    login: login
+})(AdminLogin)
 

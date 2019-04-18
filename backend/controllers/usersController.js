@@ -54,9 +54,8 @@ module.exports = {
         // }
         try {
 
-            const user = await User.findOne({ username: req.body.username })
-            const match = await bcrypt.compare(req.body.password, user.password)
-            
+            const user = await User.findOne({ username: req.body.params.username })
+            const match = await bcrypt.compare(req.body.params.password, user.password)
             if(!match) {
                 status = 401
                 result = { message: "Authentication error" }
