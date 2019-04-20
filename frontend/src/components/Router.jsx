@@ -13,7 +13,7 @@ import MapSearch from './MapSearch'
 import AdminLogin from './AdminLogin';
 import AdminFrame from './AdminFrame';
 
-import NotFound from './NotFound';
+//import NotFound from './NotFound';
 
 const Root = (props) => {
     const { history, location } = props
@@ -35,7 +35,7 @@ const Root = (props) => {
             <Route path="/admin/tickets" component={TicketList} />
 
             {/* <Route component={NotFound} /> */}
-        </Router> 
+        </Router>
     )
 }
 
