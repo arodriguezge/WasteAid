@@ -10,7 +10,8 @@ class HeaderAdmin extends React.Component {
                 <Navbar bg="success" expand="lg">
 
                     <Navbar.Brand className="pb-0 pt-0">
-                        <span className="text-white  d-sm-inline pl-2 specialFont ">Wasteaid</span>
+                        <img src="../images/logo.svg" className="d-inline-block align-top m-1" width="50" height="50" alt="logo" /> &nbsp;
+                        <span className="d-sm-inline d-none text-white pl-1 specialFont">Wasteaid</span>
 
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
