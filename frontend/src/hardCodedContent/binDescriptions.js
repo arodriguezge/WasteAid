@@ -30,7 +30,7 @@ export const binDescriptions = {
         hints: "You can use a bucket, special paper bags or a peace of newspaper for collecting and disposal of biowaste."
     },
     grey: {
-        germanName: "RESTMÜLL",
+        germanName: "RESTABFALL",
         allowed: "RESIDUAL WASTE (household rubbish, e.g. ash, wallpapers, dust bags, dish ware, animal litter, window glass",
         forbidden: "Toxic waste, batteries, paint, organic solvents (benzine etc.), animal corpses",
         hints: "If you empty out garbage bags more trash fits into the container."

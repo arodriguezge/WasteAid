@@ -59,10 +59,10 @@ class AddItemForm extends Component {
                     <form onSubmit={this.handleSubmit} id="add-item-form">
                         <p className="heading3b">Waste Item Name:</p>
                         <input type="text" className="form-control" placeholder="Type name of waste item here..."
-                            required={true} ref={this.name} /><br /> {/* required={true} */}
+                            required={true} ref={this.name} /><br />
 
                         <p className="heading3">Waste Item Description:</p><br />
-                        <textarea type="text" className="form-control" id="exampleFormControlTextarea1" rows="5"
+                        <textarea className="form-control" id="exampleFormControlTextarea1" rows="5"
                             placeholder="Type item description here..." ref={this.description} /><br />
 
                         <p className="heading3">Waste Bin:</p><br />

@@ -14,7 +14,8 @@ import AdminLogin from './AdminLogin';
 import AdminFrame from './AdminFrame';
 
 import NotFound from './NotFound';
-
+import AddSiteForm from './AddSiteForm';
+// import SitesList from '../containers/SitesList';     // has to be created yet
 
 
 class Router extends React.Component {
@@ -37,6 +38,10 @@ class Router extends React.Component {
                     {/* those two now have special header: HeaderAdmin */}
                     <Route path="/items" component={ItemsList} />
                     <Route path="/admin/tickets" component={TicketList} />
+
+                    {/* has to be craeted yet */}
+                    {/* <Route path="/admin/sites" component={TicketList} /> */}
+                    <Route path="/admin/addSite" component={AddSiteForm} />
 
                     <Route component={NotFound} />
                 </Switch>
