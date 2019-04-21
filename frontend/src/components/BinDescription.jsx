@@ -9,7 +9,7 @@ function BinDescrText(props) {
             <b>German name:</b> {props.descrTxt.germanName}<br/>
             <b>Allowed:</b> {props.descrTxt.allowed}<br/>
             <b>Not allowed:</b> {props.descrTxt.forbidden}<br/>
-            <b>Hints:</b> {props.descrTxt.hints}
+            <b>Hint:</b> {props.descrTxt.hints}
         </div>
     )
 }

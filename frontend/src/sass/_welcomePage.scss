@@ -15,34 +15,8 @@
   margin-bottom: 5%;
 }
 
-.form-box-welcome {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin-top: 30px;
-}
-
-.form-welcome {
-  width: 48%;
-}
-
-.input-and-button-welcome {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: -8px;
-}
-
-.form-control-welcome {
-  min-width: 180px;
-  width: 84%;
-  border-radius: 5px;
-  border: 1px solid lightgray;
-  padding-left: 10px;
-  height: 38px;
-  margin-bottom: -20px;
-  margin-top: -18px;
+.button-welcome {
+  margin-left: 10px;
 }
 
 .p2-welcome {
@@ -85,3 +59,82 @@
   font-weight: bold;
 }
 
+
+/* outer form container */
+.form-box-welcome {
+  display: flex;
+  justify-content: center;
+}
+
+/* inner form container */
+.form-welcome {
+  min-width: 200px;
+}
+
+/* innermost form container */
+.input-and-button-welcome {
+  display: flex;
+  width: 100%;
+}
+
+@media only screen and (min-width: 1200px) {
+  .form-welcome {
+    width: calc(43% - 70px);
+  }
+  .form-box-welcome {
+    margin-top: 30px;
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  .form-welcome {
+    width: calc(52% - 70px);
+  }
+  .form-box-welcome {
+    margin-top: 30px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .form-welcome {
+    width: calc(70% - 70px);
+  }
+  .form-box-welcome {
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .form-welcome {
+    width: calc(96% - 70px);
+  }
+  .form-box-welcome {
+    margin-top: 10px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .form-welcome {
+    width: calc(96% - 70px);
+  }
+  .form-box-welcome {
+    margin-top: 5px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .form-welcome {
+    width: calc(90%);
+  }
+  .form-box-welcome {
+    margin-top: 5px;
+  }
+  .input-and-button-welcome {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .button-welcome {
+    margin-top: 10px;
+    margin-left: 0;
+  }
+}

@@ -1,22 +1,21 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 import Footer from './Footer'
 import Header from './Header'
-import { withRouter } from 'react-router-dom'
-
+import {withRouter} from 'react-router-dom'
 
 class SearchItemHint extends Component {
     render() {
         return (
             <div className="popup-container-welcome">
                 <div className="search-item-hint-welcome">
-                    <p className="close-hint-char-welcome" onClick={this.props.hideHint} title="Close pop-up">&#10005;</p>
-                    Please enter search item<br />before starting the search!
+                    <p className="close-hint-char-welcome" onClick={this.props.hideHint}
+                       title="Close pop-up">&#10005;</p>
+                    Please enter search item<br/>before starting the search!
                 </div>
             </div>
         )
     }
 }
-
 
 class WelcomePage extends Component {
     constructor(props) {
@@ -27,44 +26,35 @@ class WelcomePage extends Component {
         };
 
         this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
         this.input = React.createRef()
     }
 
 
     handleChange = event => {
-        this.setState({ soughtItem: event.target.value })
-    };
-
+        this.setState({soughtItem: event.target.value.trim()})
+    }
 
     toggleSearchItemHint = () => {
         this.setState({
             searchItemHintHidden: !this.state.searchItemHintHidden
         })
-    };
+    }
 
+    handleSubmit(event) {
+        if (this.state.soughtItem && this.state.soughtItem !== "default") {
+            this.props.history.push(`/searchArea/${this.state.soughtItem}`)
+        } else {
+            this.setState({searchItemHintHidden: false});
+            event.target.reset()
+        }
+        event.preventDefault();
+    }
 
     render() {
-        const Button = withRouter(({ history }) => (
-            <button
-                className="btn btn-secondary button2"
-                type='button'
-                title="start search"
-                onClick={() => {
-                    if (this.state.soughtItem !== "default") {
-                        history.push(`/searchArea/${this.state.soughtItem}`)
-                    } else {
-                        this.setState({ searchItemHintHidden: false })
-                    }
-                }}
-            >
-                Search
-            </button>
-        ));
-
-
         return (
             <React.Fragment>
-                <Header />
+                <Header/>
                 <div className="container">
                     <h1 className="h2-0 font-weight-bold">Welcome to Wasteaid</h1>
 
@@ -112,28 +102,34 @@ class WelcomePage extends Component {
 
                     </div>
                     <div className="form-box-welcome">
-                        <form className="form-welcome">
+                        <form className="form-welcome" onSubmit={this.handleSubmit}>
                             <p className="p2-welcome">Which waste bin is best for my trash?</p>
                             <div className="input-and-button-welcome">
-                                <input type="text" className="form-control-welcome"
-                                    placeholder="Type name of waste item here..."
-                                    required={true} ref={this.input}
-                                    onChange={this.handleChange}
+                                <input type="text"
+                                       className="form-control form-welcome"
+                                       placeholder="Type name of waste item here..."
+                                       required={true} ref={this.input}
+                                       onChange={this.handleChange}
                                 />
-                                <Button />
+                                <input
+                                    className="btn btn-secondary button-welcome"
+                                    title="start search"
+                                    type="submit"
+                                    value="Search"
+                                />
                             </div>
                         </form>
                     </div>
 
-                    {!this.state.searchItemHintHidden && <SearchItemHint hideHint={this.toggleSearchItemHint} />}
+                    {!this.state.searchItemHintHidden && <SearchItemHint hideHint={this.toggleSearchItemHint}/>}
 
                 </div>
-                <Footer />
+                <Footer/>
             </React.Fragment>
         )
     }
 }
 
-export default WelcomePage;
+export default withRouter(WelcomePage)
 
 
