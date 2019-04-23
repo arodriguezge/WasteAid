@@ -4,31 +4,32 @@ import Footer from '../components/Footer'
 import HeaderAdmin from '../components/HeaderAdmin'
 import { connect } from 'react-redux'
 import Loading from "../components/Loading"
-import { fetchTickets } from '../actions/index'
+import { fetchTickets } from '../actions/ticketActions'
 
 
 // corresponding style file: _ticketList.scss
 
 class TicketList extends Component {
     componentDidMount = () => {
-        this.props.fetchTickets()
+        const token = localStorage.getItem('token')
+        this.props.fetchTickets(token, this.props.history)
     }
 
     render() {
         let loading
-        if(this.props.items.loading) {
+        if(this.props.tickets.loading) {
             loading = <Loading />
         }
 
         return (
             <React.Fragment>
-                <HeaderAdmin />
+                <HeaderAdmin history={this.props.history}/>
                 {/* shows loading */}
                 {loading}
                 <div className="container">
                     <h4 className="h4-5">Items to be approved</h4>
-                    {this.props.items.data.map(item => {
-                        return <Ticket item={item} key={`item ${item._id}`} />
+                    {this.props.tickets.data.map(ticket => {
+                        return <Ticket item={ticket} key={`item ${ticket._id}`} />
                     })}
                 </div>
                 <Footer />
@@ -37,8 +38,8 @@ class TicketList extends Component {
     }
 }
 
-const mapStateToProps = ({ items }) => {
-    return { items }
+const mapStateToProps = ({ tickets }) => {
+    return { tickets }
 }
 
 

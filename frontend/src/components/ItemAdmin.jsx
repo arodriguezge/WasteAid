@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import { connect } from 'react-redux'
 import EditTicket from './EditTicket'
 import {disposalSites} from '../hardCodedContent/disposalSites'
-import { removeItem, editItem } from '../actions/index'
+import { removeItem, editItem } from '../actions/ticketActions'
 
 
 // corresponding style files: _ticket.scss and _addItemForm.scss
