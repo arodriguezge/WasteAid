@@ -8,6 +8,7 @@ const bodyParser = require('body-parser')
 const indexRouter = require('./routes/index')
 const itemsRouter = require('./routes/items')
 const usersRouter = require('./routes/users')
+const ticketsRouter = require('./routes/tickets')
 
 const DB_URI = process.env.MONGO_LOCAL_CONN_URL
 
@@ -30,7 +31,7 @@ if (environment !== 'production') {
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', FRONTEND_URI)
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE')
-  res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type')
+  res.setHeader('Access-Control-Allow-Headers', 'Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers,X-Access-Token,XKey,Authorization')
   next()
 })
 
@@ -50,6 +51,7 @@ mongoose
 app.use('/', indexRouter)
 app.use('/api/items', itemsRouter)
 app.use('/api/users', usersRouter)
+app.use('/api/admin/tickets', ticketsRouter)
 
 
 app.listen(`${stage.port}`, () => {
