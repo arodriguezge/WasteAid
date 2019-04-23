@@ -17,7 +17,12 @@
     font-size: 40px;
 }
 
-a:hover:not(.active) span {
+.button-admin-header {
+    background-color: #12A065 !important;
+    border: none;
+}
+
+a:hover:not(.active) span, {
     // background-color: white; 
     color: rgba(255, 255, 255, 0.90) !important;
     border-bottom: 2px solid  rgba(255, 255, 255, 0.9);

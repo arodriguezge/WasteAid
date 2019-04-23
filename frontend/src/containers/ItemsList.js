@@ -4,29 +4,30 @@ import ItemAdmin from '../components/ItemAdmin'
 import Footer from '../components/Footer'
 import HeaderAdmin from '../components/HeaderAdmin'
 import Loading from '../components/Loading'
-import { fetchApprovedItems } from '../actions/index'
+import { fetchApprovedItems } from '../actions/ticketActions'
 
 
 class ItemsList extends Component {
     componentDidMount = () => {
-        this.props.fetchApprovedItems()
+        const token = localStorage.getItem('token')
+        this.props.fetchApprovedItems(token, this.props.history)
     }
 
     render() {
         let loading
-        if(this.props.items.loading) {
+        if(this.props.tickets.loading) {
             loading = <Loading />
         }
 
         return (
             <React.Fragment>
-                <HeaderAdmin/>
+                <HeaderAdmin history={this.props.history}/>
                     {/* shows loading */}
                     {loading}
                     <div className="container">
                         <h4 className="h4-5">Approved Items</h4>
-                        {this.props.items.data.map(item => {
-                                return <ItemAdmin item={item} key={`item ${item._id}`}/>
+                        {this.props.tickets.data.map(ticket => {
+                                return <ItemAdmin item={ticket} key={`item ${ticket._id}`}/>
                         })}
                     </div>
                 <Footer/>
@@ -35,8 +36,8 @@ class ItemsList extends Component {
     }
 }
 
-const mapStateToProps = ({ items }) => {
-    return { items }
+const mapStateToProps = ({ tickets }) => {
+    return { tickets }
 }
 
 export default connect(mapStateToProps, { fetchApprovedItems: fetchApprovedItems })(ItemsList)

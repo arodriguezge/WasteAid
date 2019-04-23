@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import { connect } from 'react-redux'
-import { editItem } from '../actions/index'
+import { editItem } from '../actions/ticketActions'
 
 // corresponding style file: _editTicketForm.scss
 
@@ -16,7 +16,7 @@ class EditTicket extends Component {
             this.name.current.value,
             this.description.current.value,
             this.bin.current.value,
-            this.props.item.category    // added category
+            this.props.item.category
         )
         event.currentTarget.reset()
         this.props.toggleHidden()
@@ -62,8 +62,8 @@ class EditTicket extends Component {
     }
 }
 
-const mapStateToProps = ({ items }) => {
-    return { items }
+const mapStateToProps = ({ tickets }) => {
+    return { tickets }
 }
 
 export default connect(mapStateToProps, {

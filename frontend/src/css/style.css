@@ -513,6 +513,10 @@ footer {
   font-family: 'Leckerli One', cursive;
   font-size: 40px; }
 
+.button-admin-header {
+  background-color: #12A065 !important;
+  border: none; }
+
 a:hover:not(.active) span {
   color: rgba(255, 255, 255, 0.9) !important;
   border-bottom: 2px solid rgba(255, 255, 255, 0.9); }
