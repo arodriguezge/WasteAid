@@ -78,8 +78,8 @@ class AddItemForm extends Component {
                             <option value="none">none of the bins (other waste disposal)</option>
                         </select>
 
-                        <button className="btn btn-secondary button3" type="submit">Add item</button>
-                        <button className="btn btn-secondary button3" onClick={this.clearForm}>Reset form</button>
+                        <button className="btn btn-outline-secondary button3" type="submit">Add item</button>
+                        <button className="btn btn-outline-secondary button3" onClick={this.clearForm}>Reset form</button>
                     </form>
 
                     {!this.state.isHidden && <FormSubmitHint hideHint={this.toggleHidden} />}

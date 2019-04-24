@@ -78,7 +78,7 @@ class MapSearch extends Component {
                     <div className="kategory-search-buttons">
                         {this.getAllWasteCategories().map((item, index) => {
                             return (
-                                <button className="btn btn-secondary btn-sm category-button" key={index}
+                                <button className="btn btn-outline-secondary btn-sm category-button" key={index}
                                     onClick={() => this.setWasteCategory(item)}>{item}</button>
                             )
                         })}

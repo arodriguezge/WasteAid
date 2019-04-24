@@ -112,7 +112,7 @@ class WelcomePage extends Component {
                                        onChange={this.handleChange}
                                 />
                                 <input
-                                    className="btn btn-secondary button-welcome"
+                                    className="btn btn-outline-secondary button-welcome"
                                     title="start search"
                                     type="submit"
                                     value="Search"
