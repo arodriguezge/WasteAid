@@ -3,27 +3,12 @@ const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 
 module.exports = {
-    list: async (req, res) => {
-        let result 
-        let status
-        try {
-            const users = await User.find({}) //CHECK THIS ONE, WE SHOULD NOT SEND PASSWORD
-            result = users
-            status = 200
-        } catch(err) {
-            status = 500
-            result = {
-                error: err.message,
-                success: false
-            }
-        }
-        res.status(status).json(result)
-    },
     create: async (req, res) => {
         let result 
         let status
         try {
             req.body.password = await bcrypt.hash(req.body.password, 10)
+            //check errors here 
             const newUser = new User(req.body)
             const user = await newUser.save()
             result = {
@@ -44,6 +29,7 @@ module.exports = {
     authenticate: async (req, res) => {
         let result 
         let status 
+        //try to re-build
         // try {
         //     let response
         //     const user = await User.findOne({ email: req.body.email })
@@ -53,27 +39,34 @@ module.exports = {
         //     return res.status(200).send(response)
         // }
         try {
-
             const user = await User.findOne({ username: req.body.params.username })
-            const match = await bcrypt.compare(req.body.params.password, user.password)
-            if(!match) {
-                status = 401
-                result = { message: "Authentication error" }
+            if(!user) {
+                status = 404
+                result = {
+                    error: 'User not found',
+                    success: false
+                }
             } else {
-
-                const token = await jwt.sign(
-                    { user: user.username }, 
-                    process.env.JWT_SECRET,
-                    { expiresIn: '12h'}
-                )
-
-                status = 200
-                result = { 
-                    success: true,
-                    token
+                const match = await bcrypt.compare(req.body.params.password, user.password)
+                if(!match) {
+                    status = 401
+                    result = {
+                        error: 'Authentication error',
+                        success: false
+                    }
+                } else {
+                    const token = await jwt.sign(
+                        { user: user.username }, 
+                        process.env.JWT_SECRET,
+                        { expiresIn: '12h'}
+                    )
+                    status = 200
+                    result = { 
+                        success: true,
+                        token
+                    }
                 }
             }
-             
         } catch(err) {
             status = 500
             result = {
