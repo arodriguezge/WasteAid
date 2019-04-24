@@ -11,7 +11,7 @@ class MapSearch extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            wasteCategory: "",
+            wasteCategory: "SELECTED",
             position: [52.513961, 13.403421],
             mapZoom: 10
         };
@@ -24,20 +24,22 @@ class MapSearch extends Component {
         if (this.props.match.params.rubbishCategory && this.props.match.params.rubbishCategory !== "default") {
             this.setState({ wasteCategory: this.props.match.params.rubbishCategory })
         } else {
-            this.setState({ wasteCategory: "" })
+            this.setState({ wasteCategory: "SELECTED" })
         }
     }
 
 
     getAllWasteCategories() {
         let allCategoryArrays = [];
-
         disposalSites.forEach(function (arrayItem) {
             allCategoryArrays.push(arrayItem.categories);
         });
 
-        let allCategoriesWithDoubles = allCategoryArrays.flat();
-        return [...new Set(allCategoriesWithDoubles)].sort()
+        // join arrays, and remove spaces only around commas
+        let allCategoriesWithDoubles = allCategoryArrays.join().replace(/\s*,\s*/g, ",");
+        let allCategoriesWithoutDoubles = Array.from(new Set(allCategoriesWithDoubles.split(','))).toString();
+
+        return allCategoriesWithoutDoubles.split(",").sort();
     }
 
 
@@ -55,6 +57,14 @@ class MapSearch extends Component {
 
 
     render() {
+        let categoryStyle;
+
+        if (this.state.wasteCategory !== "SELECTED") {
+            categoryStyle = { fontWeight: "bold" }
+        } else {
+            categoryStyle = { fontWeight: "normal" }
+        }
+
         return (
             <React.Fragment>
                 <Header ref={this.headerRef} />
@@ -74,7 +84,7 @@ class MapSearch extends Component {
                         })}
                     </div>
                     <div className="map-search-hint">
-                        Disposal locations accepting waste category <b>{this.state.wasteCategory}</b>:
+                        Disposal locations accepting the waste category <span style={categoryStyle}>{this.state.wasteCategory.toLowerCase()}</span>:
                     </div>
 
                     <Map
@@ -91,23 +101,23 @@ class MapSearch extends Component {
                             disposalSites.map((item, index) => {
                                 if (item.categories.indexOf(this.state.wasteCategory) > -1) {
                                     return (
-                                        <Marker position={[item.coordinates.latitude, item.coordinates.longitude]}
+                                        <Marker position={[item.latitude, item.longitude]}
                                             key={index}>
                                             <Popup>
                                                 <b>{item.name}</b><br />
                                                 {item.address}<br />
                                                 <hr />
                                                 <b>Opening hours</b><br />
-                                                Monday: {item.openingHours.monday}<br />
-                                                Tuesday: {item.openingHours.tuesday}<br />
-                                                Wednesday: {item.openingHours.wednesday}<br />
-                                                Thursday: {item.openingHours.thursday}<br />
-                                                Friday: {item.openingHours.friday}<br />
-                                                Saturday: {item.openingHours.saturday}<br />
-                                                Sunday: {item.openingHours.sunday}<br />
+                                                Monday: {item.monday}<br />
+                                                Tuesday: {item.tuesday}<br />
+                                                Wednesday: {item.wednesday}<br />
+                                                Thursday: {item.thursday}<br />
+                                                Friday: {item.friday}<br />
+                                                Saturday: {item.saturday}<br />
+                                                Sunday: {item.sunday}<br />
                                                 <hr />
-                                                Phone: {item.contact.phone}<br />
-                                                Email: {item.contact.email}
+                                                Phone: {item.phone}<br />
+                                                Email: {item.email}
                                             </Popup>
                                         </Marker>
                                     )

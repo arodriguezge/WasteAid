@@ -142,7 +142,8 @@ export default (state = initialState, action) => {
         case types.APPROVE_TICKET_SUCCESS:
             return Object.assign({}, state, {
                 data: state.data.filter(item => item._id !== action.payload.item._id),
-                success: true
+                success: true,
+                loading: false      // stop Loading (Spinner)
             })
         case types.APPROVE_TICKET_FAILURE:
             return {

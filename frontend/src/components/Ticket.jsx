@@ -42,13 +42,15 @@ class Ticket extends Component {
 
     getAllWasteCategories() {
         let allCategoryArrays = [];
-
         disposalSites.forEach(function (arrayItem) {
             allCategoryArrays.push(arrayItem.categories);
         });
 
-        let allCategoriesWithDoubles = allCategoryArrays.flat();
-        return [...new Set(allCategoriesWithDoubles)].sort()
+        // join arrays, and remove spaces only around commas
+        let allCategoriesWithDoubles = allCategoryArrays.join().replace(/\s*,\s*/g, ",");
+        let allCategoriesWithoutDoubles = Array.from(new Set(allCategoriesWithDoubles.split(','))).toString();
+
+        return allCategoriesWithoutDoubles.split(",").sort();
     }
 
     handleChange() {

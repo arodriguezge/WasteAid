@@ -41,14 +41,6 @@
   justify-content: flex-end;
   align-items: center; }
 
-.map-search-link {
-  color: black;
-  text-decoration: none; }
-
-.map-search-link:hover {
-  color: black;
-  text-decoration: none; }
-
 .bin-icon-container2 {
   display: flex;
   flex-wrap: wrap;
@@ -368,7 +360,7 @@ footer {
 .close-hint-char-ticket {
   font-size: 1.5rem;
   text-align: right;
-  margin: 0 0 -15px 0;
+  margin: 0 0 -5px 0;
   cursor: pointer;
   font-weight: bold; }
 
