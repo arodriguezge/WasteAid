@@ -68,7 +68,7 @@ class SearchArea extends React.Component {
                             <input type="text" className="form-control2"
                                 placeholder="Type name of waste item here..."
                                 required={true} ref={this.query} />
-                            <button className="btn btn-secondary button2" type="submit" title="start search">
+                            <button className="btn btn-outline-secondary button2" type="submit" title="start search">
                                 Search
                                 </button>
                         </div>

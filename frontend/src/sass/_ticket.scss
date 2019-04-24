@@ -34,9 +34,8 @@
 
 .button5 {
   margin-left: 6px;
-}
-.button5:hover {
-  cursor: pointer;
+  height: 28px;
+  padding-top: 2px;
 }
 
 .table5 {
@@ -44,9 +43,6 @@
 }
 
 .select-ticket {
-  background-image: linear-gradient(#fff, #d5d5d5);
-  /*background-color: #dfdfff;*/
-  color: black;
   font-size: 0.9rem;
   min-width: 160px !important;
   max-width: 200px;
@@ -55,10 +51,6 @@
   padding-top: 3px;
   padding-left: 3px;
   border: 1px solid #aaa;
-  border-radius: 2px !important;
-}
-.select-ticket:hover {
-  cursor: pointer;
 }
 
 .popup-container-ticket {

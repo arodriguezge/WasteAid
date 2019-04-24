@@ -8,13 +8,13 @@ export const binDescriptions = {
     green: {
         germanName: "GRÜNGLAS, BUNTGLAS",
         allowed: "GREEN GLASS / COLORED GLASS, e.g. perfume bottles, jars, bottles for juice, wine, vinegar, oil.",
-        forbidden: "Glass items that are not bottles or jars, e.g. window glass, glass decoration, glass ashtrays. Porcelain (chinaware), pottery.",
+        forbidden: "Glass items that are not bottles or jars, e.g. window glass, glass decoration, lead glass, incandescent bulbs. Porcelain (chinaware), pottery.",
         hints: "Please, empty the bottles and jars before disposal. Some public glass container are only for brown or green glass. Return returnable bottles (German: Pfandflaschen) to the vendor to get some money back!"
     },
     white: {
         germanName: "WEISSGLAS",
         allowed: "WHITE GLASS, e.g. perfume bottles, jars, bottles for juice, wine, vinegar, oil",
-        forbidden: "Colored glass. Glass items that are not bottles or jars, e.g. window glass, glass decoration, glass ashtrays. Porcelain (chinaware), pottery.",
+        forbidden: "Colored glass. Glass items that are not bottles or jars, e.g. window glass, glass decoration, lead glass, incandescent bulbs. Porcelain (chinaware), pottery.",
         hints: "Please, empty the bottles and jars before disposal. Return returnable bottles (German: Pfandflaschen) to the vendor to get some money back!"
     },
     yellow: {
@@ -39,6 +39,6 @@ export const binDescriptions = {
         germanName: "SONDERMÜLL",
         allowed: "not specified",
         forbidden: "not specified",
-        hints: "SPECIAL WASTE. Some waste items shouldn't be thrown in any of the garbage containers, e.g. hazardous waste, batteries, paint, organic solvents (benzine etc.), animal corpses. Go to WEB SEARCH to find an appropriate disposal site."
+        hints: "SPECIAL WASTE. Some waste items shouldn't be thrown in any of the garbage containers, e.g. hazardous waste, batteries, paint, organic solvents (benzine etc.), animal corpses. Go to Mab Search to find an appropriate disposal site."
     }
 };
