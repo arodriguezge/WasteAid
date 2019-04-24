@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
-import {NavLink} from 'react-router-dom'
+// import {NavLink} from 'react-router-dom'
+import {withRouter} from 'react-router-dom'
 
 // corresponding style files: _item.scss, _ticket.scss
 
@@ -16,6 +17,7 @@ class Item extends Component {
             toggleHint: "show item description"
         };
         this.toggleItemDescr = this.toggleItemDescr.bind(this);
+        this.goToMap = this.goToMap.bind(this);
     }
 
     toggleItemDescr() {
@@ -33,6 +35,14 @@ class Item extends Component {
             })
         }
     }
+
+
+    goToMap() {
+        if (this.props.item.category) {
+            this.props.history.push(`/mapSearch/${this.props.item.category}`)
+        }
+    }
+
 
     binIconPath() {
         //console.log(this.props.item.description);
@@ -92,10 +102,8 @@ class Item extends Component {
                         </td>
                         <td>
                             <div className="button-container-1">
-                                <button className="button5" title="show disposal sites in map">
-                                    <NavLink to={`/mapSearch/${this.props.item.category}`} className="map-search-link" activeClassName="active">
-                                        <span>Map Search</span>
-                                    </NavLink>
+                                <button className="map-button" title="show disposal sites in map" onClick={this.goToMap}>
+                                    Map Search
                                 </button>
                                 <img className="wastebin-icon5" src={this.binIconPath()} alt="wastebin icon"
                                      title={this.binIconTitle()}/>
@@ -115,4 +123,4 @@ class Item extends Component {
     }
 }
 
-export default Item
+export default withRouter(Item)

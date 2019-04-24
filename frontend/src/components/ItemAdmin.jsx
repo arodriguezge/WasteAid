@@ -17,7 +17,7 @@ class CategoryHint extends Component {
             <div className="popup-container-ticket">
                 <div className="category-hint">
                     <p className="close-hint-char-ticket" onClick={this.props.hideHint} title="Close pop-up">&#10005;</p>
-                    Please set a CATEGORY<br/>before editing or approving!
+                    Please set a CATEGORY<br/>before editing!
                 </div>
             </div>
         )
@@ -42,13 +42,15 @@ class Ticket extends Component {
 
     getAllWasteCategories() {
         let allCategoryArrays = [];
-
         disposalSites.forEach(function (arrayItem) {
             allCategoryArrays.push(arrayItem.categories);
         });
 
-        let allCategoriesWithDoubles = allCategoryArrays.flat();
-        return [...new Set(allCategoriesWithDoubles)].sort()
+        // join arrays, and remove spaces only around commas
+        let allCategoriesWithDoubles = allCategoryArrays.join().replace(/\s*,\s*/g, ",");
+        let allCategoriesWithoutDoubles = Array.from(new Set(allCategoriesWithDoubles.split(','))).toString();
+
+        return allCategoriesWithoutDoubles.split(",").sort();
     }
 
     handleChange() {
