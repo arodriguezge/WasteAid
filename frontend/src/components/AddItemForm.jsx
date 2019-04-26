@@ -62,20 +62,20 @@ class AddItemForm extends Component {
                             required={true} ref={this.name} /><br /> {/* required={true} */}
 
                         <p className="heading3">Waste Item Description:</p><br />
-                        <textarea type="text" className="form-control" id="exampleFormControlTextarea1" rows="5"
+                        <textarea className="form-control" id="exampleFormControlTextarea1" rows="5"
                             placeholder="Type item description here..." ref={this.description} /><br />
 
                         <p className="heading3">Waste Bin:</p><br />
 
                         <select className="form-control" defaultValue="Choose..." ref={this.bin}>
-                            <option value="Choose...">Choose...</option>
-                            <option value="blue">blue bin (paper, cardboard)</option>
-                            <option value="green">green bin (colored glass)</option>
-                            <option value="white">white bin (white glass)</option>
-                            <option value="yellow">yellow/orange bin (plastic, metal, Green Dot)</option>
-                            <option value="brown">brown bin (biodegradable goods)</option>
-                            <option value="grey">grey/black bin (everything else)</option>
-                            <option value="none">none of the bins (other waste disposal)</option>
+                            <option value="Choose...">Choose waste bin here...</option>
+                            <option value="blue">Blue bin (paper, cardboard)</option>
+                            <option value="green">Green bin (colored glass)</option>
+                            <option value="white">White bin (white glass)</option>
+                            <option value="yellow">Yellow bin (plastic, metal, Green Dot)</option>
+                            <option value="brown">Brown bin (biodegradable goods)</option>
+                            <option value="grey">Dark grey bin (everything else)</option>
+                            <option value="none">None of the bins (special disposal)</option>
                         </select>
 
                         <button className="btn btn-outline-secondary button3" type="submit">Add item</button>

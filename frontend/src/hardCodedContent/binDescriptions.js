@@ -20,7 +20,7 @@ export const binDescriptions = {
     yellow: {
         germanName: "WERTSTOFFE",
         allowed: "PLASTIC, METAL, GREEN DOT (bottles, foil, tin cans, tooth brushes, yogurt pots etc.)",
-        forbidden: "Rubber, electrical devices, electronics, data storage devices (CD, DVD). Nonferrous metals except aluminium.",
+        forbidden: "Rubber, electrical devices, electronics, data storage devices (CD, DVD), clothes, wood, batteries, energy saving lamps. Nonferrous metals except aluminium.",
         hints: "Please, empty the bottles and jars before disposal. Return returnable bottles (German: Pfandflaschen) and beer cans to the vendor to get some money back!"
     },
     brown: {
@@ -39,6 +39,6 @@ export const binDescriptions = {
         germanName: "SONDERMÜLL",
         allowed: "not specified",
         forbidden: "not specified",
-        hints: "SPECIAL WASTE. Some waste items shouldn't be thrown in any of the garbage containers, e.g. hazardous waste, batteries, paint, organic solvents (benzine etc.), animal corpses. Go to Mab Search to find an appropriate disposal site."
+        hints: "SPECIAL WASTE. Some waste items shouldn't be thrown in any of the garbage containers, e.g. hazardous waste, batteries, paint, organic solvents (benzine etc.), animal corpses. Click on \"Map\" in the results in order to find an appropriate disposal site."
     }
 };

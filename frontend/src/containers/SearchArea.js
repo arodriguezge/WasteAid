@@ -107,7 +107,7 @@ class SearchArea extends React.Component {
                         {this.state.wasteBinColor ? <BinDescription binColor={this.state.wasteBinColor} /> : null}
 
                         <div className="search-area-map-hint">
-                            For big garbage amounts or special waste: Click on Map Search in results.
+                            For big garbage amounts or special waste: Click on Map in results.
                             </div>
 
                         {/* result of search by item - query - bin color */}

@@ -103,7 +103,7 @@ class Item extends Component {
                         <td>
                             <div className="button-container-1">
                                 <button className="btn btn-outline-secondary btn-sm" title="show disposal sites in map" onClick={this.goToMap}>
-                                    Map Search
+                                    Map
                                 </button>
                                 <img className="wastebin-icon5" src={this.binIconPath()} alt="wastebin icon"
                                      title={this.binIconTitle()}/>
