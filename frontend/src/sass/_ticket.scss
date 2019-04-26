@@ -66,8 +66,9 @@
 }
 
 .category-hint {
+  color: #fff;
   border-radius: 5px;
-  background-color: #70e1e9;
+  background-color: #12A065;
   padding: 8px 18px 15px 18px;
   z-index: 2;
   margin: auto;
@@ -79,6 +80,14 @@
   text-align: left;
 }
 
+.close-hint-char-item-admin {
+  font-size: 1.5rem;
+  text-align: right;
+  margin: 0 0 -20px 0;
+  cursor: pointer;
+  font-weight: bold;
+}
+
 .close-hint-char-ticket {
   font-size: 1.5rem;
   text-align: right;
@@ -86,6 +95,8 @@
   cursor: pointer;
   font-weight: bold;
 }
+
+
 
 /*
 .buttons-container {

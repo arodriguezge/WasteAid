@@ -16,8 +16,8 @@ class CategoryHint extends Component {
         return (
             <div className="popup-container-ticket">
                 <div className="category-hint">
-                    <p className="close-hint-char-ticket" onClick={this.props.hideHint} title="Close pop-up">&#10005;</p>
-                    Please set a CATEGORY<br/>before editing!
+                    <p className="close-hint-char-item-admin" onClick={this.props.hideHint} title="Close pop-up">&#10005;</p>
+                    Please select a<br/>CATEGORY before editing!
                 </div>
             </div>
         )

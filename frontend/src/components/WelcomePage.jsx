@@ -29,8 +29,7 @@ class WelcomePage extends Component {
         this.handleSubmit = this.handleSubmit.bind(this);
         this.input = React.createRef()
     }
-
-
+    
     handleChange = event => {
         this.setState({soughtItem: event.target.value.trim()})
     }
@@ -50,8 +49,16 @@ class WelcomePage extends Component {
         }
         event.preventDefault();
     }
+    
+    goToSearchArea(item) {
+        this.props.history.push(`/searchArea/${item}`)
+    }
 
     render() {
+        // let listStyle = {
+        //     listStyleImage: url('../images/green-dot.svg')
+        // }
+
         return (
             <React.Fragment>
                 <Header/>
@@ -61,22 +68,22 @@ class WelcomePage extends Component {
                     <div className="list-container-0">
 
                         <div className="list-box-0">
+                            <h4>This little app can help you:</h4>
+                            <ul> {/* style={listStyle}*/}
+                                <li>Separate your rubbish properly</li>
+                                <li>Use the public waste disposal system</li>
+                                <li>Reduce your daily waste amount</li>
+                                <li>Find disposal sites for special refuse</li>
+                            </ul>
+                        </div>
+
+                        <div className="list-box-0">
                             <h4>Contribute to a better future</h4>
                             <ul>
                                 <li>Support recycling of your waste</li>
                                 <li>Dispose of your refuse eco-friendly</li>
                                 <li>Keep your ecological footprint small</li>
                                 <li>Help save natural resources</li>
-                            </ul>
-                        </div>
-
-                        <div className="list-box-0">
-                            <h4>This little app can help you</h4>
-                            <ul>
-                                <li>separate your rubbish properly</li>
-                                <li>use the public waste disposal system</li>
-                                <li>reduce your daily waste amount</li>
-                                <li>find disposal sites for special refuse</li>
                             </ul>
                         </div>
 
@@ -101,6 +108,7 @@ class WelcomePage extends Component {
                             */}
 
                     </div>
+
                     <div className="form-box-welcome">
                         <form className="form-welcome" onSubmit={this.handleSubmit}>
                             <p className="p2-welcome">Which waste bin is best for my trash?</p>
@@ -122,6 +130,12 @@ class WelcomePage extends Component {
                     </div>
 
                     {!this.state.searchItemHintHidden && <SearchItemHint hideHint={this.toggleSearchItemHint}/>}
+
+                    {/* <div className="most-searched-items">
+                        <div className="item-picture-container">
+                            <img src="../images/brown-glass-bottles-256x190.jpg" alt="brown glass bottles"/>
+                        </div>
+                    </div> */}
 
                 </div>
                 <Footer/>
