@@ -4,9 +4,9 @@ export const faq = [
     {
         question: "How can I use this app?",
         answers: [
-            "In the SEARCH AREA you can find out where to dispose of specific waste items.",
+            "In the SEARCH you can find out where to dispose of specific waste items.",
             "There you can also see what is allowed to be thrown into the diverse garbage containers.",
-            "The MAP SEARCH allows you to find nearby recycling centers and other disposal sites."
+            "The MAP allows you to find nearby recycling centers and other disposal sites."
         ],
         links: []
     },
@@ -31,22 +31,22 @@ export const faq = [
     {
         question: "Where can I get rid of rubbish not allowed to be thrown into one of the bins?",
         answers: [
-            "Go to MAP SEARCH. If the corresponding waste category is being listed there you can find suitable disposal sites in the map."
+            "Go to MAP. If the corresponding waste category is being listed there you can find suitable disposal sites in the map."
         ],
         links: []
     },
     {
         question: "Where can I dispose of big amounts of waste?",
         answers: [
-            "Go to MAP SEARCH. There you can find alternative disposal sites that accept big amounts of waste that don't fit into the bins in the backyard.",
-            "The BSR Recycling Centers (BSR Recyclinghöfe) for instance accept 1 cubic meter of garbage per day. For most sorts of waste the service is for free."
+            "Go to MAP. There you can find alternative disposal sites that accept big amounts of waste that don't fit into the bins in the backyard.",
+            "The BSR Recycling Centers (German: BSR Recyclinghöfe) for instance accept 1 cubic meter of garbage per day. For most sorts of waste the service is for free."
         ],
         links: []
     },
     {
         question: "How to get rid of big amounts of garden refuse?",
         answers: [
-            "The BSR Recycling Centers (BSR Recyclinghöfe) sell big plastic bags for foliage (leaves), twigs (small branches) and lawn cuttings for a few Euros each.",
+            "The BSR Recycling Centers (German: BSR Recyclinghöfe) sell big plastic bags for foliage (leaves), twigs (small branches) and lawn cuttings for a few Euros each.",
             "You can leave the filled bags on the pavement. The BSR will pick them up on occasion."
         ],
         links: []
@@ -68,13 +68,13 @@ export const faq = [
     {
         question: "Can I put window glass into the waste glass container?",
         answers: [
-            "No, please don't! There a different sorts of glass that shouldn't be mixed for the sake of recycability.",
+            "No, please don't! There a different sorts of glass that shouldn't be mixed for the sake of recyclability.",
             "Only bottles and jars made of glass are being collected in the waste glass containers."
         ],
         links: []
     },
     {
-        question: "Do I have to remove the caps from the glass vessels?",
+        question: "Do I have to remove the caps from glass bottles and glass jars?",
         answers: [
             "No, it is not necessary because the lids will be sorted out before the recycling process.",
             "Ideally, you can remove lids made of plastic and add them to the recycable plastic waste."
@@ -93,14 +93,14 @@ export const faq = [
         question: "Is recycling suited for mitigating climate change?",
         answers: [
             "Most probably, yes. Garbage that can't be recycled will be incinerated or buried, both of which release greenhouse gases.",
-            "Unavoidably, carbon dioxide is being emitted through recycling too, but not as much as through waste incineration."
+            "Unavoidably, carbon dioxide is being emitted through recycling too, but not as much as through waste incineration. Another benefit of recycling is saving of valuable raw materials, whose production is energy-consuming."
         ],
         links: []
     },
     {
         question: "Where can I leave metals like copper, brass or bronze?",
         answers: [
-            "Small amounts of non-ferrous metal can be delivered to the BSR Recycling Centers (BSR Recyclinghöfe).",
+            "Small amounts of non-ferrous metal can be delivered to the BSR Recycling Centers (German: BSR Recyclinghöfe).",
             "Big amounts will be accepted by scrap yards. Possibly, you can get some money for it."
         ],
         links: []

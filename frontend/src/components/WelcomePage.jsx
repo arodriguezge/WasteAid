@@ -27,6 +27,7 @@ class WelcomePage extends Component {
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.goToSearchArea = this.goToSearchArea.bind(this);
         this.input = React.createRef()
     }
     
@@ -63,7 +64,7 @@ class WelcomePage extends Component {
             <React.Fragment>
                 <Header/>
                 <div className="container">
-                    <h1 className="h2-0 font-weight-bold">Welcome to Wasteaid</h1>
+                    <h1 className="h2-0 font-weight-bold">Welcome to WasteAid</h1>
 
                     <div className="list-container-0">
 
@@ -87,35 +88,16 @@ class WelcomePage extends Component {
                             </ul>
                         </div>
 
-                        {/*
-                            <div className="list-box-0">
-                            <h4>Features</h4>
-                            <ul>
-                                <li>General info on disposal of domestic<br/>refuse and benefits of recycling</li>
-                                <li>Growing database describing various<br/>waste items and how to get rid of them</li>
-                                <li>Users can propose waste items</li>
-                            </ul>
-                            </div>
-
-                            <div className="list-box-0">
-                            <h4>Limitations</h4>
-                            <ul>
-                                <li>This app adresses private consumers and<br/>is related to domestic waste exclusively</li>
-                                <li>This app is not an advisor for disposal<br/>of commercial waste</li>
-                                <li>bla bla</li>
-                            </ul>
-                            </div>
-                            */}
-
                     </div>
 
                     <div className="form-box-welcome">
                         <form className="form-welcome" onSubmit={this.handleSubmit}>
-                            <p className="p2-welcome">Which waste bin is best for my trash?</p>
+                            <p className="p2-welcome-1">Which waste bin is best for my trash?</p>
                             <div className="input-and-button-welcome">
-                                <input type="text"
+                                <input
+                                    type="text"
                                        className="form-control form-welcome"
-                                       placeholder="Type name of waste item here..."
+                                       placeholder="Type name of waste item here... *"
                                        required={true} ref={this.input}
                                        onChange={this.handleChange}
                                 />
@@ -126,16 +108,69 @@ class WelcomePage extends Component {
                                     value="Search"
                                 />
                             </div>
+                            <p className="p2-welcome-2">* e.g. napkins, dust bags, paint, batteries, ...</p>
                         </form>
                     </div>
 
                     {!this.state.searchItemHintHidden && <SearchItemHint hideHint={this.toggleSearchItemHint}/>}
 
-                    {/* <div className="most-searched-items">
+                    <div className="image-gallery">
                         <div className="item-picture-container">
-                            <img src="../images/brown-glass-bottles-256x190.jpg" alt="brown glass bottles"/>
+                            <img
+                                onClick={(event) => this.goToSearchArea("glass", event)}
+                                className="banner"
+                                src="../images/brown-glass-bottles-256x190.jpg"
+                                alt="brown glass bottles"
+                                title="glass"
+                            />
                         </div>
-                    </div> */}
+                        <div className="item-picture-container">
+                            <img
+                                onClick={(event) => this.goToSearchArea("cans", event)}
+                                className="banner"
+                                src="../images/cans-320x213.jpg"
+                                alt="empty cans"
+                                title="cans"
+                            />
+                        </div>
+                        <div className="item-picture-container">
+                            <img
+                                onClick={(event) => this.goToSearchArea("batteries", event)}
+                                className="banner"
+                                src="../images/batteries-320x240.jpg"
+                                alt="batteries"
+                                title="batteries"
+                            />
+                        </div>
+                        <div className="item-picture-container">
+                            <img
+                                onClick={(event) => this.goToSearchArea("kitchen refuse", event)}
+                                className="banner"
+                                src="../images/potatoe-peelings-227x170.jpg"
+                                alt="potato peelings"
+                                title="kitchen refuse"
+                            />
+                        </div>
+                        <div className="item-picture-container">
+                            <img
+                                onClick={(event) => this.goToSearchArea("cardboard", event)}
+                                className="banner"
+                                src="../images/cardboard-box-280x215.jpg"
+                                alt="cardboard box"
+                                title="cardboard"
+                            />
+                        </div>
+                        <div className="item-picture-container">
+                            <img
+                                onClick={(event) => this.goToSearchArea("plastic", event)}
+                                className="banner"
+                                src="../images/plastic-waste-256x170.jpg"
+                                alt="plastic waste"
+                                title="plastic"
+                            />
+                        </div>
+
+                    </div>
 
                 </div>
                 <Footer/>

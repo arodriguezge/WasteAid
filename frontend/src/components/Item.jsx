@@ -96,7 +96,7 @@ class Item extends Component {
                         <td>
                             <div className="desrc-toggle-switch-1" onClick={this.toggleItemDescr}
                                  title={this.state.toggleHint}>
-                                &nbsp;{this.state.toggleSwitchChar}
+                                {this.state.toggleSwitchChar}
                             </div>
                             <div className="card-title5">{this.props.item.name}</div>
                         </td>

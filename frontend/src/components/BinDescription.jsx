@@ -130,7 +130,7 @@ class BinDescription extends Component {
                         <td>
                             <div className="desrc-toggle-switch2" onClick={this.toggleBinDescr}
                                  title={this.state.toggleHint}>
-                                &nbsp;{this.state.toggleSwitchChar}
+                                {this.state.toggleSwitchChar}
                             </div>
                             <div className="card-title2">{binTitle}</div>
                         </td>
