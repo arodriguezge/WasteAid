@@ -126,11 +126,11 @@ class WelcomePage extends Component {
                         </div>
                         <div className="item-picture-container">
                             <img
-                                onClick={(event) => this.goToSearchArea("cans", event)}
+                                onClick={(event) => this.goToSearchArea("tins", event)}
                                 className="banner"
                                 src="../images/cans-320x213.jpg"
-                                alt="empty cans"
-                                title="cans"
+                                alt="empty tins"
+                                title="tins"
                             />
                         </div>
                         <div className="item-picture-container">
