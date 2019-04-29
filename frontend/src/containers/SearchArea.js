@@ -69,15 +69,17 @@ class SearchArea extends React.Component {
 
                     <form onSubmit={this.handleSubmit}>
                         <p className="p2">Search database by waste item name ...</p>
-                        <div className="input-and-button2">
-                            <input type="text" className="form-control2"
+                        <div className="input-group input-and-button2">
+                            <input type="text" className="form-control"
                                    placeholder="Type name of waste item here..."
                                    required={true} ref={this.query}
                                    defaultValue={this.state.defInputValue}
                             />
-                            <button className="btn btn-outline-secondary button2" type="submit" title="start search">
-                                Search
-                            </button>
+                            <div className="input-group-append">
+                                <button className="btn btn-outline-secondary" type="submit" title="start search">
+                                    Search
+                                </button>
+                            </div>
                         </div>
                     </form>
 

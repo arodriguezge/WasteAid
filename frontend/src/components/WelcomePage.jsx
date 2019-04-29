@@ -56,10 +56,6 @@ class WelcomePage extends Component {
     }
 
     render() {
-        // let listStyle = {
-        //     listStyleImage: url('../images/green-dot.svg')
-        // }
-
         return (
             <React.Fragment>
                 <Header/>
@@ -67,7 +63,6 @@ class WelcomePage extends Component {
                     <h1 className="h2-0 font-weight-bold">Welcome to WasteAid</h1>
 
                     <div className="list-container-0">
-
                         <div className="list-box-0">
                             <h4>This little app can help you:</h4>
                             <ul> {/* style={listStyle}*/}
@@ -77,7 +72,6 @@ class WelcomePage extends Component {
                                 <li>Find disposal sites for special refuse</li>
                             </ul>
                         </div>
-
                         <div className="list-box-0">
                             <h4>Contribute to a better future</h4>
                             <ul>
@@ -87,13 +81,12 @@ class WelcomePage extends Component {
                                 <li>Help save natural resources</li>
                             </ul>
                         </div>
-
                     </div>
 
                     <div className="form-box-welcome">
                         <form className="form-welcome" onSubmit={this.handleSubmit}>
                             <p className="p2-welcome-1">Which waste bin is best for my trash?</p>
-                            <div className="input-and-button-welcome">
+                            <div className="input-group">
                                 <input
                                     type="text"
                                        className="form-control form-welcome"
@@ -101,12 +94,14 @@ class WelcomePage extends Component {
                                        required={true} ref={this.input}
                                        onChange={this.handleChange}
                                 />
-                                <input
-                                    className="btn btn-outline-secondary button-welcome"
-                                    title="start search"
-                                    type="submit"
-                                    value="Search"
-                                />
+                                <div className="input-group-append">
+                                    <input
+                                        className="btn btn-outline-secondary"
+                                        title="start search"
+                                        type="submit"
+                                        value="Search"
+                                    />
+                                </div>
                             </div>
                             <p className="p2-welcome-2">* e.g. napkins, dust bags, paint, batteries, ...</p>
                         </form>
@@ -169,7 +164,6 @@ class WelcomePage extends Component {
                                 title="plastic"
                             />
                         </div>
-
                     </div>
 
                 </div>
