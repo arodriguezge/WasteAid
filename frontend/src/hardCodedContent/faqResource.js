@@ -4,9 +4,9 @@ export const faq = [
     {
         question: "How can I use this app?",
         answers: [
-            "In the SEARCH you can find out where to dispose of specific waste items.",
-            "There you can also see what is allowed to be thrown into the diverse garbage containers.",
-            "The MAP allows you to find nearby recycling centers and other disposal sites."
+            "In SEARCH you can find out where to dispose of specific waste items. There you can also see what is allowed to be thrown into the diverse garbage containers.",
+            "The MAP allows you to find nearby recycling centers and other disposal sites.",
+            "In ADD AN ITEM you can contribute to this app by proposing waste items you can't find in SEARCH. The proposed items can be found in the database after approval by the administrator."
         ],
         links: []
     },

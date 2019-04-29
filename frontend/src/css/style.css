@@ -59,24 +59,10 @@
   cursor: pointer; }
 
 .input-and-button2 {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   margin-top: -8px; }
-
-.form-control2 {
-  min-width: 180px;
-  width: 90%;
-  border-radius: 5px;
-  border: 1px solid lightgray;
-  padding-left: 10px;
-  height: 38px;
-  margin-bottom: -20px;
-  margin-top: -18px; }
 
 .p2 {
   margin-top: 7px;
-  margin-bottom: 10px;
   padding-left: 3px; }
 
 .p2-1 {
@@ -88,11 +74,6 @@
   border-radius: 5px;
   background-color: #fcc;
   padding: 7px 12px; }
-
-.button2 {
-  margin-top: 3px;
-  margin-right: 2px;
-  margin-left: 10px; }
 
 .search-area-map-hint {
   padding: 10px 0 3px 3px; }
@@ -164,9 +145,6 @@ select:hover {
   margin-top: 3%;
   margin-bottom: 30px; }
 
-.button-welcome {
-  margin-left: 10px; }
-
 .p2-welcome-1 {
   margin-top: 0;
   margin-bottom: 7px;
@@ -217,25 +195,14 @@ li {
   list-style: none;
   background-image: url("/images/green-dot.svg");
   background-repeat: no-repeat;
-  /* background-position: left center; */
   background-position: 0 1px;
   background-size: 20px;
-  /* border: 1px solid grey; */
   line-height: 145%; }
 
 /* outer form container */
 .form-box-welcome {
   display: flex;
   justify-content: center; }
-
-/* inner form container */
-.form-welcome {
-  min-width: 200px; }
-
-/* innermost form container */
-.input-and-button-welcome {
-  display: flex;
-  width: 100%; }
 
 @media only screen and (min-width: 1200px) {
   .form-welcome {
@@ -278,12 +245,6 @@ li {
     width: calc(90%); }
   .form-box-welcome {
     margin-top: 20px; }
-  .input-and-button-welcome {
-    flex-wrap: wrap;
-    justify-content: center; }
-  .button-welcome {
-    margin-top: 10px;
-    margin-left: 0; }
   .p2-welcome-2 {
     margin-bottom: 0; } }
 
@@ -549,15 +510,30 @@ footer {
   font-family: 'Leckerli One', cursive;
   font-size: 40px; }
 
+.logo-image {
+  width: 50px;
+  height: 50px; }
+
 .button-admin-header {
-  background-color: #12A065 !important;
+  background-color: #02bd6f !important;
   border: none; }
 
-a:hover:not(.active) span {
+@media only screen and (max-width: 392px) {
+  .logo-image {
+    width: 30px;
+    height: 30px; }
+  .specialFont {
+    font-family: 'Leckerli One', cursive;
+    font-size: 28px; } }
+
+a:hover:not(.active) span.underline {
   color: rgba(255, 255, 255, 0.9) !important;
   border-bottom: 2px solid rgba(255, 255, 255, 0.9); }
 
 .text-grey {
+  color: rgba(255, 255, 255, 0.75) !important; }
+
+.navbar-light .navbar-nav .nav-link {
   color: rgba(255, 255, 255, 0.75) !important; }
 
 footer {

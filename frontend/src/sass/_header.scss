@@ -7,9 +7,9 @@
 }
 
 .active span {
-    color: rgba(255, 255, 255, 1) !important;    
+    color: rgba(255, 255, 255, 1) !important;
     // font-weight: bold;
-    
+
 }
 
 .specialFont {
@@ -17,20 +17,38 @@
     font-size: 40px;
 }
 
-.button-admin-header {
-    background-color: #12A065 !important;
-    border: none;
+.logo-image {
+    width: 50px;
+    height: 50px;
 }
 
-a:hover:not(.active) span, {
-    // background-color: white; 
+.button-admin-header {
+    background-color: #02bd6f !important;
+    border: none;
+}
+@media only screen and (max-width: 392px) {
+    .logo-image {
+        width: 30px;
+        height: 30px;
+    }
+    .specialFont {
+        font-family: 'Leckerli One', cursive;
+        font-size: 28px;
+    }
+}
+
+a:hover:not(.active) span.underline {
+    // background-color: white;
     color: rgba(255, 255, 255, 0.90) !important;
     border-bottom: 2px solid  rgba(255, 255, 255, 0.9);
-    
+
 }
 
 .text-grey {
     color: rgba(255, 255, 255, 0.75) !important;
-    
+
 }
 
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.75) !important;
+}

@@ -16,10 +16,6 @@
   margin-bottom: 30px;
 }
 
-.button-welcome {
-  margin-left: 10px;
-}
-
 .p2-welcome-1 {
   margin-top: 0;
   margin-bottom: 7px;
@@ -75,10 +71,8 @@ li {
   list-style: none;
   background-image: url("/images/green-dot.svg");
   background-repeat: no-repeat;
-  /* background-position: left center; */
   background-position: 0 1px;
   background-size: 20px;
-  /* border: 1px solid grey; */
   line-height: 145%;
 }
 
@@ -86,17 +80,6 @@ li {
 .form-box-welcome {
   display: flex;
   justify-content: center;
-}
-
-/* inner form container */
-.form-welcome {
-  min-width: 200px;
-}
-
-/* innermost form container */
-.input-and-button-welcome {
-  display: flex;
-  width: 100%;
 }
 
 @media only screen and (min-width: 1200px) {
@@ -160,19 +143,10 @@ li {
   .form-box-welcome {
     margin-top: 20px;
   }
-  .input-and-button-welcome {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .button-welcome {
-    margin-top: 10px;
-    margin-left: 0;
-  }
   .p2-welcome-2 {
     margin-bottom: 0;
   }
 }
-
 
 .image-gallery {
   margin-top: 20px;
