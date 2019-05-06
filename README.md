@@ -1,4 +1,4 @@
-# Waste-Disposal-Advisor-project
+# WasteAid
 
 Run in the Frontend folder:
 ```
@@ -15,8 +15,5 @@ npm install
 npm run dev
 
 ```
-After installing MongoDB in your machine, you will need to run once:
-```
-sudo service mongod start
-```
+
 
